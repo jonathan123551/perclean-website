@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>بير كلين - التحول</title>
+    <link rel="stylesheet" href="/assets/perclean.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Cairo font for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', var(--font-heading);
+        }
+        .nav-links a { margin-left: 0; margin-right: 2rem; }
+        .scene-dirty { padding-left: 0; padding-right: 10%; align-items: flex-start; }
+        .scene-clean { padding-right: 0; padding-left: 10%; align-items: flex-end; }
+        .cat-item::before { left: auto; right: -20px; }
+        .cat-item.active { padding-left: 0; padding-right: 20px; }
+        .stage-info { padding-left: 2rem; padding-right: 0; }
+        
+        @media (max-width: 1024px) {
+            .scene-dirty { padding-right: 5%; }
+            .scene-clean { padding-left: 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/ar/"><img src="/assets/logo.png" alt="Per Clean" class="nav-logo-img"></a>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+            </button>
+
+            <div class="nav-links">
+                <a href="#transform">التحول</a>
+                <a href="#stage">الحلول</a>
+                <a href="#shop">المتجر</a>
+                <a href="/">English</a>
+                <a href="#" class="cart-link">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cinematic Hero Sequence -->
+    <section id="transform" class="hero-cinematic">
+        <div class="scene-container">
+            
+            <!-- Dirty State -->
+            <div class="scene-dirty">
+                <div class="dirty-bg"></div>
+                <h1 class="text-mess" style="font-family: var(--font-heading);">MESS</h1>
+                <p class="subtitle-dirty">زيوت محترقة. دهون صعبة. بقع عنيدة.</p>
+            </div>
+
+            <!-- The Brand Catalyst Logo -->
+            <div class="brand-catalyst">
+                <img src="/assets/logo.png" alt="Per Clean Logo" />
+            </div>
+
+            <!-- Clean State (Revealed via scroll) -->
+            <div class="scene-clean">
+                <div class="clean-bg"></div>
+                <h1 class="text-clean" style="font-family: var(--font-heading);">CLEAN</h1>
+                <p class="subtitle-clean">التحول الجذري</p>
+                <button class="btn-discover">اكتشف الحل &larr;</button>
+            </div>
+
+            <!-- The Hero Product that drives the transformation -->
+            <div class="product-hero">
+                <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121" alt="Per Actif 5KG" />
+            </div>
+
+            <!-- Splashes / Particles for effect -->
+            <div class="splash-effect"></div>
+        </div>
+    </section>
+
+    <!-- Interactive Stage (Replacing 4-card grid) -->
+    <section id="stage" class="interactive-stage">
+        <div class="stage-layout">
+            
+            <!-- Categories Menu -->
+            <div class="stage-menu">
+                <h2 class="stage-title">ماذا تنظف اليوم؟</h2>
+                <ul class="category-list">
+                    <li class="cat-item active" data-target="kitchen">المطبخ والدهون</li>
+                    <li class="cat-item" data-target="laundry">غسيل الملابس</li>
+                    <li class="cat-item" data-target="softener">العناية بالأقمشة</li>
+                    <li class="cat-item" data-target="surfaces">تعقيم الأسطح</li>
+                </ul>
+            </div>
+
+            <!-- The Dynamic Stage -->
+            <div class="stage-display">
+                <div class="stage-bg" style="background: radial-gradient(circle at top left, #e8f7f8, #f0f0f0);"></div>
+                
+                <div class="stage-content active" id="stage-kitchen">
+                    <div class="stage-info">
+                        <h3>بير أكتيف ٥ كيلو</h3>
+                        <p>مزيل قوي للدهون والبقع للأفران والشفاطات.</p>
+                        <span class="price">٤٥٠.٠٠ ج.م</span>
+                        <button class="btn-primary">أضف إلى السلة</button>
+                    </div>
+                    <div class="stage-product">
+                        <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121" alt="Per Actif" />
+                    </div>
+                </div>
+
+                <div class="stage-content" id="stage-laundry">
+                    <div class="stage-info">
+                        <h3>بيرووش چل ٥ كيلو</h3>
+                        <p>چل منظف للملابس للغسالات الاتوماتيك بجودة فائقة.</p>
+                        <span class="price">٤١٠.٠٠ ج.م</span>
+                        <button class="btn-primary">أضف إلى السلة</button>
+                    </div>
+                    <div class="stage-product">
+                        <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/6C87C2BD-02AB-461B-BDDA-780DB8DEBA62.jpg?v=1784721867" alt="Perwash Gel" />
+                    </div>
+                </div>
+
+                <div class="stage-content" id="stage-softener">
+                    <div class="stage-info">
+                        <h3>بير سوفت ٥ كيلو</h3>
+                        <p>منعم ومعطر للملابس ومضاد للشحنات الاستاتيكية.</p>
+                        <span class="price">٣٨٠.٠٠ ج.م</span>
+                        <button class="btn-primary">أضف إلى السلة</button>
+                    </div>
+                    <div class="stage-product">
+                        <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/IMG-4633.jpg?v=1761828559" alt="Per Soft" />
+                    </div>
+                </div>
+
+                <div class="stage-content" id="stage-surfaces">
+                    <div class="stage-info">
+                        <h3>جيرمول ٥ كيلو</h3>
+                        <p>سائل مطهر لجميع الاسطح يقضي على (99%) من الجراثيم.</p>
+                        <span class="price">٨٧٠.٠٠ ج.م</span>
+                        <button class="btn-primary">أضف إلى السلة</button>
+                    </div>
+                    <div class="stage-product">
+                        <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3DD3BB6C-75FE-472B-B1AC-3A6FFBDF35F5.jpg?v=1784721511" alt="Germol" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="full-catalog">
+<div class="catalog-container">
+<h2 class="catalog-title">المجموعة الكاملة</h2>
+<div class="product-grid">
+
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/ChatGPTImageDec19_2025_10_17_32AM.png?v=1766131869" alt="perfumed and disinfectant  Detergent for toilet flusher (XP toilet125gm)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف ومطهر و معطر  للتواليت للتعليق داخل صندوق الطرد</h4>
+            <div class="card-footer">
+                <span class="card-price">55.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121" alt="Powerful Grease & Stain Remover for Stove, Hood, and Kitchen Walls (Per Actif 5KG)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">مزيل للدهون</h4>
+            <div class="card-footer">
+                <span class="card-price">450.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/1C06BF29-BCAC-43EF-8938-ECC97D29B292.jpg?v=1784721432" alt="Hand washing liquid soap  (spring scent) 1.5k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل تنظيف اليدين برائحة السبرنج  حجم ١.٥ كيلو</h4>
+            <div class="card-footer">
+                <span class="card-price">140.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/IMG-4633.jpg?v=1761828559" alt="Fabric softener and fragrance, anti-static (Per soft  5KG)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">منعم ومعطر للملابس ومضاد للشحنات الاستاتيكية</h4>
+            <div class="card-footer">
+                <span class="card-price">380.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C11CA7CF-42E1-4ED3-B45D-DC4EFDF8E34D.jpg?v=1784132598" alt="Hard surfaces disinfectant liquid 700 GM" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل مطهر لجميع الأسطح حجم ٧٠٠ جم</h4>
+            <div class="card-footer">
+                <span class="card-price">150.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3DD3BB6C-75FE-472B-B1AC-3A6FFBDF35F5.jpg?v=1784721511" alt="(Germol) Hard surfaces disinfectant liquid 5KG" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل مطهر لجميع الاسطح يقضي على (99%) من الجراثيم  يصلح لجميع الاغراض المنزلية و هو آمن على الغسالات الاوتوماتيكية 5 كيلوجرام</h4>
+            <div class="card-footer">
+                <span class="card-price">870.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A6D5B9C8-EF53-4542-B5BA-D78F04596B90.jpg?v=1784721575" alt="Hand washing liquid soap Pink sugar scent 1.5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">140.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/10D1C703-99B8-40C4-BFC9-2F1B09A61AFE.jpg?v=1784721657" alt="Hand washing liquid soap Clear green Scent 1.5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين بالأعشاب</h4>
+            <div class="card-footer">
+                <span class="card-price">140.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E2E79F84-A1D9-4453-8FCE-B2A01B39E5CC.jpg?v=1784721689" alt="Hand washing liquid soap Dovana Scent 1.5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين بالدوڤانا</h4>
+            <div class="card-footer">
+                <span class="card-price">140.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BD93F18F-80B4-483E-9D17-7D466CCFC612.jpg?v=1784721613" alt="Hand washing liquid soap Green apple Scent 1.5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين بالتفاح</h4>
+            <div class="card-footer">
+                <span class="card-price">140.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2CF9170E-88BB-40D0-9B4D-5ACC01763B6A.jpg?v=1784721747" alt="Dish washing liquid detergent Lemon scent (Mencopol 5 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">منظف سائل للأغراض المنزلية بالليمون</h4>
+            <div class="card-footer">
+                <span class="card-price">240.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/170CC148-1C7E-4951-B9D8-3CF8A2488EEF.jpg?v=1784721779" alt="Dish washing liquid detergent Lemon scent (Mencopol 1 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">منظف سائل للأغراض المنزلية بالليمون</h4>
+            <div class="card-footer">
+                <span class="card-price">55.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AEE95EF3-AAA8-40DF-8004-C457503CF8FF.jpg?v=1752437946" alt="Premium Liquid Laundry Detergent Gel for Automatic Washing Machines (Perwash 5 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">چل منظف للملابس للغسالات الاتوماتيك</h4>
+            <div class="card-footer">
+                <span class="card-price">410.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BE5EA4CF-ADD5-4EB5-A47C-B45F2E7CA08F.jpg?v=1786962853" alt="Premium Liquid Laundry Detergent Gel for Automatic Washing Machines (Perwash1.65 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">چل منظف للملابس للغسالات الاتوماتيك</h4>
+            <div class="card-footer">
+                <span class="card-price">165.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A248BC5F-6F80-49A9-9AE2-9FB901EE35D3.jpg?v=1786962892" alt="Fabric softener and fragrance, anti-static (Softener 1.5 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">منعم الملابس ومعطر ومضاد للشحنات الاستاتيكية</h4>
+            <div class="card-footer">
+                <span class="card-price">130.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/FA1DB7CD-7B81-4902-9192-2F203AE33AEA.jpg?v=1752437609" alt="Powerful Stain & Yellowing Remover for Clothes (Perwash Ox bleach 5 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">مزيل البقع والأصفرار من الملابس</h4>
+            <div class="card-footer">
+                <span class="card-price">450.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/8FA4FEB7-0FF0-4F51-92E6-0DBE568BF2FB.jpg?v=1786962937" alt="Powerful Stain & Yellowing Remover for Clothes (Perwash Ox bleach 1.5 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">مزيل البقع والأصفرار من الملابس</h4>
+            <div class="card-footer">
+                <span class="card-price">155.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3C39477A-6848-4320-81C3-B8C783DC3528.jpg?v=1786962974" alt="Powerful Stain & Yellowing Remover for Clothes (Perwash Ox bleach 650 ml)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">مزيل البقع والأصفرار من الملابس</h4>
+            <div class="card-footer">
+                <span class="card-price">75.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B2275EC2-6681-4239-A192-5A37BE566848.jpg?v=1786107084" alt="Hand washing liquid soap Spring Scent125 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">35.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C1070E2F-98E1-4DFF-AB40-32FAA3D6EECF.jpg?v=1786107121" alt="Hand washing liquid soap Pink sugar Scent  125 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">35.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E1C749FD-6CAB-4254-A2AA-220D72E365E2.jpg?v=1786107153" alt="Hand washing liquid soap Dovana Scent 125 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">35.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/15154349-84D0-4118-A49C-462654E95FC0.jpg?v=1786107181" alt="Hand washing liquid soap Clear green Scent 125 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين بالأعشاب</h4>
+            <div class="card-footer">
+                <span class="card-price">35.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3BA91AB0-6F81-4C11-A910-2D884A54E414.jpg?v=1786107211" alt="Hand washing liquid soap Green apple Scent 125 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">35.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/54C3A6BA-34A9-4974-A74E-2442E9B4E5FF.jpg?v=1784721824" alt="Hand washing liquid soap Spring Scent 500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">60.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/19_jpg.jpg?v=1784094303" alt="Hand washing liquid soap Pink sugar Scent 500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">60.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/9CE55F68-BA26-42F9-B9CA-B9D131039563.jpg?v=1784721863" alt="Hand washing liquid soap Dovana Scent 500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدينحجم ٥٠٠ مل</h4>
+            <div class="card-footer">
+                <span class="card-price">60.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/20_jpg.jpg?v=1784094234" alt="Hand washing liquid soap Clear green Scent 500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين بالأعشاب</h4>
+            <div class="card-footer">
+                <span class="card-price">60.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E179B9D7-08E3-4945-9062-97DB6E801CC6.jpg?v=1784721898" alt="Hand washing liquid soap Green apple Scent 500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">60.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/F24BA1B2-AFCD-4078-9E3B-675C88D139CC.jpg?v=1784721927" alt="Hand washing liquid soap Spring Scent 5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين بالسبرنج</h4>
+            <div class="card-footer">
+                <span class="card-price">400.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B9238D2D-FCF7-4EF4-893E-D250B4A6173D.jpg?v=1784721953" alt="Hand washing liquid soap Pink sugar Scent 5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين</h4>
+            <div class="card-footer">
+                <span class="card-price">400.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7C92B80D-B2BA-4FBA-91D5-B548BF5809F5.jpg?v=1784722013" alt="Hand washing liquid soap Clear green Scent 5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين بالأعشاب</h4>
+            <div class="card-footer">
+                <span class="card-price">400.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/6B79DA87-98E0-49EB-87B4-629595737974.jpg?v=1784722043" alt="Hand washing liquid soap Dovana Scent 5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">سائل منظف لليدين برائحة الدوڤانا</h4>
+            <div class="card-footer">
+                <span class="card-price">400.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B6D527C4-B9E1-4CB2-83E4-F5A5F2B1FBE1.jpg?v=1786963283" alt="Powerful Grease & Stain Remover for Stove, Hood, and Kitchen Walls (Per Actif650 Gram)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">مزيل للدهون</h4>
+            <div class="card-footer">
+                <span class="card-price">85.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B8F7F933-757A-43A9-A4D8-19AC78D22CED.jpg?v=1786963042" alt="Pershine with spray
+
+500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">ملمع زجاج ببخاخ</h4>
+            <div class="card-footer">
+                <span class="card-price">40.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E42D76BC-8D6E-4821-9B9E-E78152170C8B.jpg?v=1786963086" alt="Pershine without spray
+
+500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">ملمع زجاج بدون بخاخ</h4>
+            <div class="card-footer">
+                <span class="card-price">35.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/DECD228C-1B45-4F64-8267-FD5FE6000513.jpg?v=1786963115" alt="Pershine with spray and without spray (Mix)
+
+500 ml" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">ملمع زجاج ببخاخ وبدون بخاخ</h4>
+            <div class="card-footer">
+                <span class="card-price">70.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7B63A88F-724F-4060-8EF6-A54E51F53869.jpg?v=1752401449" alt="Pershine
+
+5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">ملمع زجاج</h4>
+            <div class="card-footer">
+                <span class="card-price">150.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A072B754-2769-423D-A07B-E98302D72EDB.jpg?v=1752401365" alt="Sanitizing and disinfectant liquid Detergent  (Perclean SD5 k)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">صابون منظف بالمطهر للأغراض العامة</h4>
+            <div class="card-footer">
+                <span class="card-price">470.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/EA6328F0-612A-44CC-B338-AD2012A935E4.jpg?v=1786963154" alt="Sanitizing and disinfectant liquid Detergent  (Per Clean SD 1.5 KG)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">صابون منظف بالمطهر للأغراض العامة</h4>
+            <div class="card-footer">
+                <span class="card-price">170.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AF0BD408-5F75-4141-AB04-347755599573.jpg?v=1786963189" alt="Sanitizing and disinfectant liquid Detergent  (Per Clean SD 700 Gram)" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">صابون منظف بالمطهر للأغراض العامة حجم ٧٠٠ جم</h4>
+            <div class="card-footer">
+                <span class="card-price">90.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/56938FAC-46BC-48E0-9E6C-781A4E97FBC2.jpg?v=1784722128" alt="dishwashing detergent- morning breeze scent 5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">صابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال</h4>
+            <div class="card-footer">
+                <span class="card-price">240.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/4110F2C5-230F-4DDA-8463-FD15A88F1E99.jpg?v=1784722160" alt="dishwashing detergent- morning breeze scent 700 gm" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">صابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال</h4>
+            <div class="card-footer">
+                <span class="card-price">55.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BA46F36A-016C-4C5D-8C68-1B5E28960F9C.jpg?v=1784722196" alt="dishwashing detergent- morning breeze scent 1.5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">صابون سائل للمواعين بالليمون والبرتقال</h4>
+            <div class="card-footer">
+                <span class="card-price">95.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/44EA168B-CFBF-4FCF-BFC8-5D0D45BC60DA.jpg?v=1786963348" alt="perfumed and disinfectant Detergent (3 in 1) 700 gm" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">منظف ومطهر ومعطر للأرضيات</h4>
+            <div class="card-footer">
+                <span class="card-price">75.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2A7BED6C-3036-486B-9C25-57E08247C31B.jpg?v=1752400847" alt="perfumed and disinfectant Detergent (3 in 1) 5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">منظف ومطهر ومعطر الأرضيات حجم ٥ كيلو</h4>
+            <div class="card-footer">
+                <span class="card-price">350.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="card-image-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2BF6CB14-5A71-4C77-8C0D-C666E703AA30.jpg?v=1786963378" alt="perfumed and disinfectant Detergent (3 in 1) 1.5 k" loading="lazy" />
+        </div>
+        <div class="card-info">
+            <h4 class="card-title">منظف ومطهر ومعطر الأرضيات</h4>
+            <div class="card-footer">
+                <span class="card-price">130.00 ج.م</span>
+                <button class="btn-add-cart" onclick="alert('تمت الإضافة للسلة')">أضف للسلة</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+
+    <!-- Minimal Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>PER CLEAN</h2>
+            <p>&copy; 2026 بير كلين. نرتقي بالعناية المنزلية.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/assets/perclean.js"></script>
+</body>
+</html>
