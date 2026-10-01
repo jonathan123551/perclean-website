@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Per Clean — The Transformation | Flagship Home & Industrial Care</title>
+    <title>Per Clean — The Transformation | Industrial & Household Chemistry</title>
     <meta name="description" content="Experience the transformation from mess to pristine clean. Premium formulated cleaning and disinfectant solutions.">
     
     <!-- Google Fonts -->
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <!-- Subtle Background Grain & Ambient Light -->
+    <!-- Atmospheric Ambient Lighting -->
     <div class="ambient-glow"></div>
 
     <!-- Navigation Header -->
@@ -28,8 +28,8 @@
             <nav class="nav-menu" id="navMenu">
                 <a href="#heroScene" class="nav-item">The Story</a>
                 <a href="#categoriesSection" class="nav-item">Categories</a>
-                <a href="#featuredSection" class="nav-item">Featured</a>
-                <a href="#catalogModal" class="nav-item" id="navShopAll">All Products</a>
+                <a href="#catalogSection" class="nav-item">Collection</a>
+                <a href="#brandPromise" class="nav-item">Brand Science</a>
             </nav>
 
             <div class="header-actions">
@@ -37,15 +37,6 @@
                     <span class="lang-globe">🌐</span>
                     <span class="lang-label">عربي</span>
                 </a>
-                
-                <button class="cart-trigger-btn" id="cartTrigger" aria-label="View Shopping Cart">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                    <span class="cart-badge" id="cartBadge">0</span>
-                </button>
 
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
                     <span></span>
@@ -60,11 +51,24 @@
         <div class="mobile-nav-links">
             <a href="#heroScene" class="mobile-nav-link">The Story</a>
             <a href="#categoriesSection" class="mobile-nav-link">Categories</a>
-            <a href="#featuredSection" class="mobile-nav-link">Featured</a>
-            <a href="#catalogModal" class="mobile-nav-link" id="mobileShopAll">All 46 Products</a>
+            <a href="#catalogSection" class="mobile-nav-link">Collection</a>
+            <a href="#brandPromise" class="mobile-nav-link">Brand Science</a>
             <a href="/ar/" class="mobile-nav-link lang-mobile">عربي / Arabic</a>
         </div>
     </div>
+
+    <!-- Persistent Floating Cart Trigger -->
+    <button class="floating-cart-pill" id="floatingCartBtn" aria-label="View Shopping Cart">
+        <div class="cart-pill-icon-wrap">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+        </div>
+        <span class="cart-pill-text">Cart</span>
+    </button>
 
     <!-- MAIN EXPERIENCE -->
     <main>
@@ -73,11 +77,10 @@
         <section class="scene-wrapper" id="heroScene">
             <div class="cinematic-viewport">
                 
-                <!-- LAYER 1: THE MESS (Deep industrial grime, burnt oil, chaos) -->
+                <!-- LAYER 1: THE MESS -->
                 <div class="layer layer-mess" id="layerMess">
                     <div class="mess-texture-bg"></div>
                     <div class="mess-vignette"></div>
-                    <div class="mess-particles" id="messParticles"></div>
                     
                     <div class="mess-hero-content">
                         <span class="tag-mess">STAGE 01 — THE PROBLEM</span>
@@ -98,7 +101,7 @@
                     </div>
                 </div>
 
-                <!-- LAYER 2: THE LIQUID TRANSFORMATION (Expanding fluid shockwave) -->
+                <!-- LAYER 2: THE LIQUID TRANSFORMATION (Accelerating Wipe) -->
                 <div class="layer layer-clean-reveal" id="layerClean">
                     <div class="clean-liquid-bg"></div>
                     <div class="clean-ambient-light"></div>
@@ -125,18 +128,23 @@
                     <div class="product-glow-backdrop"></div>
                     
                     <div class="product-bottle-wrapper" id="productBottleWrapper">
-                        <img src="/assets/actif5_isolated.png" alt="Per Actif 5KG Degreaser" class="hero-bottle-img">
+                        <img src="/assets/actif5_isolated.png" alt="Per Actif 5KG Degreaser" class="hero-bottle-img" id="heroBottleImg">
                         <div class="product-contact-shadow"></div>
                     </div>
 
                     <div class="product-hero-specs" id="productHeroSpecs">
                         <span class="spec-kicker">FLAGSHIP POWER</span>
                         <h3 class="spec-title">Per Actif 5KG</h3>
-                        <p class="spec-desc">Commercial Degreaser & Heavy Stain Dissolver. Engineered for stoves, extractors, and industrial surfaces.</p>
+                        <p class="spec-desc">Industrial Alkaline Degreaser & Baked-On Carbon Dissolver. Formulated for stoves, hoods, and commercial cooktops.</p>
                         <div class="spec-footer">
                             <span class="spec-price">450.00 EGP</span>
-                            <button class="btn-hero-cart" data-id="actif-5kg" data-title="Per Actif 5KG Degreaser" data-price="450.00 EGP" data-img="/assets/actif5_isolated.png">
-                                Quick Add to Cart
+                            <button class="btn-hero-cart" 
+                                data-id="actif-5kg" 
+                                data-title="Per Actif 5KG Degreaser" 
+                                data-price="450.00 EGP" 
+                                data-img="/assets/actif5_isolated.png"
+                                data-img-element="heroBottleImg">
+                                <span>Add to Cart</span>
                             </button>
                         </div>
                     </div>
@@ -145,12 +153,12 @@
             </div>
         </section>
 
-        <!-- 02. CATEGORY EXPERIENCE (Choreographed Horizontal Carousel with One Dominant Focus) -->
+        <!-- 02. CATEGORY EXPERIENCE (Choreographed Horizontal Carousel) -->
         <section class="category-experience-section" id="categoriesSection">
             <div class="category-section-intro">
-                <span class="section-kicker">CURATED HOME CARE</span>
+                <span class="section-kicker">DISCIPLINES OF CARE</span>
                 <h2 class="section-heading">WHAT ARE YOU CLEANING?</h2>
-                <p class="section-subtext">Five targeted biological and surfactant disciplines engineered for every corner of your home.</p>
+                <p class="section-subtext">Five targeted surfactant and biocidal disciplines engineered for uncompromising performance.</p>
             </div>
 
             <div class="category-viewport" id="categoryViewport">
@@ -166,11 +174,11 @@
                                 <div class="cat-item-shadow"></div>
                             </div>
                             <div class="cat-details">
-                                <span class="cat-badge">HEAVY DUTY</span>
-                                <h3 class="cat-name">Kitchen & Degreasing</h3>
-                                <p class="cat-desc">Deep-acting alkaline agents dissolve baked-on oils, burnt carbon, hoods, and stainless steel.</p>
+                                <span class="cat-badge">HEAVY DUTY DEGREASING</span>
+                                <h3 class="cat-name">Kitchen & Cooktop Care</h3>
+                                <p class="cat-desc">Deep-acting alkaline agents dissolve baked-on oils, burnt grease, hoods, and stainless steel.</p>
                                 <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Kitchen">Explore Lineup &rarr;</button>
+                                    <button class="btn-cat-explore" data-filter="Kitchen">Explore Kitchen Lineup &rarr;</button>
                                 </div>
                             </div>
                         </div>
@@ -186,11 +194,11 @@
                                 <div class="cat-item-shadow"></div>
                             </div>
                             <div class="cat-details">
-                                <span class="cat-badge">ENZYMATIC FORMULA</span>
+                                <span class="cat-badge">ENZYMATIC GEL FORMULA</span>
                                 <h3 class="cat-name">Automatic Laundry Care</h3>
-                                <p class="cat-desc">High-efficiency liquid detergent gels with active color protection and stain lifting enzymes.</p>
+                                <p class="cat-desc">High-efficiency liquid detergent gels with active color protection and stain-lifting enzymes.</p>
                                 <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Laundry">Explore Lineup &rarr;</button>
+                                    <button class="btn-cat-explore" data-filter="Laundry">Explore Laundry Lineup &rarr;</button>
                                 </div>
                             </div>
                         </div>
@@ -206,11 +214,11 @@
                                 <div class="cat-item-shadow"></div>
                             </div>
                             <div class="cat-details">
-                                <span class="cat-badge">LONG LASTING SCENT</span>
+                                <span class="cat-badge">LONG LASTING MICRO-AROMA</span>
                                 <h3 class="cat-name">Fabric Conditioning</h3>
                                 <p class="cat-desc">Anti-static softening agents with concentrated micro-encapsulated floral aromas that linger for weeks.</p>
                                 <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Softener">Explore Lineup &rarr;</button>
+                                    <button class="btn-cat-explore" data-filter="Softener">Explore Softeners &rarr;</button>
                                 </div>
                             </div>
                         </div>
@@ -226,11 +234,11 @@
                                 <div class="cat-item-shadow"></div>
                             </div>
                             <div class="cat-details">
-                                <span class="cat-badge">99.9% SANITIZATION</span>
-                                <h3 class="cat-name">Medical-Grade Disinfection</h3>
+                                <span class="cat-badge">99.9% MEDICAL SANITIZATION</span>
+                                <h3 class="cat-name">Surface Disinfection</h3>
                                 <p class="cat-desc">Germol and active hospital-grade surface sanitizers for ceramic, marble, and multi-contact zones.</p>
                                 <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Disinfectant">Explore Lineup &rarr;</button>
+                                    <button class="btn-cat-explore" data-filter="Disinfectant">Explore Disinfectants &rarr;</button>
                                 </div>
                             </div>
                         </div>
@@ -246,11 +254,11 @@
                                 <div class="cat-item-shadow"></div>
                             </div>
                             <div class="cat-details">
-                                <span class="cat-badge">DERMATOLOGICALLY TESTED</span>
+                                <span class="cat-badge">BOTANICAL MOISTURIZING</span>
                                 <h3 class="cat-name">Luxury Hand Wash</h3>
-                                <p class="cat-desc">Rich moisturizing formulas with Pink Sugar, Spring, and Green Apple botanicals that protect skin moisture.</p>
+                                <p class="cat-desc">Gentle foaming botanical formulas with Pink Sugar, Spring, and Green Apple infusions.</p>
                                 <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Hand Soap">Explore Lineup &rarr;</button>
+                                    <button class="btn-cat-explore" data-filter="Hand Soap">Explore Hand Soaps &rarr;</button>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +267,7 @@
                 </div>
             </div>
 
-            <!-- Category Mobile Indicators / Dot controls -->
+            <!-- Category Mobile Indicators -->
             <div class="category-mobile-indicators">
                 <span class="cat-dot active" data-target="0"></span>
                 <span class="cat-dot" data-target="1"></span>
@@ -269,38 +277,63 @@
             </div>
         </section>
 
-        <!-- 03. FEATURED PRODUCTS (Clean, Focused, Not 46 Dumped Cards) -->
-        <section class="featured-section" id="featuredSection">
-            <div class="featured-container">
-                <div class="section-header-row">
-                    <div>
-                        <span class="section-kicker">FLAGSHIP FORMULAS</span>
-                        <h2 class="section-heading">FEATURED ESSENTIALS</h2>
+        <!-- 03. UNIFIED EDITORIAL PRODUCT SHOWROOM (ONE SEAMLESS DESIGN WORLD) -->
+        <section class="catalog-showroom-section" id="catalogSection">
+            <div class="showroom-container">
+                
+                <div class="showroom-header">
+                    <span class="section-kicker">FACTORY-DIRECT FORMULATIONS</span>
+                    <h2 class="section-heading">THE PER CLEAN COLLECTION</h2>
+                    <p class="section-subtext">Every formulation is manufactured to industrial concentrations. Select a category below or explore the full catalog.</p>
+                </div>
+
+                <!-- Editorial Toolbar (Tabs & Keyword Search) -->
+                <div class="showroom-toolbar">
+                    <div class="filter-tab-bar" id="categoryFilterBar">
+                        <button class="tab-btn active" data-cat="ALL">All Formulas (<span class="tab-count" id="countAll">46</span>)</button>
+                        <button class="tab-btn" data-cat="Kitchen">Kitchen & Grease (<span class="tab-count">7</span>)</button>
+                        <button class="tab-btn" data-cat="Laundry">Laundry Gel (<span class="tab-count">5</span>)</button>
+                        <button class="tab-btn" data-cat="Softener">Fabric Care (<span class="tab-count">2</span>)</button>
+                        <button class="tab-btn" data-cat="Disinfectant">Disinfectants (<span class="tab-count">9</span>)</button>
+                        <button class="tab-btn" data-cat="Hand Soap">Hand Wash (<span class="tab-count">19</span>)</button>
                     </div>
-                    <button class="btn-open-catalog-top" id="btnOpenCatalogHeader">
-                        Browse All 46 Products &rarr;
-                    </button>
+
+                    <div class="showroom-search-box">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="showroomSearchInput" placeholder="Filter by product name, volume, or keywords...">
+                        <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear Search" style="display:none;">&times;</button>
+                    </div>
                 </div>
 
-                <!-- Curated 6 Featured Products Grid -->
-                <div class="featured-grid" id="featuredGrid">
-                    <!-- Populated cleanly via JS from data.json -->
+                <!-- Active Filter Announcement -->
+                <div class="active-filter-indicator" id="activeFilterIndicator">
+                    <span>Showing <strong id="visibleItemsCount">46</strong> formulations</span>
+                    <button class="btn-reset-filters" id="btnResetFilters" style="display:none;">Reset Filters</button>
                 </div>
 
-                <div class="catalog-trigger-center">
-                    <button class="btn-view-all-large" id="btnViewAllCatalog">
-                        <span>VIEW COMPLETE COLLECTION (46 PRODUCTS)</span>
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
+                <!-- Product Showcase Grid -->
+                <div class="showroom-grid" id="showroomGrid">
+                    <!-- Products are injected here dynamically with isolated styling -->
+                </div>
+
+                <!-- Expand/Collapse Full Catalog Toggle -->
+                <div class="catalog-expand-row" id="catalogExpandRow">
+                    <button class="btn-expand-catalog" id="btnExpandCatalog">
+                        <span id="expandCatalogText">VIEW ALL 46 PRODUCTS</span>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </button>
                 </div>
+
             </div>
         </section>
 
-        <!-- 04. SHORT BRAND MESSAGE / PROMISE -->
-        <section class="brand-promise-section">
+        <!-- 04. SHORT BRAND SCIENCE PROMISE -->
+        <section class="brand-promise-section" id="brandPromise">
             <div class="promise-backdrop"></div>
             <div class="promise-content">
                 <img src="/assets/logo.png" alt="Per Clean Brand Mark" class="promise-logo">
@@ -331,7 +364,7 @@
                     <p>Order directly via WhatsApp for same-day confirmation and doorstep delivery across Egypt.</p>
                 </div>
                 <div class="cta-action">
-                    <a href="https://wa.me/201000000000?text=Hello%2C%20I%20would%20like%20to%20order%20Per%20Clean%20products." target="_blank" rel="noopener" class="btn-whatsapp-direct">
+                    <a href="https://wa.me/201000000000?text=Hello%20Per%20Clean%20Egypt%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-whatsapp-direct">
                         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
                             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.03.8 0.81-2.95-.19-.3a8.18 8.18 0 0 1-1.25-4.56c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/>
                         </svg>
@@ -348,22 +381,23 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <img src="/assets/logo.png" alt="Per Clean" class="footer-logo">
-                <p class="footer-tagline">Industrial Power. Household Perfection.</p>
+                <p class="footer-tagline">Industrial Chemistry. Household Perfection.</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
                     <h4>Navigation</h4>
-                    <a href="#heroScene">The Transformation</a>
-                    <a href="#categoriesSection">Solutions</a>
-                    <a href="#featuredSection">Featured</a>
-                    <a href="#catalogModal" class="trigger-modal-link">All 46 Products</a>
+                    <a href="#heroScene">The Story</a>
+                    <a href="#categoriesSection">Disciplines</a>
+                    <a href="#catalogSection">Full Collection</a>
+                    <a href="#brandPromise">Formulation Science</a>
                 </div>
                 <div class="footer-col">
                     <h4>Categories</h4>
-                    <a href="#" class="filter-link" data-filter="Kitchen">Kitchen Care</a>
-                    <a href="#" class="filter-link" data-filter="Laundry">Laundry Gel</a>
-                    <a href="#" class="filter-link" data-filter="Softener">Fabric Softeners</a>
-                    <a href="#" class="filter-link" data-filter="Disinfectant">Disinfectants</a>
+                    <a href="#catalogSection" class="footer-cat-link" data-filter="Kitchen">Kitchen Care</a>
+                    <a href="#catalogSection" class="footer-cat-link" data-filter="Laundry">Laundry Gel</a>
+                    <a href="#catalogSection" class="footer-cat-link" data-filter="Softener">Fabric Softeners</a>
+                    <a href="#catalogSection" class="footer-cat-link" data-filter="Disinfectant">Disinfectants</a>
+                    <a href="#catalogSection" class="footer-cat-link" data-filter="Hand Soap">Luxury Hand Wash</a>
                 </div>
                 <div class="footer-col">
                     <h4>Direct Contact</h4>
@@ -374,66 +408,23 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Per Clean Egypt. All rights reserved. Commercial-grade chemical manufacture.</p>
+            <p>&copy; 2026 Per Clean Egypt. All rights reserved. Commercial chemical production.</p>
         </div>
     </footer>
 
     <!-- ======================================================= -->
-    <!-- SLIDE-OVER CATALOG MODAL (ALL 46 PRODUCTS WITH FILTERS) -->
-    <!-- ======================================================= -->
-    <div class="catalog-modal-overlay" id="catalogModal">
-        <div class="catalog-modal-sheet">
-            <div class="catalog-modal-header">
-                <div class="catalog-modal-title">
-                    <h3>The Complete Per Clean Catalog</h3>
-                    <span class="catalog-count-pill" id="catalogCountPill">46 Products Available</span>
-                </div>
-                <button class="catalog-close-btn" id="catalogCloseBtn" aria-label="Close Catalog">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Filter and Search Toolbar -->
-            <div class="catalog-toolbar">
-                <div class="search-box">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" id="catalogSearchInput" placeholder="Search by name, size (e.g. 5KG), or keyword...">
-                </div>
-
-                <div class="filter-pills" id="filterPills">
-                    <button class="filter-pill active" data-category="ALL">All (46)</button>
-                    <button class="filter-pill" data-category="Kitchen">Kitchen & Grease</button>
-                    <button class="filter-pill" data-category="Laundry">Laundry Gel</button>
-                    <button class="filter-pill" data-category="Softener">Fabric Care</button>
-                    <button class="filter-pill" data-category="Disinfectant">Disinfectants</button>
-                    <button class="filter-pill" data-category="Hand Soap">Hand Wash</button>
-                </div>
-            </div>
-
-            <!-- Catalog Items Grid -->
-            <div class="catalog-modal-body">
-                <div class="catalog-grid" id="fullCatalogGrid">
-                    <!-- Populated dynamically via JS -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ======================================================= -->
-    <!-- SLIDE-OVER CART DRAWER -->
+    <!-- SLIDE-OVER CART DRAWER (LUXURY OBSIDIAN & CYAN FINISH) -->
     <!-- ======================================================= -->
     <div class="cart-drawer-overlay" id="cartDrawerOverlay">
         <div class="cart-drawer" id="cartDrawer">
+            
             <div class="cart-drawer-header">
-                <h3>Your Cart (<span id="cartDrawerCount">0</span>)</h3>
+                <div class="cart-header-title-wrap">
+                    <h3>Your Cart</h3>
+                    <span class="cart-drawer-count-badge" id="cartDrawerCount">0 Items</span>
+                </div>
                 <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Cart">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
@@ -442,28 +433,33 @@
 
             <div class="cart-items-list" id="cartItemsList">
                 <div class="cart-empty-state" id="cartEmptyState">
-                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                    <p>Your cart is empty.</p>
-                    <button class="btn-start-shopping" id="btnStartShopping">Browse Products</button>
+                    <div class="empty-icon-wrap">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                    <p class="empty-title">Your cart is empty</p>
+                    <p class="empty-desc">Discover our commercial-grade cleaning and disinfection formulations.</p>
+                    <button class="btn-start-shopping" id="btnStartShopping">Browse Collection</button>
                 </div>
             </div>
 
             <div class="cart-drawer-footer" id="cartDrawerFooter">
                 <div class="cart-subtotal-row">
-                    <span>Estimated Total:</span>
+                    <span class="subtotal-label">Estimated Subtotal:</span>
                     <strong class="cart-total-value" id="cartTotalValue">0.00 EGP</strong>
                 </div>
+                <p class="cart-dispatch-note">Same-day dispatch across Cairo, Giza, and all Egyptian governorates.</p>
                 <button class="btn-checkout-whatsapp" id="btnCheckoutWhatsApp">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                         <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.03.8 0.81-2.95-.19-.3a8.18 8.18 0 0 1-1.25-4.56c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/>
                     </svg>
-                    <span>Order via WhatsApp</span>
+                    <span>Complete Order on WhatsApp</span>
                 </button>
             </div>
+            
         </div>
     </div>
 

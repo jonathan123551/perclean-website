@@ -1,17 +1,19 @@
 /**
- * PER CLEAN — FLAGSHIP CINEMATIC CONTROLLER
- * Full GSAP Scroll Choreography, Responsive Media Matching, Dynamic Commerce & RTL
+ * PER CLEAN — UNIFIED LUXURY FLAGSHIP CONTROLLER
+ * Full GSAP Scroll Choreography, Parabolic Product-to-Cart Flight, Showroom Filtering & RTL
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Register GSAP Plugins
+    // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
 
     const isRtl = document.documentElement.dir === 'rtl' || document.body.classList.contains('rtl-mode');
     let allProductsData = [];
     let cart = [];
+    let currentCategoryFilter = 'ALL';
+    let isCatalogExpanded = false;
 
-    // Header scroll background toggle
+    // Header background toggle on scroll
     const siteHeader = document.getElementById('siteHeader');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 40) {
@@ -21,14 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, { passive: true });
 
-    // Mobile Hamburger Menu
+    // Mobile Navigation Menu
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileNavDrawer = document.getElementById('mobileNavDrawer');
     if (mobileMenuBtn && mobileNavDrawer) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileNavDrawer.classList.toggle('active');
         });
-        // Close on link click
         mobileNavDrawer.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => mobileNavDrawer.classList.remove('active'));
         });
@@ -38,11 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 01. CINEMATIC HERO CHOREOGRAPHY (GSAP MatchMedia)
     // =========================================================================
     const mm = gsap.matchMedia();
-
-    // Split MESS chars for physical shattering
     const messChars = document.querySelectorAll('.mess-char');
 
-    // DESKTOP CHOREOGRAPHY (>= 769px)
+    // DESKTOP HERO (>= 769px)
     mm.add("(min-width: 769px)", () => {
         const desktopHeroTl = gsap.timeline({
             scrollTrigger: {
@@ -55,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // 1. Initial State -> Physical Mess Breaking
         desktopHeroTl
+            // 1. Mess Shattering with physical velocity
             .to(".mess-texture-bg", {
                 scale: 1.25,
                 filter: "brightness(0.22) contrast(1.4)",
@@ -85,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 duration: 0.8
             }, 0.4);
 
-        // 2. Brand Catalyst Logo Lands with Heavy Momentum
+        // 2. Brand Catalyst Logo Lands
         desktopHeroTl
             .fromTo("#brandCatalyst", 
                 { scale: 0, rotation: -18, opacity: 0, y: -100 },
@@ -98,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 1.3
             );
 
-        // 3. Clean Transformation Mask Expands from Impact Center
+        // 3. Clean Mask Expands
         desktopHeroTl
             .to("#layerClean", {
                 clipPath: "circle(160% at 50% 50%)",
@@ -118,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: "power2.out"
             }, 2.0);
 
-        // 4. Logo Transitions & Product Hero Rises Solid & Grounded
+        // 4. Logo Transitions & Product Hero Rises
         desktopHeroTl
             .to("#brandCatalyst", {
                 scale: 0.45,
@@ -155,14 +154,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: "power2.out"
             }, 3.3);
 
-        // =========================================================================
-        // CATEGORY HORIZONTAL CHOREOGRAPHY (DESKTOP)
-        // =========================================================================
+        // Category Horizontal Choreography
         const catTrack = document.getElementById('categoryTrack');
         const catCards = gsap.utils.toArray('.cat-card-item');
 
         if (catTrack && catCards.length > 0) {
-            const totalShift = (catCards.length - 1) * 38; // percentage shift
+            const totalShift = (catCards.length - 1) * 38;
             const catTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#categoriesSection",
@@ -180,10 +177,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 duration: 4
             });
 
-            // Card Dominance Interpolation
             catCards.forEach((card, idx) => {
                 const startTime = idx * 0.9;
-                
                 catTl.to(card, {
                     scale: 1.0,
                     opacity: 1,
@@ -209,13 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // MOBILE CHOREOGRAPHY (<= 768px, tested at 320px, 360px, 390px, 430px)
+    // MOBILE HERO (<= 768px)
     mm.add("(max-width: 768px)", () => {
         const mobileHeroTl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#heroScene",
                 start: "top top",
-                end: "+=150%", // Fast, natural swipe distance on mobile
+                end: "+=150%",
                 scrub: 0.5,
                 pin: true,
                 anticipatePin: 1
@@ -223,7 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         mobileHeroTl
-            // 1. Mess Dissolve & Shatter
             .to(messChars, {
                 y: -100,
                 opacity: 0,
@@ -240,15 +234,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 filter: "brightness(0.2)",
                 duration: 0.8
             }, 0)
-            
-            // 2. Logo Drop Catalyst
             .fromTo("#brandCatalyst",
                 { scale: 0, opacity: 0, y: -40 },
                 { scale: 0.88, opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.5)" },
                 0.5
             )
-            
-            // 3. Clean Mask Wipe
             .to("#layerClean", {
                 clipPath: "circle(150% at 50% 50%)",
                 duration: 1.2,
@@ -260,8 +250,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 y: -80,
                 duration: 0.5
             }, 1.2)
-            
-            // 4. Product Hero Locks in Comfortably
             .fromTo("#productHeroStage",
                 { y: "60vh", opacity: 1 },
                 { y: "0vh", opacity: 1, duration: 1.0, ease: "power2.out" },
@@ -272,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 duration: 0.5
             }, 1.7);
 
-        // Mobile Category Carousel Dots
+        // Mobile Category Dots
         const catViewport = document.getElementById('categoryViewport');
         const catDots = document.querySelectorAll('.cat-dot');
         const catCards = document.querySelectorAll('.cat-card-item');
@@ -313,26 +301,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================================================================
-    // 02. DYNAMIC COMMERCE ENGINE (DATA.JSON INGESTION)
+    // 02. CATEGORY -> PRODUCT SMOOTH TRANSITION
+    // =========================================================================
+    document.querySelectorAll('.btn-cat-explore, .footer-cat-link').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const filterCat = btn.dataset.filter;
+            if (!filterCat) return;
+
+            // Smooth scroll to Showroom
+            const targetSection = document.getElementById('catalogSection');
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Switch Tab
+            setTimeout(() => {
+                setCategoryTab(filterCat);
+            }, 400);
+        });
+    });
+
+    // =========================================================================
+    // 03. DYNAMIC COMMERCE INGESTION & EDITORIAL SHOWROOM
     // =========================================================================
     fetch('/data.json')
         .then(res => res.text())
         .then(raw => {
-            // Strip potential UTF-8 BOM
             const cleaned = raw.charCodeAt(0) === 0xFEFF ? raw.slice(1) : raw;
             const data = JSON.parse(cleaned);
             allProductsData = data.products || [];
 
-            renderFeaturedProducts(allProductsData);
-            renderFullCatalog(allProductsData);
-            initCatalogFilters();
-            initCartEvents();
+            renderShowroomProducts();
+            initShowroomControls();
         })
         .catch(err => {
-            console.error("Error loading product catalog:", err);
+            console.error("Error loading products:", err);
         });
 
-    // Helper: Categorize product by title keywords
     function categorizeProduct(title) {
         const t = title.toLowerCase();
         if (t.includes('actif') || t.includes('grease') || t.includes('kitchen') || t.includes('mencopol') || t.includes('dish')) {
@@ -349,77 +354,98 @@ document.addEventListener("DOMContentLoaded", () => {
         return 'General';
     }
 
-    // Render 6 Curated Featured Products
-    function renderFeaturedProducts(products) {
-        const featuredGrid = document.getElementById('featuredGrid');
-        if (!featuredGrid) return;
+    function getProductImage(product) {
+        // High-DPI isolated assets for curated flagship items
+        const t = product.title.toLowerCase();
+        if (t.includes('actif') && t.includes('5k')) return '/assets/actif5_isolated.png';
+        if (t.includes('actif') && t.includes('650')) return '/assets/feat_actif650.png';
+        if (t.includes('perwash') && t.includes('5 k')) return '/assets/cat_laundry.png';
+        if (t.includes('soft') && t.includes('5k')) return '/assets/cat_softener.png';
+        if (t.includes('germol') && t.includes('5k')) return '/assets/cat_surfaces.png';
+        if (t.includes('hand') && t.includes('spring') && t.includes('1.5k')) return '/assets/cat_soaps.png';
 
-        // Choose 6 flagship products across disciplines
-        const curatedIndexes = [1, 12, 3, 5, 2, 32]; // Actif 5KG, Perwash Gel, Softener 5KG, Germol 5KG, Hand Soap Spring, Actif 650g
-        const curated = curatedIndexes.map(idx => products[idx] || products[0]);
+        return (product.images && product.images[0]) ? product.images[0].src : '/assets/logo.png';
+    }
 
-        featuredGrid.innerHTML = curated.map(p => {
-            const price = p.variants[0]?.price || "0.00";
-            const img = p.images[0]?.src || '/assets/logo.png';
+    function renderShowroomProducts() {
+        const grid = document.getElementById('showroomGrid');
+        const countIndicator = document.getElementById('visibleItemsCount');
+        const expandBtnRow = document.getElementById('catalogExpandRow');
+        const expandBtnText = document.getElementById('expandCatalogText');
+        if (!grid) return;
+
+        const searchVal = document.getElementById('showroomSearchInput')?.value.trim().toLowerCase() || '';
+
+        // Filter products by current active tab & search
+        let filtered = allProductsData.filter(p => {
             const cat = categorizeProduct(p.title);
             const title = isRtl ? (p.translations?.ar?.title || p.title) : p.title;
+            const matchCat = currentCategoryFilter === 'ALL' || cat === currentCategoryFilter;
+            const matchSearch = searchVal === '' || title.toLowerCase().includes(searchVal) || cat.toLowerCase().includes(searchVal);
+            return matchCat && matchSearch;
+        });
+
+        // If category is "ALL" and user has not clicked expand, show initial curated 6 items
+        const displayLimit = (currentCategoryFilter === 'ALL' && !isCatalogExpanded && searchVal === '') ? 6 : filtered.length;
+        const toDisplay = filtered.slice(0, displayLimit);
+
+        if (countIndicator) {
+            countIndicator.innerText = filtered.length;
+        }
+
+        // Show/hide expand button
+        if (expandBtnRow) {
+            if (currentCategoryFilter === 'ALL' && searchVal === '') {
+                expandBtnRow.style.display = 'block';
+                if (expandBtnText) {
+                    expandBtnText.innerText = isCatalogExpanded ? 
+                        (isRtl ? 'عرض أقل' : 'COLLAPSE TO FEATURED') : 
+                        (isRtl ? 'عرض جميع الـ 46 منتج' : 'VIEW ALL 46 PRODUCTS');
+                }
+            } else {
+                expandBtnRow.style.display = 'none';
+            }
+        }
+
+        if (toDisplay.length === 0) {
+            grid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 4rem; color: var(--text-muted);">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">${isRtl ? 'لم يتم العثور على تركيبات مطابقة.' : 'No formulations found matching your filter.'}</p>
+                    <button class="btn-cat-explore" onclick="window.resetShowroomFilters()">${isRtl ? 'إعادة ضبط البحث' : 'Reset Search'}</button>
+                </div>
+            `;
+            return;
+        }
+
+        grid.innerHTML = toDisplay.map((p, index) => {
+            const price = p.variants[0]?.price || "0.00";
+            const img = getProductImage(p);
+            const cat = categorizeProduct(p.title);
+            const title = isRtl ? (p.translations?.ar?.title || p.title) : p.title;
+            const cardId = `prod-card-${p.id || index}`;
+            const imgId = `prod-img-${p.id || index}`;
 
             return `
-                <div class="product-card">
-                    <div class="card-image-wrap">
-                        <img src="${img}" alt="${title}" loading="lazy">
+                <div class="showroom-card" id="${cardId}" data-category="${cat}">
+                    <div class="card-stage-wrap">
+                        <img src="${img}" alt="${title}" class="card-product-img" id="${imgId}" loading="lazy" crossOrigin="anonymous">
+                        <div class="card-stage-pedestal"></div>
                     </div>
                     <div class="card-body">
-                        <span class="card-category-tag">${cat}</span>
+                        <div class="card-meta-row">
+                            <span class="card-category-kicker">${cat}</span>
+                            <span class="card-volume-tag">${extractVolume(title)}</span>
+                        </div>
                         <h4 class="card-title">${title}</h4>
                         <div class="card-footer">
                             <span class="card-price">${price} EGP</span>
                             <button class="btn-card-add" 
-                                data-id="${p.id}" 
+                                data-id="${p.id || index}" 
                                 data-title="${title.replace(/"/g, '&quot;')}" 
                                 data-price="${price} EGP" 
-                                data-img="${img}">
-                                ${isRtl ? 'إضافة للسلة' : 'Add to Cart'}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }).join('');
-    }
-
-    // Render Full Catalog inside Slide-Over Modal
-    function renderFullCatalog(products) {
-        const grid = document.getElementById('fullCatalogGrid');
-        const countPill = document.getElementById('catalogCountPill');
-        if (!grid) return;
-
-        if (countPill) {
-            countPill.innerText = isRtl ? `${products.length} منتج متوفر` : `${products.length} Products Available`;
-        }
-
-        grid.innerHTML = products.map(p => {
-            const price = p.variants[0]?.price || "0.00";
-            const img = p.images[0]?.src || '/assets/logo.png';
-            const cat = categorizeProduct(p.title);
-            const title = isRtl ? (p.translations?.ar?.title || p.title) : p.title;
-
-            return `
-                <div class="product-card catalog-item" data-category="${cat}" data-title="${title.toLowerCase()}">
-                    <div class="card-image-wrap" style="height: 220px; padding: 1.5rem;">
-                        <img src="${img}" alt="${title}" loading="lazy">
-                    </div>
-                    <div class="card-body" style="padding: 1.25rem;">
-                        <span class="card-category-tag">${cat}</span>
-                        <h4 class="card-title" style="font-size: 1.05rem;">${title}</h4>
-                        <div class="card-footer">
-                            <span class="card-price" style="font-size: 1.25rem;">${price} EGP</span>
-                            <button class="btn-card-add" 
-                                data-id="${p.id}" 
-                                data-title="${title.replace(/"/g, '&quot;')}" 
-                                data-price="${price} EGP" 
-                                data-img="${img}">
-                                ${isRtl ? 'إضافة' : '+ Add'}
+                                data-img="${img}"
+                                data-img-element="${imgId}">
+                                <span>${isRtl ? 'إضافة للسلة' : 'Add to Cart'}</span>
                             </button>
                         </div>
                     </div>
@@ -427,106 +453,196 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }).join('');
 
-        initCartEvents();
+        // Animate entrance of newly rendered cards
+        gsap.fromTo(".showroom-card", 
+            { opacity: 0, y: 25 },
+            { opacity: 1, y: 0, duration: 0.45, stagger: 0.05, ease: "power2.out" }
+        );
+
+        bindAddToCartTriggers();
     }
 
-    // Modal & Catalog Filter Controls
-    const catalogModal = document.getElementById('catalogModal');
-    const catalogCloseBtn = document.getElementById('catalogCloseBtn');
-    const btnViewAllCatalog = document.getElementById('btnViewAllCatalog');
-    const btnOpenCatalogHeader = document.getElementById('btnOpenCatalogHeader');
-    const navShopAll = document.getElementById('navShopAll');
-    const mobileShopAll = document.getElementById('mobileShopAll');
-
-    function openCatalog(filterCategory = 'ALL') {
-        catalogModal?.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        
-        if (filterCategory !== 'ALL') {
-            const pill = document.querySelector(`.filter-pill[data-category="${filterCategory}"]`);
-            pill?.click();
-        }
+    function extractVolume(title) {
+        const match = title.match(/(\d+(?:\.\d+)?\s*(?:KG|K|GM|Gram|ML|k|gm|ml))/i);
+        return match ? match[1].toUpperCase() : 'STANDARD';
     }
 
-    function closeCatalog() {
-        catalogModal?.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    btnViewAllCatalog?.addEventListener('click', () => openCatalog('ALL'));
-    btnOpenCatalogHeader?.addEventListener('click', () => openCatalog('ALL'));
-    navShopAll?.addEventListener('click', (e) => { e.preventDefault(); openCatalog('ALL'); });
-    mobileShopAll?.addEventListener('click', (e) => { e.preventDefault(); openCatalog('ALL'); });
-    catalogCloseBtn?.addEventListener('click', closeCatalog);
-    
-    // Category card explore buttons
-    document.querySelectorAll('.btn-cat-explore').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.dataset.filter;
-            openCatalog(filter);
-        });
-    });
-
-    // Close on overlay click
-    catalogModal?.addEventListener('click', (e) => {
-        if (e.target === catalogModal) closeCatalog();
-    });
-
-    // Filter and Search Logic
-    function initCatalogFilters() {
-        const searchInput = document.getElementById('catalogSearchInput');
-        const pills = document.querySelectorAll('.filter-pill');
-
-        let currentCategory = 'ALL';
-        let currentSearch = '';
-
-        function applyFilters() {
-            const items = document.querySelectorAll('.catalog-item');
-            let visibleCount = 0;
-
-            items.forEach(item => {
-                const itemCat = item.dataset.category;
-                const itemTitle = item.dataset.title;
-
-                const matchCat = currentCategory === 'ALL' || itemCat === currentCategory;
-                const matchSearch = currentSearch === '' || itemTitle.includes(currentSearch);
-
-                if (matchCat && matchSearch) {
-                    item.style.display = 'flex';
-                    visibleCount++;
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            const countPill = document.getElementById('catalogCountPill');
-            if (countPill) {
-                countPill.innerText = isRtl ? `${visibleCount} منتج متوفر` : `${visibleCount} Products Available`;
-            }
-        }
-
-        pills.forEach(pill => {
-            pill.addEventListener('click', () => {
-                pills.forEach(p => p.classList.remove('active'));
-                pill.classList.add('active');
-                currentCategory = pill.dataset.category;
-                applyFilters();
+    function initShowroomControls() {
+        // Tab Filters
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const cat = btn.dataset.cat;
+                setCategoryTab(cat);
             });
         });
+
+        // Search Input
+        const searchInput = document.getElementById('showroomSearchInput');
+        const clearBtn = document.getElementById('clearSearchBtn');
+        const resetBtn = document.getElementById('btnResetFilters');
 
         searchInput?.addEventListener('input', (e) => {
-            currentSearch = e.target.value.trim().toLowerCase();
-            applyFilters();
+            const val = e.target.value.trim();
+            if (clearBtn) clearBtn.style.display = val ? 'block' : 'none';
+            if (resetBtn) resetBtn.style.display = val ? 'inline-block' : 'none';
+            renderShowroomProducts();
+        });
+
+        clearBtn?.addEventListener('click', () => {
+            if (searchInput) searchInput.value = '';
+            clearBtn.style.display = 'none';
+            if (resetBtn) resetBtn.style.display = 'none';
+            renderShowroomProducts();
+        });
+
+        resetBtn?.addEventListener('click', () => {
+            window.resetShowroomFilters();
+        });
+
+        // Expand Catalog Toggle
+        const btnExpandCatalog = document.getElementById('btnExpandCatalog');
+        btnExpandCatalog?.addEventListener('click', () => {
+            isCatalogExpanded = !isCatalogExpanded;
+            renderShowroomProducts();
+            if (isCatalogExpanded) {
+                const grid = document.getElementById('showroomGrid');
+                grid?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    }
+
+    function setCategoryTab(category) {
+        currentCategoryFilter = category;
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.cat === category);
+        });
+
+        const resetBtn = document.getElementById('btnResetFilters');
+        if (resetBtn) {
+            resetBtn.style.display = category !== 'ALL' ? 'inline-block' : 'none';
+        }
+
+        renderShowroomProducts();
+    }
+
+    window.resetShowroomFilters = function() {
+        currentCategoryFilter = 'ALL';
+        isCatalogExpanded = false;
+        const searchInput = document.getElementById('showroomSearchInput');
+        const clearBtn = document.getElementById('clearSearchBtn');
+        const resetBtn = document.getElementById('btnResetFilters');
+        if (searchInput) searchInput.value = '';
+        if (clearBtn) clearBtn.style.display = 'none';
+        if (resetBtn) resetBtn.style.display = 'none';
+
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(b => b.classList.toggle('active', b.dataset.cat === 'ALL'));
+
+        renderShowroomProducts();
+    };
+
+    // =========================================================================
+    // 04. PRODUCT -> CART PARABOLIC FLIGHT ANIMATION (FLIP / GSAP)
+    // =========================================================================
+    function bindAddToCartTriggers() {
+        document.querySelectorAll('.btn-card-add, .btn-hero-cart').forEach(btn => {
+            btn.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const id = btn.dataset.id;
+                const title = btn.dataset.title;
+                const price = btn.dataset.price;
+                const img = btn.dataset.img;
+                const imgElemId = btn.dataset.imgElement;
+
+                // Animate product flight to floating cart
+                const sourceImg = document.getElementById(imgElemId) || btn.closest('.showroom-card')?.querySelector('.card-product-img');
+                const targetCart = document.getElementById('floatingCartBtn');
+
+                if (sourceImg && targetCart) {
+                    animateProductFlight(sourceImg, targetCart, () => {
+                        addToCart({ id, title, price, img });
+                    });
+                } else {
+                    addToCart({ id, title, price, img });
+                }
+
+                // Button visual confirmation
+                const textSpan = btn.querySelector('span') || btn;
+                const origText = textSpan.innerText;
+                textSpan.innerText = isRtl ? '✓ أضيف للسلة' : '✓ Added to Cart';
+                btn.style.background = 'var(--brand-teal-bright)';
+                btn.style.color = 'var(--bg-dark)';
+
+                setTimeout(() => {
+                    textSpan.innerText = origText;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                }, 1500);
+            };
+        });
+    }
+
+    function animateProductFlight(sourceImg, targetCart, onArrive) {
+        const startRect = sourceImg.getBoundingClientRect();
+        const endRect = targetCart.getBoundingClientRect();
+
+        // Create temporary animated clone
+        const ghost = document.createElement('img');
+        ghost.src = sourceImg.src;
+        ghost.className = 'flying-cart-ghost';
+        ghost.style.left = `${startRect.left}px`;
+        ghost.style.top = `${startRect.top}px`;
+        ghost.style.width = `${startRect.width}px`;
+        ghost.style.height = `${startRect.height}px`;
+        document.body.appendChild(ghost);
+
+        const deltaX = (endRect.left + endRect.width / 2) - (startRect.left + startRect.width / 2);
+        const deltaY = (endRect.top + endRect.height / 2) - (startRect.top + startRect.height / 2);
+
+        // GSAP Parabolic Arc
+        gsap.timeline({
+            onComplete: () => {
+                ghost.remove();
+
+                // Target Cart reaction bounce
+                gsap.timeline()
+                    .to(targetCart, { scale: 1.35, duration: 0.12, ease: "power2.out" })
+                    .to(targetCart, { scale: 1.0, duration: 0.35, ease: "elastic.out(1.2, 0.4)" });
+
+                // Call add to cart and animate badge
+                onArrive();
+
+                const badge = document.getElementById('floatingCartBadge');
+                if (badge) {
+                    gsap.fromTo(badge, 
+                        { scale: 0.2, rotation: isRtl ? 20 : -20 },
+                        { scale: 1.0, rotation: 0, duration: 0.4, ease: "back.out(2.5)" }
+                    );
+                }
+            }
+        })
+        .to(ghost, {
+            scale: 0.2,
+            rotation: isRtl ? -20 : 20,
+            opacity: 0.85,
+            x: deltaX,
+            y: deltaY,
+            duration: 0.75,
+            ease: "power2.in"
         });
     }
 
     // =========================================================================
-    // 03. CART & WHATSAPP CHECKOUT LOGIC
+    // 05. CART DRAWER & WHATSAPP CHECKOUT
     // =========================================================================
-    const cartTrigger = document.getElementById('cartTrigger');
+    const floatingCartBtn = document.getElementById('floatingCartBtn');
     const cartDrawerOverlay = document.getElementById('cartDrawerOverlay');
     const cartCloseBtn = document.getElementById('cartCloseBtn');
-    const cartBadge = document.getElementById('cartBadge');
+    const floatingCartBadge = document.getElementById('floatingCartBadge');
     const cartDrawerCount = document.getElementById('cartDrawerCount');
     const cartItemsList = document.getElementById('cartItemsList');
     const cartTotalValue = document.getElementById('cartTotalValue');
@@ -543,34 +659,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = '';
     }
 
-    cartTrigger?.addEventListener('click', openCart);
+    floatingCartBtn?.addEventListener('click', openCart);
     cartCloseBtn?.addEventListener('click', closeCart);
     btnStartShopping?.addEventListener('click', () => {
         closeCart();
-        openCatalog('ALL');
+        document.getElementById('catalogSection')?.scrollIntoView({ behavior: 'smooth' });
     });
 
     cartDrawerOverlay?.addEventListener('click', (e) => {
         if (e.target === cartDrawerOverlay) closeCart();
     });
-
-    function initCartEvents() {
-        document.querySelectorAll('.btn-card-add, .btn-hero-cart').forEach(btn => {
-            btn.onclick = () => {
-                const id = btn.dataset.id;
-                const title = btn.dataset.title;
-                const price = btn.dataset.price;
-                const img = btn.dataset.img;
-
-                addToCart({ id, title, price, img });
-
-                // Visual button feedback
-                const prev = btn.innerText;
-                btn.innerText = isRtl ? '✓ أضيف بنجاح' : '✓ Added!';
-                setTimeout(() => { btn.innerText = prev; }, 1400);
-            };
-        });
-    }
 
     function addToCart(product) {
         const existing = cart.find(item => item.id === product.id);
@@ -580,13 +678,14 @@ document.addEventListener("DOMContentLoaded", () => {
             cart.push({ ...product, qty: 1 });
         }
         updateCartUI();
-        openCart();
     }
 
     function updateCartUI() {
         const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
-        if (cartBadge) cartBadge.innerText = totalItems;
-        if (cartDrawerCount) cartDrawerCount.innerText = totalItems;
+        if (floatingCartBadge) floatingCartBadge.innerText = totalItems;
+        if (cartDrawerCount) {
+            cartDrawerCount.innerText = isRtl ? `${totalItems} منتج` : `${totalItems} Items`;
+        }
 
         const emptyState = document.getElementById('cartEmptyState');
         const footer = document.getElementById('cartDrawerFooter');
@@ -615,9 +714,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h4 class="cart-item-title">${item.title}</h4>
                         <div class="cart-item-price">${item.price}</div>
                         <div class="cart-qty-ctrls">
-                            <button class="btn-qty" onclick="window.changeCartQty(${idx}, -1)">-</button>
-                            <span style="font-weight:700; font-size:0.95rem;">${item.qty}</span>
-                            <button class="btn-qty" onclick="window.changeCartQty(${idx}, 1)">+</button>
+                            <button class="btn-qty" onclick="window.changeCartQty(${idx}, -1)" aria-label="Decrease quantity">-</button>
+                            <span style="font-weight:800; font-size:0.95rem; min-width:20px; text-align:center;">${item.qty}</span>
+                            <button class="btn-qty" onclick="window.changeCartQty(${idx}, 1)" aria-label="Increase quantity">+</button>
                         </div>
                     </div>
                 </div>
@@ -643,8 +742,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let totalEGP = 0;
         let message = isRtl ? 
-            "مرحباً شركة بير كلين، أود تأكيد طلب المنتجات التالية عبر الموقع الإلكتروني:\n\n" : 
-            "Hello Per Clean Egypt, I would like to place an order for the following items:\n\n";
+            "مرحباً شركة بير كلين، أود تأكيد طلب المنتجات التالية عبر الموقع الرسمي:\n\n" : 
+            "Hello Per Clean Egypt, I would like to place an order from your official website:\n\n";
 
         cart.forEach((item, i) => {
             const unitPrice = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
@@ -654,10 +753,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         message += isRtl ? 
-            `\nالإجمالي التقديري: ${totalEGP.toFixed(2)} ج.م\nيرجى تأكيد التوصيل وبيانات الاستلام.` : 
-            `\nEstimated Total: ${totalEGP.toFixed(2)} EGP\nPlease confirm availability and delivery details.`;
+            `\nالإجمالي التقديري: ${totalEGP.toFixed(2)} ج.م\nيرجى تأكيد التوصيل وبيانات الشحن.` : 
+            `\nEstimated Total: ${totalEGP.toFixed(2)} EGP\nPlease confirm product availability and doorstep delivery details.`;
 
-        const phone = "201000000000"; // Replace with verified brand number
+        const phone = "201000000000"; // Replace with verified brand phone
         const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
     });
