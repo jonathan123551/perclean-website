@@ -2,203 +2,470 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <title>بير كلين - التحول</title>
-    <link rel="stylesheet" href="/assets/perclean.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>بير كلين — التحول | العناية المنزلية والصناعية الفائقة</title>
+    <meta name="description" content="عش تجربة التحول من الفوضى إلى النظافة الفائقة. حلول تنظيف وتطهير متطورة مصممة بأعلى معايير الجودة.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Cairo font for Arabic -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Cairo', var(--font-heading);
-        }
-        .nav-links a { margin-left: 0; margin-right: 2rem; }
-        .scene-dirty { padding-left: 0; padding-right: 10%; align-items: flex-start; }
-        .scene-clean { padding-right: 0; padding-left: 10%; align-items: flex-end; }
-        .cat-item::before { left: auto; right: -20px; }
-        .cat-item.active { padding-left: 0; padding-right: 20px; }
-        .stage-info { padding-left: 2rem; padding-right: 0; }
-        
-        @media (max-width: 1024px) {
-            .scene-dirty { padding-right: 5%; }
-            .scene-clean { padding-left: 5%; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/perclean.css">
 </head>
-<body>
+<body class="rtl-mode">
 
-    <!-- Floating Cart -->
-    <div class="floating-cart">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-        <span class="cart-count">0</span>
+    <!-- Subtle Background Grain & Ambient Light -->
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="/ar/" class="brand-link" aria-label="بير كلين الرئيسية">
+                <img src="/assets/logo.png" alt="شعار بير كلين" class="header-logo">
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#heroScene" class="nav-item">قصة التحول</a>
+                <a href="#categoriesSection" class="nav-item">التصنيفات</a>
+                <a href="#featuredSection" class="nav-item">المميزة</a>
+                <a href="#catalogModal" class="nav-item" id="navShopAll">جميع المنتجات</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="/" class="lang-switch" title="English Version">
+                    <span class="lang-globe">🌐</span>
+                    <span class="lang-label">English</span>
+                </a>
+                
+                <button class="cart-trigger-btn" id="cartTrigger" aria-label="عرض سلة المشتريات">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="تبديل القائمة">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide Menu -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-links">
+            <a href="#heroScene" class="mobile-nav-link">قصة التحول</a>
+            <a href="#categoriesSection" class="mobile-nav-link">التصنيفات</a>
+            <a href="#featuredSection" class="mobile-nav-link">المنتجات المميزة</a>
+            <a href="#catalogModal" class="mobile-nav-link" id="mobileShopAll">جميع الـ 46 منتج</a>
+            <a href="/" class="mobile-nav-link lang-mobile">English / الإنجليزية</a>
+        </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="#"><img src="/assets/logo.png" alt="بير كلين" class="nav-logo-img"></a>
-            </div>
-            
-            <button class="menu-toggle" aria-label="تبديل القائمة">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
-            </button>
-
-            <div class="nav-links">
-                <a href="#shop">المتجر</a>
-                <a href="/">English</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 01. CINEMATIC HERO -->
-    <section class="scene-wrapper">
-        <div class="cinematic-viewport">
-            
-            <!-- Layer 1: MESS -->
-            <div class="layer layer-mess">
-                <div class="mess-bg"></div>
-                <div class="mess-typography">
-                    <h1 class="mess-text" style="font-family: inherit">فوضى</h1>
-                    <p class="mess-sub" style="font-family: inherit">زيوت محترقة. دهون عنيدة. بقع صعبة.</p>
-                </div>
-            </div>
-
-            <!-- Layer 2: CLEAN (Revealed via mask) -->
-            <div class="layer layer-clean">
-                <div class="clean-bg"></div>
-                <div class="clean-typography">
-                    <h1 class="clean-text" style="font-family: inherit">نظافة</h1>
-                </div>
-            </div>
-            
-            <!-- Layer 3: THE BRAND CATALYST -->
-            <div class="brand-catalyst-center">
-                <img src="/assets/logo.png" alt="بير كلين" />
-            </div>
-
-            <!-- Layer 4: PRODUCT HERO -->
-            <div class="product-hero-center">
-                <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121" alt="بير أكتيف" />
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 02. CATEGORY EXPERIENCE -->
-    <section class="category-experience">
-        <div class="category-header">
-            <h2>اكتشف الحلول</h2>
-            <p>عناية مستهدفة لكل سطح في منزلك.</p>
-        </div>
-        <div class="category-horizontal-scroll">
-            <div class="category-track">
+    <!-- MAIN EXPERIENCE -->
+    <main>
+        
+        <!-- 01. CINEMATIC HERO SEQUENCE (MESS -> TRANSFORMATION -> LOGO -> CLEAN -> PRODUCT) -->
+        <section class="scene-wrapper" id="heroScene">
+            <div class="cinematic-viewport">
                 
-                <div class="cat-panel">
-                    <div class="cat-card">
-                        <div class="cat-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121" alt="المطبخ" />
-                        </div>
-                        <div class="cat-content">
-                            <h3>عناية المطبخ</h3>
-                            <button class="btn-outline" onclick="document.getElementById('shop').scrollIntoView()">اكتشف &larr;</button>
-                        </div>
+                <!-- LAYER 1: THE MESS -->
+                <div class="layer layer-mess" id="layerMess">
+                    <div class="mess-texture-bg"></div>
+                    <div class="mess-vignette"></div>
+                    <div class="mess-particles" id="messParticles"></div>
+                    
+                    <div class="mess-hero-content">
+                        <span class="tag-mess">المرحلة 01 — التحدي</span>
+                        <h1 class="mess-title">
+                            <span class="mess-char">فـ</span>
+                            <span class="mess-char">و</span>
+                            <span class="mess-char">ضـ</span>
+                            <span class="mess-char">ى</span>
+                        </h1>
+                        <p class="mess-subtitle">زيوت محترقة. دهون متكلسة. بقع مستعصية.</p>
+                    </div>
+
+                    <div class="scroll-indicator" id="scrollIndicator">
+                        <span class="scroll-mouse">
+                            <span class="scroll-wheel"></span>
+                        </span>
+                        <span class="scroll-text">مرر للتحول</span>
                     </div>
                 </div>
 
-                <div class="cat-panel">
-                    <div class="cat-card">
-                        <div class="cat-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/6C87C2BD-02AB-461B-BDDA-780DB8DEBA62.jpg?v=1784721867" alt="الغسيل" />
-                        </div>
-                        <div class="cat-content">
-                            <h3>عناية الغسيل</h3>
-                            <button class="btn-outline" onclick="document.getElementById('shop').scrollIntoView()">اكتشف &larr;</button>
-                        </div>
+                <!-- LAYER 2: THE LIQUID TRANSFORMATION -->
+                <div class="layer layer-clean-reveal" id="layerClean">
+                    <div class="clean-liquid-bg"></div>
+                    <div class="clean-ambient-light"></div>
+                    
+                    <!-- Clean State Typography -->
+                    <div class="clean-hero-content">
+                        <span class="tag-clean">المرحلة 02 — التركيبة العلمية</span>
+                        <h2 class="clean-title">نظافة</h2>
+                        <p class="clean-subtitle">نقاء الأسطح. صفاء فائق.</p>
                     </div>
                 </div>
 
-                <div class="cat-panel">
-                    <div class="cat-card">
-                        <div class="cat-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/IMG-4633.jpg?v=1761828559" alt="الأقمشة" />
-                        </div>
-                        <div class="cat-content">
-                            <h3>منعمات الأقمشة</h3>
-                            <button class="btn-outline" onclick="document.getElementById('shop').scrollIntoView()">اكتشف &larr;</button>
-                        </div>
+                <!-- LAYER 3: THE BRAND CATALYST (Per Clean Logo) -->
+                <div class="brand-catalyst-container" id="brandCatalyst">
+                    <div class="catalyst-glow-ring"></div>
+                    <div class="catalyst-logo-box">
+                        <img src="/assets/logo.png" alt="شعار بير كلين" class="catalyst-img">
                     </div>
+                    <div class="catalyst-caption">عنصر التحول الفعال</div>
                 </div>
 
-                <div class="cat-panel">
-                    <div class="cat-card">
-                        <div class="cat-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3DD3BB6C-75FE-472B-B1AC-3A6FFBDF35F5.jpg?v=1784721511" alt="الأسطح" />
-                        </div>
-                        <div class="cat-content">
-                            <h3>مطهرات الأسطح</h3>
-                            <button class="btn-outline" onclick="document.getElementById('shop').scrollIntoView()">اكتشف &larr;</button>
-                        </div>
+                <!-- LAYER 4: THE PRODUCT HERO (Per Actif 5KG Emerging Solid & Grounded) -->
+                <div class="product-hero-stage" id="productHeroStage">
+                    <div class="product-glow-backdrop"></div>
+                    
+                    <div class="product-bottle-wrapper" id="productBottleWrapper">
+                        <img src="/assets/actif5_isolated.png" alt="بير أكتيف 5 كجم مزيل دهون" class="hero-bottle-img">
+                        <div class="product-contact-shadow"></div>
                     </div>
-                </div>
 
-                <div class="cat-panel">
-                    <div class="cat-card">
-                        <div class="cat-image">
-                            <img src="https://cdn.shopify.com/s/files/1/0712/4038/4697/files/1C06BF29-BCAC-43EF-8938-ECC97D29B292.jpg?v=1784721432" alt="الأساسيات" />
-                        </div>
-                        <div class="cat-content">
-                            <h3>صابون اليدين</h3>
-                            <button class="btn-outline" onclick="document.getElementById('shop').scrollIntoView()">اكتشف &larr;</button>
+                    <div class="product-hero-specs" id="productHeroSpecs">
+                        <span class="spec-kicker">القوة الصناعية الفائقة</span>
+                        <h3 class="spec-title">بير أكتيف 5 كجم</h3>
+                        <p class="spec-desc">مذيب الدهون والشحوم العنيدة للمطابخ والشوايات والمداخن والأسطح الصناعية.</p>
+                        <div class="spec-footer">
+                            <span class="spec-price">450.00 ج.م</span>
+                            <button class="btn-hero-cart" data-id="actif-5kg" data-title="بير أكتيف 5 كجم مزيل شحوم" data-price="450.00 ج.م" data-img="/assets/actif5_isolated.png">
+                                إضافة سريعة للسلة
+                            </button>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 03. SHOP FEATURED & ALL -->
-    <section id="shop" class="shopping-experience">
-        <div class="shop-container">
-            <div class="shop-header">
-                <h2>منتجات مميزة</h2>
-            </div>
-            
-            <div class="product-grid featured-grid">
-                <!-- We will inject the first 6 products here via JS -->
+        <!-- 02. CATEGORY EXPERIENCE -->
+        <section class="category-experience-section" id="categoriesSection">
+            <div class="category-section-intro">
+                <span class="section-kicker">عناية متكاملة للمنزل</span>
+                <h2 class="section-heading">ما الذي ترغب في تنظيفه اليوم؟</h2>
+                <p class="section-subtext">خمسة تخصصات كيميائية مصممة خصيصاً لكل ركن في منزلك ومنشأتك.</p>
             </div>
 
-            <div class="shop-all-trigger">
-                <button class="btn-solid" id="btn-load-all">عرض كل الـ 46 منتج</button>
-            </div>
-            
-            <div class="product-grid full-grid" style="display:none;">
-                <!-- Full catalog injected here via JS -->
-            </div>
-        </div>
-    </section>
+            <div class="category-viewport" id="categoryViewport">
+                <div class="category-track" id="categoryTrack">
+                    
+                    <!-- Card 01: Kitchen Care -->
+                    <div class="cat-card-item is-dominant" data-index="0">
+                        <div class="cat-card-inner">
+                            <span class="cat-num">01 // 05</span>
+                            <div class="cat-visual">
+                                <div class="cat-img-halo"></div>
+                                <img src="/assets/actif5_isolated.png" alt="عناية المطبخ" class="cat-floating-product">
+                                <div class="cat-item-shadow"></div>
+                            </div>
+                            <div class="cat-details">
+                                <span class="cat-badge">قوة فائقة</span>
+                                <h3 class="cat-name">عناية المطبخ والدهون</h3>
+                                <p class="cat-desc">مركبات قلوية متطورة تفتت الزيوت المحترقة، الكربون، المداخن، والستانلس ستيل.</p>
+                                <div class="cat-actions">
+                                    <button class="btn-cat-explore" data-filter="Kitchen">استكشف المجموعة &larr;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 04. BRAND MESSAGE -->
-    <section class="brand-message-scene">
-        <div class="brand-message-content">
-            <img src="/assets/logo.png" alt="بير كلين" class="footer-logo-large">
-            <h2>الارتقاء بالعناية المنزلية.</h2>
-            <p>تركيبات استثنائية مصممة لفعالية لا مثيل لها.</p>
-        </div>
-    </section>
+                    <!-- Card 02: Laundry Care -->
+                    <div class="cat-card-item" data-index="1">
+                        <div class="cat-card-inner">
+                            <span class="cat-num">02 // 05</span>
+                            <div class="cat-visual">
+                                <div class="cat-img-halo"></div>
+                                <img src="/assets/cat_laundry.png" alt="جل الغسيل" class="cat-floating-product">
+                                <div class="cat-item-shadow"></div>
+                            </div>
+                            <div class="cat-details">
+                                <span class="cat-badge">تركيبة إنزيمية</span>
+                                <h3 class="cat-name">جل الغسيل الأوتوماتيك</h3>
+                                <p class="cat-desc">جل غسيل فائق الكفاءة بإنزيمات نشطة تحافظ على الألوان وتزيل أعتى البقع.</p>
+                                <div class="cat-actions">
+                                    <button class="btn-cat-explore" data-filter="Laundry">استكشف المجموعة &larr;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Footer -->
+                    <!-- Card 03: Fabric Softeners -->
+                    <div class="cat-card-item" data-index="2">
+                        <div class="cat-card-inner">
+                            <span class="cat-num">03 // 05</span>
+                            <div class="cat-visual">
+                                <div class="cat-img-halo"></div>
+                                <img src="/assets/cat_softener.png" alt="منعم الأقمشة" class="cat-floating-product">
+                                <div class="cat-item-shadow"></div>
+                            </div>
+                            <div class="cat-details">
+                                <span class="cat-badge">عطر دائم لأسابيع</span>
+                                <h3 class="cat-name">منعمات الأقمشة والملابس</h3>
+                                <p class="cat-desc">نعومة مخملية مانعة للشحنات مع كبسولات عطرية تدوم في الأنسجة طويلاً.</p>
+                                <div class="cat-actions">
+                                    <button class="btn-cat-explore" data-filter="Softener">استكشف المجموعة &larr;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 04: Disinfectants -->
+                    <div class="cat-card-item" data-index="3">
+                        <div class="cat-card-inner">
+                            <span class="cat-num">04 // 05</span>
+                            <div class="cat-visual">
+                                <div class="cat-img-halo"></div>
+                                <img src="/assets/cat_surfaces.png" alt="مطهرات الأسطح" class="cat-floating-product">
+                                <div class="cat-item-shadow"></div>
+                            </div>
+                            <div class="cat-details">
+                                <span class="cat-badge">تطهير بنسبة 99.9%</span>
+                                <h3 class="cat-name">المطهرات الطبية للأسطح</h3>
+                                <p class="cat-desc">جيرمول ومطهرات متعددة الأغراض للرخام، السيراميك، وأسطح التلامس اليومية.</p>
+                                <div class="cat-actions">
+                                    <button class="btn-cat-explore" data-filter="Disinfectant">استكشف المجموعة &larr;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 05: Hand Care -->
+                    <div class="cat-card-item" data-index="4">
+                        <div class="cat-card-inner">
+                            <span class="cat-num">05 // 05</span>
+                            <div class="cat-visual">
+                                <div class="cat-img-halo"></div>
+                                <img src="/assets/cat_soaps.png" alt="صابون اليدين" class="cat-floating-product">
+                                <div class="cat-item-shadow"></div>
+                            </div>
+                            <div class="cat-details">
+                                <span class="cat-badge">مختبر للجلد والحساسية</span>
+                                <h3 class="cat-name">صابون اليدين الفاخر</h3>
+                                <p class="cat-desc">تركيبات غنية بالمرطبات مع روائح السكر الوردي، الربيع، والتفاح الأخضر المنعش.</p>
+                                <div class="cat-actions">
+                                    <button class="btn-cat-explore" data-filter="Hand Soap">استكشف المجموعة &larr;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Category Mobile Indicators -->
+            <div class="category-mobile-indicators">
+                <span class="cat-dot active" data-target="0"></span>
+                <span class="cat-dot" data-target="1"></span>
+                <span class="cat-dot" data-target="2"></span>
+                <span class="cat-dot" data-target="3"></span>
+                <span class="cat-dot" data-target="4"></span>
+            </div>
+        </section>
+
+        <!-- 03. FEATURED PRODUCTS -->
+        <section class="featured-section" id="featuredSection">
+            <div class="featured-container">
+                <div class="section-header-row">
+                    <div>
+                        <span class="section-kicker">تركيبات مختارة</span>
+                        <h2 class="section-heading">أبرز المنتجات الأساسية</h2>
+                    </div>
+                    <button class="btn-open-catalog-top" id="btnOpenCatalogHeader">
+                        تصفح جميع الـ 46 منتج &larr;
+                    </button>
+                </div>
+
+                <!-- Curated 6 Featured Products Grid -->
+                <div class="featured-grid" id="featuredGrid">
+                    <!-- Populated cleanly via JS from data.json -->
+                </div>
+
+                <div class="catalog-trigger-center">
+                    <button class="btn-view-all-large" id="btnViewAllCatalog">
+                        <span>عرض الكتالوج الكامل (46 منتجاً)</span>
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg)">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. SHORT BRAND MESSAGE / PROMISE -->
+        <section class="brand-promise-section">
+            <div class="promise-backdrop"></div>
+            <div class="promise-content">
+                <img src="/assets/logo.png" alt="علامة بير كلين" class="promise-logo">
+                <h2 class="promise-title">نحول العناية المنزلية إلى علم متكامل.</h2>
+                <p class="promise-body">كل تركيبة من بير كلين مصنعة بمواد خافضة للتوتر السطحي بتركيز صناعي. وفر كبير، تفتيت فوري للدهون، وأمان لا مساومة عليه لأسرتك ومنزلك.</p>
+                <div class="promise-badges">
+                    <div class="p-badge">
+                        <span class="p-val">100%</span>
+                        <span class="p-lbl">توريد مباشر من المصنع</span>
+                    </div>
+                    <div class="p-badge">
+                        <span class="p-val">5 كجم / 1.5 كجم</span>
+                        <span class="p-lbl">تركيزات فائقة التوفير</span>
+                    </div>
+                    <div class="p-badge">
+                        <span class="p-val">فوري</span>
+                        <span class="p-lbl">تأكيد وشحن عبر واتساب</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. DIRECT CALL TO ACTION -->
+        <section class="cta-direct-section">
+            <div class="cta-card">
+                <div class="cta-text">
+                    <h3>هل أنت مستعد لنظافة فائقة في منزلك؟</h3>
+                    <p>اطلب مباشرة عبر واتساب لتأكيد طلبك وتوصيله حتى باب منزلك في جميع أنحاء مصر.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="https://wa.me/201000000000?text=مرحباً%2C%20أود%20طلب%20منتجات%20بير%20كلين." target="_blank" rel="noopener" class="btn-whatsapp-direct">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.03.8 0.81-2.95-.19-.3a8.18 8.18 0 0 1-1.25-4.56c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/>
+                        </svg>
+                        <span>تواصل واطلب عبر واتساب</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 بير كلين. جميع الحقوق محفوظة.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="/assets/logo.png" alt="بير كلين" class="footer-logo">
+                <p class="footer-tagline">قوة صناعية. نظافة منزلية فائقة.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <a href="#heroScene">قصة التحول</a>
+                    <a href="#categoriesSection">الحلول المتكاملة</a>
+                    <a href="#featuredSection">المنتجات المميزة</a>
+                    <a href="#catalogModal" class="trigger-modal-link">جميع الـ 46 منتج</a>
+                </div>
+                <div class="footer-col">
+                    <h4>التصنيفات</h4>
+                    <a href="#" class="filter-link" data-filter="Kitchen">عناية المطبخ</a>
+                    <a href="#" class="filter-link" data-filter="Laundry">جل الغسيل</a>
+                    <a href="#" class="filter-link" data-filter="Softener">منعمات الأقمشة</a>
+                    <a href="#" class="filter-link" data-filter="Disinfectant">المطهرات</a>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل مباشر</h4>
+                    <p>القاهرة، جمهورية مصر العربية</p>
+                    <p>خدمة العملاء: 201000000000+</p>
+                    <p><a href="/">Switch to English (الإنجليزية)</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 شركة بير كلين مصر. جميع الحقوق محفوظة. تصنيع كيميائي معتمد.</p>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- SLIDE-OVER CATALOG MODAL -->
+    <div class="catalog-modal-overlay" id="catalogModal">
+        <div class="catalog-modal-sheet">
+            <div class="catalog-modal-header">
+                <div class="catalog-modal-title">
+                    <h3>كتالوج منتجات بير كلين الكامل</h3>
+                    <span class="catalog-count-pill" id="catalogCountPill">46 منتج متوفر</span>
+                </div>
+                <button class="catalog-close-btn" id="catalogCloseBtn" aria-label="إغلاق الكتالوج">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Filter and Search Toolbar -->
+            <div class="catalog-toolbar">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="catalogSearchInput" placeholder="ابحث بالاسم، الحجم (مثال: 5 كجم)، أو الكلمة المفتاحية...">
+                </div>
+
+                <div class="filter-pills" id="filterPills">
+                    <button class="filter-pill active" data-category="ALL">الكل (46)</button>
+                    <button class="filter-pill" data-category="Kitchen">المطبخ والدهون</button>
+                    <button class="filter-pill" data-category="Laundry">جل الغسيل</button>
+                    <button class="filter-pill" data-category="Softener">عناية الأقمشة</button>
+                    <button class="filter-pill" data-category="Disinfectant">المطهرات</button>
+                    <button class="filter-pill" data-category="Hand Soap">غسيل اليدين</button>
+                </div>
+            </div>
+
+            <!-- Catalog Items Grid -->
+            <div class="catalog-modal-body">
+                <div class="catalog-grid" id="fullCatalogGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE-OVER CART DRAWER -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+        <div class="cart-drawer" id="cartDrawer">
+            <div class="cart-drawer-header">
+                <h3>سلة المشتريات (<span id="cartDrawerCount">0</span>)</h3>
+                <button class="cart-close-btn" id="cartCloseBtn" aria-label="إغلاق السلة">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="cart-items-list" id="cartItemsList">
+                <div class="cart-empty-state" id="cartEmptyState">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <p>سلتك فارغة حالياً.</p>
+                    <button class="btn-start-shopping" id="btnStartShopping">تصفح المنتجات</button>
+                </div>
+            </div>
+
+            <div class="cart-drawer-footer" id="cartDrawerFooter">
+                <div class="cart-subtotal-row">
+                    <span>الإجمالي التقديري:</span>
+                    <strong class="cart-total-value" id="cartTotalValue">0.00 ج.م</strong>
+                </div>
+                <button class="btn-checkout-whatsapp" id="btnCheckoutWhatsApp">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.03.8 0.81-2.95-.19-.3a8.18 8.18 0 0 1-1.25-4.56c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/>
+                    </svg>
+                    <span>إتمام الطلب عبر واتساب</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="/assets/perclean.js"></script>
 </body>
 </html>
