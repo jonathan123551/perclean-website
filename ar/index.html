@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>بير كلين — التحول | فيلم العلامة التجارية التفاعلي والكيمياء النقية</title>
-    <meta name="description" content="عش تجربة التحول من الفوضى إلى النظافة الفائقة. حلول تنظيف وتطهير متطورة مصممة بأعلى معايير الجودة.">
+    <title>بير كلين — كيمياء نقية. نظافة فائقة.</title>
+    <meta name="description" content="عش تجربة التحول من الفوضى اليومية إلى النظافة المعمارية النقية. حلول تنظيف وتطهير فائقة الجودة بمعايير صناعية متطورة.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +15,7 @@
 </head>
 <body class="rtl-mode">
 
-    <!-- Atmospheric Deep Lighting -->
-    <div class="ambient-glow"></div>
-
-    <!-- Navigation Header -->
+    <!-- Minimal Fixed Header -->
     <header class="site-header" id="siteHeader">
         <div class="header-inner">
             <a href="/ar/" class="brand-link" aria-label="بير كلين الرئيسية">
@@ -26,19 +23,18 @@
             </a>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="#cameraScene" class="nav-item">فيلم العلامة</a>
-                <a href="#categoriesSection" class="nav-item">التخصصات</a>
-                <a href="#catalogSection" class="nav-item">المجموعة الكاملة</a>
-                <a href="#brandPromise" class="nav-item">علم التركيبات</a>
+                <a href="#brandFilm" class="nav-item">فيلم العلامة</a>
+                <a href="#disciplines" class="nav-item">التخصصات</a>
+                <a href="#showroom" class="nav-item">معرض المنتجات</a>
             </nav>
 
             <div class="header-actions">
                 <a href="/" class="lang-switch" title="English Version">
-                    <span class="lang-globe">🌐</span>
-                    <span class="lang-label">English</span>
+                    <span>🌐</span>
+                    <span>English</span>
                 </a>
 
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="تبديل القائمة">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
                     <span></span>
                     <span></span>
                 </button>
@@ -46,20 +42,9 @@
         </div>
     </header>
 
-    <!-- Mobile Slide Menu -->
-    <div class="mobile-nav-drawer" id="mobileNavDrawer">
-        <div class="mobile-nav-links">
-            <a href="#cameraScene" class="mobile-nav-link">فيلم العلامة</a>
-            <a href="#categoriesSection" class="mobile-nav-link">التخصصات</a>
-            <a href="#catalogSection" class="mobile-nav-link">المجموعة الكاملة</a>
-            <a href="#brandPromise" class="mobile-nav-link">علم التركيبات</a>
-            <a href="/" class="mobile-nav-link lang-mobile">English / الإنجليزية</a>
-        </div>
-    </div>
-
-    <!-- Minimal Floating Cart Button -->
-    <button class="floating-cart-icon-btn" id="floatingCartBtn" aria-label="عرض سلة المشتريات">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+    <!-- Floating Minimal Shopping Bag (Quiet & Refined) -->
+    <button class="floating-cart-btn" id="floatingCartBtn" aria-label="عرض حقيبة المشتريات">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <path d="M16 10a4 4 0 0 1-8 0"></path>
@@ -67,422 +52,530 @@
         <span class="cart-icon-badge" id="cartBadge">0</span>
     </button>
 
-    <!-- MAIN EXPERIENCE -->
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <a href="#brandFilm" class="mobile-nav-link">فيلم العلامة</a>
+        <a href="#disciplines" class="mobile-nav-link">التخصصات</a>
+        <a href="#showroom" class="mobile-nav-link">معرض المنتجات</a>
+        <a href="/" class="mobile-nav-link" style="color: var(--brand-teal);">English / الإنجليزية</a>
+    </div>
+
     <main>
         
-        <!-- 01. THE CAMERA IS THE MAIN CHARACTER (3D SPATIAL FILM SEQUENCE) -->
-        <section class="camera-film-section" id="cameraScene">
-            <div class="camera-stage" id="cameraStage">
-                <div class="camera-world" id="cameraWorld">
+        <!-- =================================================================== -->
+        <!-- ACT I: THE BRAND FILM (MESS -> CATALYST -> CLEAN)                   -->
+        <!-- =================================================================== -->
+        <section class="brand-film-section" id="brandFilm">
+            <div class="film-stage" id="filmStage">
+                
+                <!-- MOMENT 01: THE MESS -->
+                <div class="film-layer layer-mess" id="layerMess">
+                    <img src="/assets/shot01_mess.jpg" alt="فوضى المطبخ اليومية" class="film-bg-media">
+                    <div class="film-cinematic-vignette"></div>
+                    <div class="film-text-wrap">
+                        <h1 class="film-statement serif">كل سطح يروي حكاية.</h1>
+                        <p class="film-subtext">واقع الحياة اليومية في كل منزل</p>
+                    </div>
+                </div>
+
+                <!-- MOMENT 02: THE ACTIVE INTERVENTION -->
+                <div class="film-layer layer-catalyst" id="layerCatalyst">
+                    <img src="/assets/shot03_foam.jpg" alt="رغوة التفكيك الفعالة" class="film-bg-media">
+                    <div class="film-cinematic-vignette"></div>
+                    <div class="film-text-wrap">
+                        <h2 class="film-statement">التركيبة تفكك الروابط.</h2>
+                        <p class="film-subtext">تفتيت فوري لجزيئات الدهون والكربون المستعصية</p>
+                    </div>
+                </div>
+
+                <!-- MOMENT 03: THE BRAND CATALYST -->
+                <div class="film-layer layer-vortex" id="layerVortex">
+                    <img src="/assets/shot05_logo_vortex.jpg" alt="دوامة النقاء المائي" class="film-bg-media">
+                    <div class="film-cinematic-vignette"></div>
+                    <div class="vortex-logo-container">
+                        <img src="/assets/logo.png" alt="شعار بير كلين المحفز" class="vortex-logo-img">
+                        <div class="film-text-wrap" style="margin-top: 1.5rem;">
+                            <h2 class="film-statement" style="font-size: clamp(2rem, 5vw, 3.8rem);">كيمياء نقية.</h2>
+                            <p class="film-subtext">تركيبة متطورة صُممت بلا مساومة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOMENT 04: PRISTINE DAYLIGHT -->
+                <div class="film-layer layer-clean" id="layerClean">
+                    <img src="/assets/shot07_kitchen_wide.jpg" alt="المطبخ المشرق بنظافة فائقة" class="film-bg-media">
+                    <div class="film-cinematic-vignette" style="background: radial-gradient(circle at center, transparent 40%, rgba(255, 255, 255, 0.4) 100%);"></div>
                     
-                    <!-- SHOT 01: A LITTLE MESS -->
-                    <div class="shot-layer shot-01" id="shot01">
-                        <div class="shot-media-wrap">
-                            <img src="/assets/shot01_mess.jpg" alt="فوضى يومية" class="shot-bg-img">
-                            <div class="shot-cinematic-vignette"></div>
+                    <div class="clean-hero-content">
+                        <div class="clean-hero-copy">
+                            <h2 class="clean-hero-headline">نظافة فائقة.</h2>
+                            <p class="clean-hero-lead">دقة كيميائية تجارية متطورة صُممت لترتقي ببيتك ومساحتك اليومية إلى أعلى درجات النقاء واللمعان المشرق.</p>
+                            <a href="#showroom" class="clean-hero-cta">
+                                <span>اكتشف التشكيلة الرائدة</span>
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
                         </div>
-                        <div class="shot-typography">
-                            <span class="shot-kicker">المشهد 01 // التحدي</span>
-                            <h1 class="shot-headline">فوضى يومية.</h1>
-                            <p class="shot-caption">واقع كل يوم في المطبخ</p>
-                        </div>
-                    </div>
-
-                    <!-- SHOT 02: CARE MOVES THROUGH -->
-                    <div class="shot-layer shot-02" id="shot02">
-                        <div class="shot-media-wrap">
-                            <img src="/assets/shot02_spray.jpg" alt="العناية تتدفق" class="shot-bg-img">
-                            <div class="shot-cinematic-vignette"></div>
-                        </div>
-                        <div class="shot-typography">
-                            <span class="shot-kicker">المشهد 02 // التدخل الفعال</span>
-                            <h2 class="shot-headline">العناية تتدفق.</h2>
-                            <p class="shot-caption">رذاذ ناعم دقيق التغلغل</p>
+                        <div class="clean-hero-bottle-wrap">
+                            <img src="/assets/actif5_isolated.png" alt="بير كلين أكتيف 5 كجم" class="clean-hero-bottle" id="heroActifBottle">
                         </div>
                     </div>
+                </div>
 
-                    <!-- SHOT 03: POWER THAT CLEARS -->
-                    <div class="shot-layer shot-03" id="shot03">
-                        <div class="shot-media-wrap">
-                            <img src="/assets/shot03_foam.jpg" alt="قوة التفتيت" class="shot-bg-img">
-                            <div class="shot-cinematic-vignette"></div>
-                        </div>
-                        <div class="shot-typography">
-                            <span class="shot-kicker">المشهد 03 // تفتيت الدهون</span>
-                            <h2 class="shot-headline">قوة تزيل الأصعب.</h2>
-                            <p class="shot-caption">استحلاب فوري للكربون والزيوت</p>
-                        </div>
+            </div>
+
+            <!-- Scroll Prompt Indicator -->
+            <div class="film-scroll-hint" id="filmScrollHint">
+                <span>مرر للتحكم في الفيلم</span>
+                <div class="scroll-indicator-line"></div>
+            </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- ACT II: THE 5 DISCIPLINES OF CARE (SPATIAL 3D CONTINUUM)             -->
+        <!-- =================================================================== -->
+        <section class="disciplines-cinematic-section" id="disciplines">
+            <div class="disciplines-stage-header">
+                <span class="discipline-eyebrow">علم المواد الفعالة المتخصص</span>
+                <h2 class="discipline-main-heading">خمسة تخصصات للعناية المتكاملة</h2>
+                <p class="discipline-main-subtext">تم ابتكار كل تخصص كيميائي ليتغلب على تحدٍ جزيئي محدد بكل سهولة وفاعلية.</p>
+            </div>
+
+            <div class="disciplines-spatial-container" id="disciplinesContainer">
+                
+                <!-- DISCIPLINE 01: KITCHEN CARE -->
+                <div class="discipline-spatial-item is-active" data-index="0" data-cat="Kitchen">
+                    <div class="discipline-item-copy">
+                        <span class="discipline-index-tag">01 // التخصصات</span>
+                        <h3 class="discipline-item-title">عناية المطبخ ومواقد الطهي</h3>
+                        <p class="discipline-item-desc">مذيبات قلوية فائقة القوة صُممت لإذابة الزيوت المتفحمة، والدهون المخبوزة على الأفران، وشاشات شفاطات الهواء الصناعية.</p>
+                        <button class="btn-discipline-explore" data-filter="Kitchen">
+                            <span>استكشف منتجات المطبخ</span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="discipline-item-visual">
+                        <div class="discipline-ambient-halo"></div>
+                        <img src="/assets/actif5_isolated.png" alt="عبوة عناية المطبخ" class="discipline-product-bottle">
+                    </div>
+                </div>
+
+                <!-- DISCIPLINE 02: LAUNDRY CARE -->
+                <div class="discipline-spatial-item" data-index="1" data-cat="Laundry">
+                    <div class="discipline-item-copy">
+                        <span class="discipline-index-tag">02 // التخصصات</span>
+                        <h3 class="discipline-item-title">جل الغسيل الأوتوماتيكي</h3>
+                        <p class="discipline-item-desc">جل غسيل إنزيمي مركز يتغلغل في عمق الألياف القطنية ليرفع أصعب البقع مع الحفاظ على حيوية الألوان وثباتها.</p>
+                        <button class="btn-discipline-explore" data-filter="Laundry">
+                            <span>استكشف منتجات الغسيل</span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="discipline-item-visual">
+                        <div class="discipline-ambient-halo"></div>
+                        <img src="/assets/cat_laundry.png" alt="عبوة جل الغسيل" class="discipline-product-bottle">
+                    </div>
+                </div>
+
+                <!-- DISCIPLINE 03: FABRIC SOFTENER -->
+                <div class="discipline-spatial-item" data-index="2" data-cat="Softener">
+                    <div class="discipline-item-copy">
+                        <span class="discipline-index-tag">03 // التخصصات</span>
+                        <h3 class="discipline-item-title">تنعيم وتعطير الأقمشة المخملي</h3>
+                        <p class="discipline-item-desc">كبسولات عطرية دقيقة مع مركبات مقاومة للكهرباء الساكنة تمنح أقمشتك نعومة الكشمير الفاخرة وانتعاشاً يدوم أسابيع.</p>
+                        <button class="btn-discipline-explore" data-filter="Softener">
+                            <span>استكشف منعمات الأقمشة</span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="discipline-item-visual">
+                        <div class="discipline-ambient-halo"></div>
+                        <img src="/assets/cat_softener.png" alt="عبوة معطر الأقمشة" class="discipline-product-bottle">
+                    </div>
+                </div>
+
+                <!-- DISCIPLINE 04: SURFACE DISINFECTION -->
+                <div class="discipline-spatial-item" data-index="3" data-cat="Disinfectant">
+                    <div class="discipline-item-copy">
+                        <span class="discipline-index-tag">04 // التخصصات</span>
+                        <h3 class="discipline-item-title">تطهير وتعقيم المستشفيات</h3>
+                        <p class="discipline-item-desc">مطهرات جيرمول الطبية الفعالة للقضاء على 99.9% من البكتيريا والجراثيم على السيراميك، الرخام، ومختلف أسطح الاتصال.</p>
+                        <button class="btn-discipline-explore" data-filter="Disinfectant">
+                            <span>استكشف المطهرات الطبية</span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="discipline-item-visual">
+                        <div class="discipline-ambient-halo"></div>
+                        <img src="/assets/cat_surfaces.png" alt="عبوة المطهر الطبي" class="discipline-product-bottle">
+                    </div>
+                </div>
+
+                <!-- DISCIPLINE 05: BOTANICAL HAND CARE -->
+                <div class="discipline-spatial-item" data-index="4" data-cat="Hand Soap">
+                    <div class="discipline-item-copy">
+                        <span class="discipline-index-tag">05 // التخصصات</span>
+                        <h3 class="discipline-item-title">غسول اليدين النباتي المرطب</h3>
+                        <p class="discipline-item-desc">صابون سائل متوازن الحموضة غني بالجلسرين المغذي لحماية حاجز البشرة الطبيعي مع عبير السكر الوردي والتفاح الأخضر.</p>
+                        <button class="btn-discipline-explore" data-filter="Hand Soap">
+                            <span>استكشف غسول اليدين</span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="discipline-item-visual">
+                        <div class="discipline-ambient-halo"></div>
+                        <img src="/assets/cat_soaps.png" alt="عبوة غسول اليدين" class="discipline-product-bottle">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="discipline-nav-tracker" id="disciplineTracker">
+                <span class="discipline-dot active" data-index="0"></span>
+                <span class="discipline-dot" data-index="1"></span>
+                <span class="discipline-dot" data-index="2"></span>
+                <span class="discipline-dot" data-index="3"></span>
+                <span class="discipline-dot" data-index="4"></span>
+            </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- ACT III: THE CURATED FLAGSHIP SHOWROOM                             -->
+        <!-- =================================================================== -->
+        <section class="showroom-section" id="showroom">
+            <div class="showroom-inner">
+                
+                <div class="showroom-header-block">
+                    <div class="showroom-title-wrap">
+                        <span class="showroom-eyebrow">نقاء مباشر من المصنع</span>
+                        <h2 class="showroom-heading">معرض بير كلين الرائد</h2>
+                        <p class="showroom-subtitle">صُنعت بأعلى المعايير الصناعية. اختر من التشكيلة الرائدة أدناه أو استكشف الأرشيف الكامل المكون من 46 تركيبة.</p>
                     </div>
 
-                    <!-- SHOT 04: FOR A BRIGHTER HOME -->
-                    <div class="shot-layer shot-04" id="shot04">
-                        <div class="shot-media-wrap">
-                            <img src="/assets/shot04_clean_stove.jpg" alt="سطح ناصع" class="shot-bg-img">
-                            <div class="shot-cinematic-vignette"></div>
-                        </div>
-                        <div class="shot-typography">
-                            <span class="shot-kicker">المشهد 04 // استعادة البريق</span>
-                            <h2 class="shot-headline">لمنزلك الأكثر إشراقاً.</h2>
-                            <p class="shot-caption">نقاء حقيقي وبريق الفولاذ</p>
-                        </div>
+                    <div class="showroom-toolbar-pills" id="showroomPills">
+                        <button class="cat-pill-btn active" data-cat="ALL">جميع المنتجات (46)</button>
+                        <button class="cat-pill-btn" data-cat="Kitchen">عناية المطبخ</button>
+                        <button class="cat-pill-btn" data-cat="Laundry">جل الغسيل</button>
+                        <button class="cat-pill-btn" data-cat="Softener">منعم الأقمشة</button>
+                        <button class="cat-pill-btn" data-cat="Disinfectant">المطهرات</button>
+                        <button class="cat-pill-btn" data-cat="Hand Soap">غسول اليدين</button>
                     </div>
+                </div>
 
-                    <!-- SHOT 05: PER CLEAN LOGO VORTEX -->
-                    <div class="shot-layer shot-05" id="shot05">
-                        <div class="shot-media-wrap">
-                            <img src="/assets/shot05_logo_vortex.jpg" alt="بير كلين" class="shot-bg-img">
-                            <div class="shot-cinematic-vignette"></div>
+                <!-- 6 Focused Flagship Pedestals -->
+                <div class="flagship-grid" id="flagshipGrid">
+                    
+                    <!-- HERO 01: Per Actif 5KG -->
+                    <div class="product-pedestal-card" data-category="Kitchen">
+                        <span class="pedestal-badge">مذيب دهون صناعي</span>
+                        <div class="pedestal-image-stage">
+                            <div class="pedestal-ambient-glow"></div>
+                            <img src="/assets/actif5_isolated.png" alt="بير كلين أكتيف 5 كجم" class="pedestal-bottle-img" id="img-actif-5">
                         </div>
-                        <div class="shot-logo-hero">
-                            <img src="/assets/logo.png" alt="بير كلين" class="hero-logo-drop">
-                            <p class="shot-caption" style="margin-top:1.5rem; letter-spacing:3px;">عناية حقيقية. لكل يوم.</p>
+                        <div class="pedestal-details">
+                            <h3 class="pedestal-title">بير كلين أكتيف — مذيب الدهون الثقيل (5 كجم)</h3>
+                            <p class="pedestal-desc">تركيبة قلوية مركزة مصممة للأفران، أسطح البوتجاز، وشفاطات المطابخ الصناعية.</p>
                         </div>
-                    </div>
-
-                    <!-- SHOT 06: HERO PRODUCT REVEAL -->
-                    <div class="shot-layer shot-06" id="shot06">
-                        <div class="shot-media-wrap">
-                            <img src="/assets/shot06_product_wave.jpg" alt="بير كلين أكتيف" class="shot-bg-img">
-                            <div class="shot-cinematic-vignette"></div>
-                        </div>
-                        <div class="shot-product-details">
-                            <span class="shot-kicker">القوة الصناعية الفائقة</span>
-                            <h2 class="shot-headline">بير كلين أكتيف</h2>
-                            <p class="shot-desc">مذيب قوي للدهون والشحوم العنيدة. مصمم للمطابخ والشوايات والمداخن والأسطح الصناعية.</p>
-                            <div class="shot-product-action">
-                                <span class="shot-price">450.00 ج.م</span>
-                                <button class="btn-film-add-cart" 
-                                    data-id="actif-film" 
-                                    data-title="بير كلين أكتيف 5 كجم" 
-                                    data-price="450.00 ج.م" 
-                                    data-img="/assets/actif5_isolated.png">
-                                    إضافة للسلة
-                                </button>
+                        <div class="pedestal-footer">
+                            <div class="pedestal-price-wrap">
+                                <span class="pedestal-price-label">السعر</span>
+                                <span class="pedestal-price-value">850 د.ج</span>
                             </div>
+                            <button class="btn-add-to-bag" 
+                                data-id="actif-5kg" 
+                                data-title="بير كلين أكتيف مذيب دهون 5 كجم" 
+                                data-price="850 د.ج" 
+                                data-img="/assets/actif5_isolated.png"
+                                data-source="img-actif-5">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>أضف للحقيبة</span>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- SHOT 07 & 08: THE BRIGHT HOME CONTEXT -->
-                    <div class="shot-layer shot-07" id="shot07">
-                        <div class="shot-media-wrap">
-                            <img src="/assets/shot07_kitchen_wide.jpg" alt="منزل أكثر نظافة" class="shot-bg-img">
-                            <div class="shot-cinematic-vignette"></div>
+                    <!-- HERO 02: Per Actif Spray 650ML -->
+                    <div class="product-pedestal-card" data-category="Kitchen">
+                        <span class="pedestal-badge">بخاخ مطبخ يومي</span>
+                        <div class="pedestal-image-stage">
+                            <div class="pedestal-ambient-glow"></div>
+                            <img src="/assets/feat_actif650.png" alt="بير أكتيف بخاخ 650 مل" class="pedestal-bottle-img" id="img-actif-650">
                         </div>
-                        <div class="shot-typography">
-                            <h2 class="shot-headline" style="font-size: clamp(2.4rem, 6vw, 4.8rem);">منزل أكثر نقاءً.<br><span style="color: var(--brand-teal-bright);">ويوم أكثر إشراقاً.</span></h2>
-                            <p class="shot-caption" style="margin-top: 1rem;">مرر للأسفل لاستكشاف التخصصات</p>
+                        <div class="pedestal-details">
+                            <h3 class="pedestal-title">بير أكتيف — بخاخ المطبخ والدهون (650 مل)</h3>
+                            <p class="pedestal-desc">رذاذ ناعم دقيق التغلغل لإذابة فورية لدهون الطهي اليومية على الرخام والأسطح.</p>
+                        </div>
+                        <div class="pedestal-footer">
+                            <div class="pedestal-price-wrap">
+                                <span class="pedestal-price-label">السعر</span>
+                                <span class="pedestal-price-value">380 د.ج</span>
+                            </div>
+                            <button class="btn-add-to-bag" 
+                                data-id="actif-650ml" 
+                                data-title="بير أكتيف بخاخ مطبخ 650 مل" 
+                                data-price="380 د.ج" 
+                                data-img="/assets/feat_actif650.png"
+                                data-source="img-actif-650">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>أضف للحقيبة</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- HERO 03: Per Wash Laundry Gel 3L -->
+                    <div class="product-pedestal-card" data-category="Laundry">
+                        <span class="pedestal-badge">جل إنزيمي متطور</span>
+                        <div class="pedestal-image-stage">
+                            <div class="pedestal-ambient-glow"></div>
+                            <img src="/assets/cat_laundry.png" alt="بير ووش جل 3 لتر" class="pedestal-bottle-img" id="img-perwash-3l">
+                        </div>
+                        <div class="pedestal-details">
+                            <h3 class="pedestal-title">بير ووش — جل غسيل الملابس المركز (3 لتر)</h3>
+                            <p class="pedestal-desc">جل إنزيمي منخفض الرغوة مصمم خصيصاً للغسالات الأوتوماتيكية للحفاظ على الملابس.</p>
+                        </div>
+                        <div class="pedestal-footer">
+                            <div class="pedestal-price-wrap">
+                                <span class="pedestal-price-label">السعر</span>
+                                <span class="pedestal-price-value">680 د.ج</span>
+                            </div>
+                            <button class="btn-add-to-bag" 
+                                data-id="perwash-3l" 
+                                data-title="بير ووش جل غسيل مركز 3 لتر" 
+                                data-price="680 د.ج" 
+                                data-img="/assets/cat_laundry.png"
+                                data-source="img-perwash-3l">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>أضف للحقيبة</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- HERO 04: Per Soft Fabric Conditioner 3L -->
+                    <div class="product-pedestal-card" data-category="Softener">
+                        <span class="pedestal-badge">نعومة مخملية فاخرة</span>
+                        <div class="pedestal-image-stage">
+                            <div class="pedestal-ambient-glow"></div>
+                            <img src="/assets/cat_softener.png" alt="بير سوفت 3 لتر" class="pedestal-bottle-img" id="img-persoft-3l">
+                        </div>
+                        <div class="pedestal-details">
+                            <h3 class="pedestal-title">بير سوفت — منعم ومعطر الأقمشة (3 لتر)</h3>
+                            <p class="pedestal-desc">تركيبة تكييف غنية بكبسولات العطر الفاخرة لمنح الملابس نعومة استثنائية وانتعاشاً مديداً.</p>
+                        </div>
+                        <div class="pedestal-footer">
+                            <div class="pedestal-price-wrap">
+                                <span class="pedestal-price-label">السعر</span>
+                                <span class="pedestal-price-value">520 د.ج</span>
+                            </div>
+                            <button class="btn-add-to-bag" 
+                                data-id="persoft-3l" 
+                                data-title="بير سوفت منعم أقمشة مخملي 3 لتر" 
+                                data-price="520 د.ج" 
+                                data-img="/assets/cat_softener.png"
+                                data-source="img-persoft-3l">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>أضف للحقيبة</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- HERO 05: Germol Ultra Hospital Sanitizer 5KG -->
+                    <div class="product-pedestal-card" data-category="Disinfectant">
+                        <span class="pedestal-badge">تعقيم طبي 99.9%</span>
+                        <div class="pedestal-image-stage">
+                            <div class="pedestal-ambient-glow"></div>
+                            <img src="/assets/cat_surfaces.png" alt="جيرمول ألترا 5 كجم" class="pedestal-bottle-img" id="img-germol-5kg">
+                        </div>
+                        <div class="pedestal-details">
+                            <h3 class="pedestal-title">جيرمول ألترا — مطهر الأسطح الطبي (5 كجم)</h3>
+                            <p class="pedestal-desc">مطهر احترافي بمعايير طبية صُمم للقضاء الشامل على البكتيريا والميكروبات على الأرضيات والأسطح.</p>
+                        </div>
+                        <div class="pedestal-footer">
+                            <div class="pedestal-price-wrap">
+                                <span class="pedestal-price-label">السعر</span>
+                                <span class="pedestal-price-value">750 د.ج</span>
+                            </div>
+                            <button class="btn-add-to-bag" 
+                                data-id="germol-5kg" 
+                                data-title="جيرمول ألترا مطهر طبي 5 كجم" 
+                                data-price="750 د.ج" 
+                                data-img="/assets/cat_surfaces.png"
+                                data-source="img-germol-5kg">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>أضف للحقيبة</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- HERO 06: Per Clean Velvet Hand Wash 1.5KG -->
+                    <div class="product-pedestal-card" data-category="Hand Soap">
+                        <span class="pedestal-badge">ترطيب نباتي ناعم</span>
+                        <div class="pedestal-image-stage">
+                            <div class="pedestal-ambient-glow"></div>
+                            <img src="/assets/cat_soaps.png" alt="غسول اليدين بير كلين 1.5 كجم" class="pedestal-bottle-img" id="img-handsoap-15">
+                        </div>
+                        <div class="pedestal-details">
+                            <h3 class="pedestal-title">بير كلين — غسول اليدين النباتي (1.5 كجم)</h3>
+                            <p class="pedestal-desc">صابون سائل لطيف غني بالجلسرين المغذي لحماية حاجز البشرة مع انتعاش السكر الوردي.</p>
+                        </div>
+                        <div class="pedestal-footer">
+                            <div class="pedestal-price-wrap">
+                                <span class="pedestal-price-label">السعر</span>
+                                <span class="pedestal-price-value">320 د.ج</span>
+                            </div>
+                            <button class="btn-add-to-bag" 
+                                data-id="handsoap-15" 
+                                data-title="بير كلين غسول يدين نباتي 1.5 كجم" 
+                                data-price="320 د.ج" 
+                                data-img="/assets/cat_soaps.png"
+                                data-source="img-handsoap-15">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>أضف للحقيبة</span>
+                            </button>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Scroll Prompt Indicator -->
-                <div class="film-scroll-prompt" id="filmScrollPrompt">
-                    <span class="prompt-mouse"><span class="prompt-wheel"></span></span>
-                    <span class="prompt-label">مرر للتحكم في الكاميرا</span>
-                </div>
-            </div>
-        </section>
+                <!-- Full Catalog Expand Archive (Preserves 100% of the 46 products) -->
+                <div class="catalog-archive-drawer" id="catalogArchive">
+                    <div class="archive-toggle-bar">
+                        <h3 class="archive-toggle-title">أرشيف التركيبات الكامل (46 منتجاً)</h3>
+                        <button class="btn-toggle-archive" id="btnToggleArchive">
+                            <span id="archiveToggleText">استكشف الأرشيف الشامل [ 46 تركيبة ]</span>
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
 
-        <!-- 02. CATEGORY CHOREOGRAPHY (ALTERNATING VERTICAL MOVEMENT) -->
-        <section class="category-film-section" id="categoriesSection">
-            <div class="cat-stage-header">
-                <span class="section-kicker">هندسة المواد الفعالة</span>
-                <h2 class="section-heading">تخصصات العناية المتكاملة</h2>
-                <p class="section-subtext">خمسة تخصصات كيميائية مصممة خصيصاً لكل ركن في منزلك ومنشأتك.</p>
-            </div>
-
-            <div class="cat-vertical-stage" id="catVerticalStage">
-                
-                <!-- CARD 01: KITCHEN CARE -->
-                <div class="cat-vert-card cat-from-top is-active" data-cat="Kitchen" data-index="0">
-                    <div class="cat-vert-card-inner">
-                        <span class="cat-vert-num">01 // 05</span>
-                        <div class="cat-vert-visual">
-                            <div class="cat-vert-halo"></div>
-                            <img src="/assets/actif5_isolated.png" alt="عناية المطبخ" class="cat-vert-img">
-                            <div class="cat-vert-shadow"></div>
+                    <div class="archive-expanded-content" id="archiveExpandedContent" style="display: none;">
+                        <div class="archive-filter-row">
+                            <div class="archive-search-box">
+                                <svg class="archive-search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <input type="text" id="archiveSearchInput" placeholder="ابحث في الأرشيف باسم المنتج، العطر، أو الحجم...">
+                            </div>
+                            <span style="font-size: 0.9rem; color: var(--clean-text-muted);" id="archiveMatchCount">عرض 46 تركيبة</span>
                         </div>
-                        <div class="cat-vert-info">
-                            <span class="cat-vert-badge">قوة قلوية فائقة</span>
-                            <h3 class="cat-vert-title">عناية المطبخ والدهون</h3>
-                            <p class="cat-vert-desc">مركبات قلوية متطورة تفتت الزيوت المحترقة، الكربون، المداخن، والستانلس ستيل.</p>
-                            <button class="btn-vert-explore" data-filter="Kitchen">استكشف مجموعة المطبخ &larr;</button>
+
+                        <div class="archive-product-grid" id="archiveProductGrid">
+                            <!-- Injected dynamically from data.json -->
                         </div>
                     </div>
                 </div>
 
-                <!-- CARD 02: LAUNDRY CARE -->
-                <div class="cat-vert-card cat-from-bottom" data-cat="Laundry" data-index="1">
-                    <div class="cat-vert-card-inner">
-                        <span class="cat-vert-num">02 // 05</span>
-                        <div class="cat-vert-visual">
-                            <div class="cat-vert-halo"></div>
-                            <img src="/assets/cat_laundry.png" alt="جل الغسيل" class="cat-vert-img">
-                            <div class="cat-vert-shadow"></div>
-                        </div>
-                        <div class="cat-vert-info">
-                            <span class="cat-vert-badge">تركيبة إنزيمية مركزة</span>
-                            <h3 class="cat-vert-title">جل الغسيل الأوتوماتيك</h3>
-                            <p class="cat-vert-desc">جل غسيل فائق الكفاءة بإنزيمات نشطة تحافظ على الألوان وتزيل أعتى البقع المستعصية.</p>
-                            <button class="btn-vert-explore" data-filter="Laundry">استكشف مجموعة الغسيل &larr;</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 03: FABRIC SOFTENERS -->
-                <div class="cat-vert-card cat-from-top" data-cat="Softener" data-index="2">
-                    <div class="cat-vert-card-inner">
-                        <span class="cat-vert-num">03 // 05</span>
-                        <div class="cat-vert-visual">
-                            <div class="cat-vert-halo"></div>
-                            <img src="/assets/cat_softener.png" alt="منعم الأقمشة" class="cat-vert-img">
-                            <div class="cat-vert-shadow"></div>
-                        </div>
-                        <div class="cat-vert-info">
-                            <span class="cat-vert-badge">عطر دائم لأسابيع</span>
-                            <h3 class="cat-vert-title">منعمات الأقمشة والملابس</h3>
-                            <p class="cat-vert-desc">نعومة مخملية مانعة للشحنات مع كبسولات عطرية تدوم في الأنسجة طويلاً.</p>
-                            <button class="btn-vert-explore" data-filter="Softener">استكشف المنعمات &larr;</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 04: DISINFECTANTS -->
-                <div class="cat-vert-card cat-from-bottom" data-cat="Disinfectant" data-index="3">
-                    <div class="cat-vert-card-inner">
-                        <span class="cat-vert-num">04 // 05</span>
-                        <div class="cat-vert-visual">
-                            <div class="cat-vert-halo"></div>
-                            <img src="/assets/cat_surfaces.png" alt="مطهرات الأسطح" class="cat-vert-img">
-                            <div class="cat-vert-shadow"></div>
-                        </div>
-                        <div class="cat-vert-info">
-                            <span class="cat-vert-badge">تطهير بنسبة 99.9%</span>
-                            <h3 class="cat-vert-title">المطهرات الطبية للأسطح</h3>
-                            <p class="cat-vert-desc">جيرمول ومطهرات متعددة الأغراض للرخام، السيراميك، وأسطح التلامس اليومية.</p>
-                            <button class="btn-vert-explore" data-filter="Disinfectant">استكشف المطهرات &larr;</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 05: HAND CARE -->
-                <div class="cat-vert-card cat-from-top" data-cat="Hand Soap" data-index="4">
-                    <div class="cat-vert-card-inner">
-                        <span class="cat-vert-num">05 // 05</span>
-                        <div class="cat-vert-visual">
-                            <div class="cat-vert-halo"></div>
-                            <img src="/assets/cat_soaps.png" alt="صابون اليدين" class="cat-vert-img">
-                            <div class="cat-vert-shadow"></div>
-                        </div>
-                        <div class="cat-vert-info">
-                            <span class="cat-vert-badge">مختبر للجلد والحساسية</span>
-                            <h3 class="cat-vert-title">صابون اليدين الفاخر</h3>
-                            <p class="cat-vert-desc">تركيبات غنية بالمرطبات مع روائح السكر الوردي، الربيع، والتفاح الأخضر المنعش.</p>
-                            <button class="btn-vert-explore" data-filter="Hand Soap">استكشف صابون اليدين &larr;</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Mobile Indicators -->
-            <div class="cat-vert-indicators">
-                <span class="vert-dot active" data-index="0"></span>
-                <span class="vert-dot" data-index="1"></span>
-                <span class="vert-dot" data-index="2"></span>
-                <span class="vert-dot" data-index="3"></span>
-                <span class="vert-dot" data-index="4"></span>
-            </div>
-        </section>
-
-        <!-- 03. UNIFIED EDITORIAL PRODUCT SHOWROOM -->
-        <section class="catalog-showroom-section" id="catalogSection">
-            <div class="showroom-container">
-                
-                <div class="showroom-header">
-                    <span class="section-kicker">توريد مباشر من المصنع</span>
-                    <h2 class="section-heading">مجموعة بير كلين الكاملة</h2>
-                    <p class="section-subtext">كل تركيبة مصنعة بأعلى تركيزات صناعية. اختر التصنيف أدناه أو تصفح الكتالوج بالكامل.</p>
-                </div>
-
-                <!-- Showroom Toolbar -->
-                <div class="showroom-toolbar">
-                    <div class="filter-tab-bar" id="categoryFilterBar">
-                        <button class="tab-btn active" data-cat="ALL">جميع التركيبات (<span class="tab-count" id="countAll">46</span>)</button>
-                        <button class="tab-btn" data-cat="Kitchen">المطبخ والدهون (<span class="tab-count">7</span>)</button>
-                        <button class="tab-btn" data-cat="Laundry">جل الغسيل (<span class="tab-count">5</span>)</button>
-                        <button class="tab-btn" data-cat="Softener">عناية الأقمشة (<span class="tab-count">2</span>)</button>
-                        <button class="tab-btn" data-cat="Disinfectant">المطهرات (<span class="tab-count">9</span>)</button>
-                        <button class="tab-btn" data-cat="Hand Soap">غسيل اليدين (<span class="tab-count">19</span>)</button>
-                    </div>
-
-                    <div class="showroom-search-box">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                        <input type="text" id="showroomSearchInput" placeholder="ابحث باسم المنتج، الحجم، أو الكلمات المفتاحية...">
-                        <button class="clear-search-btn" id="clearSearchBtn" aria-label="مسح البحث" style="display:none;">&times;</button>
-                    </div>
-                </div>
-
-                <!-- Active Filter Announcement -->
-                <div class="active-filter-indicator" id="activeFilterIndicator">
-                    <span>عرض <strong id="visibleItemsCount">46</strong> تركيبة متوفرة</span>
-                    <button class="btn-reset-filters" id="btnResetFilters" style="display:none;">إعادة ضبط الفلاتر</button>
-                </div>
-
-                <!-- Product Showcase Grid -->
-                <div class="showroom-grid" id="showroomGrid">
-                    <!-- Products are injected here dynamically -->
-                </div>
-
-                <!-- Expand/Collapse Full Catalog Toggle -->
-                <div class="catalog-expand-row" id="catalogExpandRow">
-                    <button class="btn-expand-catalog" id="btnExpandCatalog">
-                        <span id="expandCatalogText">عرض جميع الـ 46 منتج</span>
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 04. SHORT BRAND SCIENCE PROMISE -->
-        <section class="brand-promise-section" id="brandPromise">
-            <div class="promise-backdrop"></div>
-            <div class="promise-content">
-                <img src="/assets/logo.png" alt="علامة بير كلين" class="promise-logo">
-                <h2 class="promise-title">نحول العناية المنزلية إلى علم متكامل.</h2>
-                <p class="promise-body">كل تركيبة من بير كلين مصنعة بمواد خافضة للتوتر السطحي بتركيز صناعي. وفر كبير، تفتيت فوري للدهون، وأمان لا مساومة عليه لأسرتك ومنزلك.</p>
-                <div class="promise-badges">
-                    <div class="p-badge">
-                        <span class="p-val">100%</span>
-                        <span class="p-lbl">توريد مباشر من المصنع</span>
-                    </div>
-                    <div class="p-badge">
-                        <span class="p-val">5 كجم / 1.5 كجم</span>
-                        <span class="p-lbl">تركيزات فائقة التوفير</span>
-                    </div>
-                    <div class="p-badge">
-                        <span class="p-val">فوري</span>
-                        <span class="p-lbl">تأكيد وشحن عبر واتساب</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 05. DIRECT CALL TO ACTION -->
-        <section class="cta-direct-section">
-            <div class="cta-card">
-                <div class="cta-text">
-                    <h3>هل أنت مستعد لنظافة فائقة في منزلك؟</h3>
-                    <p>اطلب مباشرة عبر واتساب لتأكيد طلبك وتوصيله حتى باب منزلك في جميع أنحاء مصر.</p>
-                </div>
-                <div class="cta-action">
-                    <a href="https://wa.me/201000000000?text=مرحباً%20شركة%20بير%20كلين%D8%8C%20أود%20طلب%20منتجات." target="_blank" rel="noopener" class="btn-whatsapp-direct">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.03.8 0.81-2.95-.19-.3a8.18 8.18 0 0 1-1.25-4.56c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/>
-                        </svg>
-                        <span>تواصل واطلب عبر واتساب</span>
-                    </a>
-                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- Refined Minimal Brand Footer -->
     <footer class="site-footer">
         <div class="footer-inner">
-            <div class="footer-brand">
+            <div class="footer-logo-wrap">
                 <img src="/assets/logo.png" alt="بير كلين" class="footer-logo">
-                <p class="footer-tagline">كيمياء صناعية. نظافة منزلية فائقة.</p>
+                <span class="footer-credo">كيمياء نقية. نظافة فائقة.</span>
             </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>روابط سريعة</h4>
-                    <a href="#cameraScene">فيلم العلامة</a>
-                    <a href="#categoriesSection">التخصصات</a>
-                    <a href="#catalogSection">المجموعة الكاملة</a>
-                    <a href="#brandPromise">علم التركيبات</a>
-                </div>
-                <div class="footer-col">
-                    <h4>التصنيفات</h4>
-                    <a href="#catalogSection" class="footer-cat-link" data-filter="Kitchen">عناية المطبخ</a>
-                    <a href="#catalogSection" class="footer-cat-link" data-filter="Laundry">جل الغسيل</a>
-                    <a href="#catalogSection" class="footer-cat-link" data-filter="Softener">منعمات الأقمشة</a>
-                    <a href="#catalogSection" class="footer-cat-link" data-filter="Disinfectant">المطهرات</a>
-                    <a href="#catalogSection" class="footer-cat-link" data-filter="Hand Soap">صابون اليدين الفاخر</a>
-                </div>
-                <div class="footer-col">
-                    <h4>تواصل مباشر</h4>
-                    <p>القاهرة، جمهورية مصر العربية</p>
-                    <p>خدمة العملاء: 201000000000+</p>
-                    <p><a href="/">Switch to English (الإنجليزية)</a></p>
-                </div>
-            </div>
+
+            <nav class="footer-nav">
+                <a href="#brandFilm">فيلم العلامة</a>
+                <a href="#disciplines">التخصصات</a>
+                <a href="#showroom">معرض المنتجات</a>
+                <a href="/">English</a>
+            </nav>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 شركة بير كلين مصر. جميع الحقوق محفوظة. تصنيع كيميائي معتمد.</p>
-        </div>
+        <p class="footer-copy">&copy; 2026 بير كلين. تصنيع كيميائي تجاري بمعايير منزلية فائقة.</p>
     </footer>
 
-    <!-- SLIDE-OVER CART DRAWER -->
-    <div class="cart-drawer-overlay" id="cartDrawerOverlay">
-        <div class="cart-drawer" id="cartDrawer">
-            
-            <div class="cart-drawer-header">
-                <div class="cart-header-title-wrap">
-                    <h3>سلة المشتريات</h3>
-                    <span class="cart-drawer-count-badge" id="cartDrawerCount">0 منتج</span>
+    <!-- =================================================================== -->
+    <!-- LIGHT LUXURY CART DRAWER & WHATSAPP CHECKOUT                       -->
+    <!-- =================================================================== -->
+    <div class="cart-drawer-backdrop" id="cartDrawerBackdrop">
+        <div class="cart-drawer-pane" id="cartDrawerPane">
+            <div class="drawer-header">
+                <div class="drawer-heading-wrap">
+                    <h3 class="drawer-heading">حقيبة المشتريات</h3>
+                    <span class="drawer-count-badge" id="drawerItemCount">0 منتجات</span>
                 </div>
-                <button class="cart-close-btn" id="cartCloseBtn" aria-label="إغلاق السلة">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                <button class="btn-close-drawer" id="btnCloseDrawer" aria-label="إغلاق الحقيبة">&times;</button>
+            </div>
+
+            <div class="drawer-body" id="drawerBody">
+                <div class="cart-empty-message" id="cartEmptyMessage">
+                    <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
                     </svg>
-                </button>
-            </div>
-
-            <div class="cart-items-list" id="cartItemsList">
-                <div class="cart-empty-state" id="cartEmptyState">
-                    <div class="empty-icon-wrap">
-                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                    </div>
-                    <p class="empty-title">سلتك فارغة حالياً</p>
-                    <p class="empty-desc">اكتشف تركيباتنا الكيميائية ذات التركيز الصناعي الفائق.</p>
-                    <button class="btn-start-shopping" id="btnStartShopping">تصفح المجموعة</button>
+                    <p>حقيبة المشتريات فارغة حالياً.</p>
+                </div>
+                <div class="cart-items-container" id="cartItemsContainer" style="display: none;">
+                    <!-- Injected items -->
                 </div>
             </div>
 
-            <div class="cart-drawer-footer" id="cartDrawerFooter">
-                <div class="cart-subtotal-row">
-                    <span class="subtotal-label">الإجمالي التقديري:</span>
-                    <strong class="cart-total-value" id="cartTotalValue">0.00 ج.م</strong>
+            <div class="drawer-footer" id="drawerFooter" style="display: none;">
+                <div class="drawer-subtotal-row">
+                    <span class="subtotal-label">المجموع التقديري</span>
+                    <span class="subtotal-value" id="drawerSubtotal">0 د.ج</span>
                 </div>
-                <p class="cart-dispatch-note">شحن فوري في نفس اليوم للقاهرة والجيزة وجميع محافظات مصر.</p>
-                <button class="btn-checkout-whatsapp" id="btnCheckoutWhatsApp">
+                <button class="btn-whatsapp-order" id="btnWhatsappOrder">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                         <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.83 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.03.8 0.81-2.95-.19-.3a8.18 8.18 0 0 1-1.25-4.56c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.43.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/>
                     </svg>
-                    <span>إتمام الطلب عبر واتساب</span>
+                    <span>تأكيد الطلب الفوري عبر واتساب</span>
                 </button>
             </div>
-            
         </div>
     </div>
 
-    <!-- GSAP & ScrollTrigger -->
+    <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Flagship Application Script -->
     <script src="/assets/perclean.js"></script>
 </body>
 </html>
