@@ -1,0 +1,2718 @@
+﻿{
+    "products":  [
+                     {
+                         "id":  8315006353593,
+                         "title":  "perfumed and disinfectant  Detergent for toilet flusher (XP toilet125gm)",
+                         "handle":  "xp-toilet-125gm",
+                         "body_html":  "\u003cp\u003eسائل منظف ومطهر و معطر  للتواليت للتعليق داخل صندوق الطرد\u003c/p\u003e",
+                         "published_at":  "2025-12-19T10:12:11+02:00",
+                         "created_at":  "2025-12-19T10:12:10+02:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45717625274553,
+                                              "title":  "125gm",
+                                              "option1":  "125gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "55.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8315006353593,
+                                              "created_at":  "2025-12-19T10:12:10+02:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  39598446379193,
+                                            "created_at":  "2025-12-19T10:11:07+02:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-12-19T10:11:09+02:00",
+                                            "product_id":  8315006353593,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/ChatGPTImageDec19_2025_10_17_32AM.png?v=1766131869",
+                                            "width":  1024,
+                                            "height":  1536
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "125gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8286851301561,
+                         "title":  "Powerful Grease \u0026 Stain Remover for Stove, Hood, and Kitchen Walls (Per Actif 5KG)",
+                         "handle":  "peractif-5kg",
+                         "body_html":  "\u003cp\u003eمزيل للدهون\u003c/p\u003e",
+                         "published_at":  "2025-11-24T13:11:39+02:00",
+                         "created_at":  "2025-11-24T13:11:34+02:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "Detergents",
+                         "tags":  [
+                                      "Home care products"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  46646515269817,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968755",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "450.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8286851301561,
+                                              "created_at":  "2026-03-18T08:20:21+02:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  39400564621497,
+                                            "created_at":  "2025-11-24T13:01:59+02:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-11-24T13:02:01+02:00",
+                                            "product_id":  8286851301561,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121",
+                                            "width":  1772,
+                                            "height":  2480
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8281973194937,
+                         "title":  "Hand washing liquid soap  (spring scent) 1.5k",
+                         "handle":  "hand-wash-spring-1-5k",
+                         "body_html":  "\u003cp\u003eسائل تنظيف اليدين برائحة السبرنج  حجم ١.٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-11-17T19:21:50+02:00",
+                         "created_at":  "2025-11-17T19:20:18+02:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "best seller"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  46646602432697,
+                                              "title":  "1.5KG",
+                                              "option1":  "1.5KG",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968281",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "140.00",
+                                              "grams":  0,
+                                              "compare_at_price":  "155.00",
+                                              "position":  1,
+                                              "product_id":  8281973194937,
+                                              "created_at":  "2026-03-18T08:57:30+02:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971856048313,
+                                            "created_at":  "2026-07-22T14:57:11+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T14:57:12+03:00",
+                                            "product_id":  8281973194937,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/1C06BF29-BCAC-43EF-8938-ECC97D29B292.jpg?v=1784721432",
+                                            "width":  2500,
+                                            "height":  2500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5KG"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8260706304185,
+                         "title":  "Fabric softener and fragrance, anti-static (Per soft  5KG)",
+                         "handle":  "منعم-ومعطر-للملابس-حجم-٥-كيلو",
+                         "body_html":  "\u003cp\u003eمنعم ومعطر للملابس ومضاد للشحنات الاستاتيكية \u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-10-30T16:00:46+03:00",
+                         "created_at":  "2025-10-30T15:48:43+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "Fabric care"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  46646603579577,
+                                              "title":  "5 KG",
+                                              "option1":  "5 KG",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968779",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "380.00",
+                                              "grams":  5000,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8260706304185,
+                                              "created_at":  "2026-03-18T08:58:08+02:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  39197161652409,
+                                            "created_at":  "2025-10-30T15:49:18+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-10-30T15:49:19+03:00",
+                                            "product_id":  8260706304185,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/IMG-4633.jpg?v=1761828559",
+                                            "width":  1280,
+                                            "height":  720
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 KG"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168081621177,
+                         "title":  "Hard surfaces disinfectant liquid 700 GM",
+                         "handle":  "سائل-مطهر-لجميع-الأسطح-1",
+                         "body_html":  "\u003cp\u003eسائل مطهر لجميع الأسطح \u003cbr\u003eحجم ٧٠٠ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:29:15+03:00",
+                         "created_at":  "2025-07-13T23:28:34+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "Home care products"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45342918213817,
+                                              "title":  "700 gm",
+                                              "option1":  "700 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968625",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "150.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168081621177,
+                                              "created_at":  "2025-09-18T00:11:17+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41829719965881,
+                                            "created_at":  "2026-07-15T19:23:16+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-15T19:23:18+03:00",
+                                            "product_id":  8168081621177,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C11CA7CF-42E1-4ED3-B45D-DC4EFDF8E34D.jpg?v=1784132598",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "700 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168081195193,
+                         "title":  "(Germol) Hard surfaces disinfectant liquid 5KG",
+                         "handle":  "سائل-مطهر-لجميع-الأسطح",
+                         "body_html":  "\u003cp\u003eسائل مطهر لجميع الاسطح يقضي على (99%) من الجراثيم  \u003cbr\u003eيصلح لجميع الاغراض المنزلية و هو آمن على الغسالات الاوتوماتيكية \u003cbr\u003e5 كيلوجرام\u003c/p\u003e\n\u003cp\u003e\u003cbr\u003e\u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:28:27+03:00",
+                         "created_at":  "2025-07-13T23:26:57+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45342920245433,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968793",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "870.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168081195193,
+                                              "created_at":  "2025-09-18T00:12:37+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971863945401,
+                                            "created_at":  "2026-07-22T14:58:30+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T14:58:31+03:00",
+                                            "product_id":  8168081195193,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3DD3BB6C-75FE-472B-B1AC-3A6FFBDF35F5.jpg?v=1784721511",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168080834745,
+                         "title":  "Hand washing liquid soap Pink sugar scent 1.5 k",
+                         "handle":  "سائل-منظف-لليدين-18",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو \u003c/p\u003e\n\u003cp\u003epink sugar \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:26:52+03:00",
+                         "created_at":  "2025-07-13T23:25:54+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343033786553,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968212",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "140.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168080834745,
+                                              "created_at":  "2025-09-18T01:46:05+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971869188281,
+                                            "created_at":  "2026-07-22T14:59:34+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T14:59:35+03:00",
+                                            "product_id":  8168080834745,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A6D5B9C8-EF53-4542-B5BA-D78F04596B90.jpg?v=1784721575",
+                                            "width":  2500,
+                                            "height":  2500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168080539833,
+                         "title":  "Hand washing liquid soap Clear green Scent 1.5 k",
+                         "handle":  "سائل-منظف-لليدين-17",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين بالأعشاب \u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:25:49+03:00",
+                         "created_at":  "2025-07-13T23:24:54+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343035654329,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968199",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "140.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168080539833,
+                                              "created_at":  "2025-09-18T01:47:22+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971880984761,
+                                            "created_at":  "2026-07-22T15:00:56+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:00:57+03:00",
+                                            "product_id":  8168080539833,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/10D1C703-99B8-40C4-BFC9-2F1B09A61AFE.jpg?v=1784721657",
+                                            "width":  2500,
+                                            "height":  2500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168080179385,
+                         "title":  "Hand washing liquid soap Dovana Scent 1.5 k",
+                         "handle":  "سائل-منظف-لليدين-16",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين بالدوڤانا\u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:24:49+03:00",
+                         "created_at":  "2025-07-13T23:23:52+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "best seller"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343037751481,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968120",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "140.00",
+                                              "grams":  0,
+                                              "compare_at_price":  "155.00",
+                                              "position":  1,
+                                              "product_id":  8168080179385,
+                                              "created_at":  "2025-09-18T01:48:38+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971884523705,
+                                            "created_at":  "2026-07-22T15:01:27+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:01:29+03:00",
+                                            "product_id":  8168080179385,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E2E79F84-A1D9-4453-8FCE-B2A01B39E5CC.jpg?v=1784721689",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168079655097,
+                         "title":  "Hand washing liquid soap Green apple Scent 1.5 k",
+                         "handle":  "سائل-منظف-لليدين-15",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين بالتفاح\u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:23:46+03:00",
+                         "created_at":  "2025-07-13T23:22:19+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343039357113,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968304",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "140.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168079655097,
+                                              "created_at":  "2025-09-18T01:49:37+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971873743033,
+                                            "created_at":  "2026-07-22T15:00:11+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:00:13+03:00",
+                                            "product_id":  8168079655097,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BD93F18F-80B4-483E-9D17-7D466CCFC612.jpg?v=1784721613",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168079294649,
+                         "title":  "Dish washing liquid detergent Lemon scent (Mencopol 5 k)",
+                         "handle":  "منظف-سائل-للأغراض-المنزلية-بالليمون",
+                         "body_html":  "\u003cp\u003e\u003cspan\u003eمنظف سائل للأغراض المنزلية بالليمون \u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan\u003eحجم ٥ كيلو \u003c/span\u003e\u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:22:13+03:00",
+                         "created_at":  "2025-07-13T23:21:14+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343040503993,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968908",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "240.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168079294649,
+                                              "created_at":  "2025-09-18T01:50:18+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971889307833,
+                                            "created_at":  "2026-07-22T15:02:25+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:02:27+03:00",
+                                            "product_id":  8168079294649,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2CF9170E-88BB-40D0-9B4D-5ACC01763B6A.jpg?v=1784721747",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168078901433,
+                         "title":  "Dish washing liquid detergent Lemon scent (Mencopol 1 k)",
+                         "handle":  "منظف-للأغراض-المنزلية",
+                         "body_html":  "\u003cp\u003eمنظف سائل للأغراض المنزلية بالليمون\u003c/p\u003e\n\u003cp\u003eحجم ١ لتر \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:21:07+03:00",
+                         "created_at":  "2025-07-13T23:19:47+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343041913017,
+                                              "title":  "1 L",
+                                              "option1":  "1 L",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "55.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168078901433,
+                                              "created_at":  "2025-09-18T01:51:02+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971893141689,
+                                            "created_at":  "2026-07-22T15:02:57+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:02:59+03:00",
+                                            "product_id":  8168078901433,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/170CC148-1C7E-4951-B9D8-3CF8A2488EEF.jpg?v=1784721779",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1 L"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168078573753,
+                         "title":  "Premium Liquid Laundry Detergent Gel for Automatic Washing Machines (Perwash 5 k)",
+                         "handle":  "چل-منظف-للملابس-للغسالات-الاتوماتيك",
+                         "body_html":  "\u003cp\u003e\u003cspan\u003eچل منظف للملابس للغسالات الاتوماتيك \u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan\u003eحجم ٥ كيلو \u003c/span\u003e\u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:19:42+03:00",
+                         "created_at":  "2025-07-13T23:18:49+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343043518649,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "٦٢٢٤٠٠٠٩٦٨٧٦٢",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "410.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168078573753,
+                                              "created_at":  "2025-09-18T01:51:48+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  38404587356345,
+                                            "created_at":  "2025-07-13T23:19:05+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-07-13T23:19:06+03:00",
+                                            "product_id":  8168078573753,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AEE95EF3-AAA8-40DF-8004-C457503CF8FF.jpg?v=1752437946",
+                                            "width":  1500,
+                                            "height":  1500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168077885625,
+                         "title":  "Premium Liquid Laundry Detergent Gel for Automatic Washing Machines (Perwash1.65 k)",
+                         "handle":  "چل-منظف-للملابس",
+                         "body_html":  "\u003cp\u003eچل منظف للملابس للغسالات الاتوماتيك \u003c/p\u003e\n\u003cp\u003eحجم ١.٦٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:18:34+03:00",
+                         "created_at":  "2025-07-13T23:16:54+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "best seller"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343044829369,
+                                              "title":  "1.65 L",
+                                              "option1":  "1.65 L",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968045",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "165.00",
+                                              "grams":  0,
+                                              "compare_at_price":  "195.00",
+                                              "position":  1,
+                                              "product_id":  8168077885625,
+                                              "created_at":  "2025-09-18T01:52:34+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282272981177,
+                                            "created_at":  "2026-08-17T13:34:12+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:34:13+03:00",
+                                            "product_id":  8168077885625,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BE5EA4CF-ADD5-4EB5-A47C-B45F2E7CA08F.jpg?v=1786962853",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.65 L"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168077000889,
+                         "title":  "Fabric softener and fragrance, anti-static (Softener 1.5 k)",
+                         "handle":  "منعم-الملابس",
+                         "body_html":  "\u003cp\u003eمنعم الملابس ومعطر ومضاد للشحنات الاستاتيكية\u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:16:48+03:00",
+                         "created_at":  "2025-07-13T23:14:09+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343046566073,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968113",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "130.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168077000889,
+                                              "created_at":  "2025-09-18T01:53:16+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282274816185,
+                                            "created_at":  "2026-08-17T13:34:51+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:34:52+03:00",
+                                            "product_id":  8168077000889,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A248BC5F-6F80-49A9-9AE2-9FB901EE35D3.jpg?v=1786962892",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168076771513,
+                         "title":  "Powerful Stain \u0026 Yellowing Remover for Clothes (Perwash Ox bleach 5 k)",
+                         "handle":  "مزيل-البقع-والأصفرار-من-الملابس-2",
+                         "body_html":  "\u003cp\u003eمزيل البقع والأصفرار من الملابس\u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:13:59+03:00",
+                         "created_at":  "2025-07-13T23:13:12+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343048597689,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968786",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "450.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168076771513,
+                                              "created_at":  "2025-09-18T01:54:02+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  38404563206329,
+                                            "created_at":  "2025-07-13T23:13:27+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-07-13T23:13:29+03:00",
+                                            "product_id":  8168076771513,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/FA1DB7CD-7B81-4902-9192-2F203AE33AEA.jpg?v=1752437609",
+                                            "width":  1500,
+                                            "height":  1500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168076509369,
+                         "title":  "Powerful Stain \u0026 Yellowing Remover for Clothes (Perwash Ox bleach 1.5 k)",
+                         "handle":  "مزيل-البقع-والأصفرار-من-الملابس-1",
+                         "body_html":  "\u003cp\u003eمزيل البقع والأصفرار من الملابس\u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:13:07+03:00",
+                         "created_at":  "2025-07-13T23:12:07+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "best seller"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343049777337,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968250",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "155.00",
+                                              "grams":  0,
+                                              "compare_at_price":  "170.00",
+                                              "position":  1,
+                                              "product_id":  8168076509369,
+                                              "created_at":  "2025-09-18T01:54:42+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282276585657,
+                                            "created_at":  "2026-08-17T13:35:36+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:35:37+03:00",
+                                            "product_id":  8168076509369,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/8FA4FEB7-0FF0-4F51-92E6-0DBE568BF2FB.jpg?v=1786962937",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8168075591865,
+                         "title":  "Powerful Stain \u0026 Yellowing Remover for Clothes (Perwash Ox bleach 650 ml)",
+                         "handle":  "مزيل-البقع-والأصفرار-من-الملابس",
+                         "body_html":  "\u003cp\u003eمزيل البقع والأصفرار من الملابس\u003c/p\u003e\n\u003cp\u003eحجم ٦٥٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T23:12:02+03:00",
+                         "created_at":  "2025-07-13T23:08:35+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343051153593,
+                                              "title":  "650 ml",
+                                              "option1":  "650 ml",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968229",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "75.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8168075591865,
+                                              "created_at":  "2025-09-18T01:55:30+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282279108793,
+                                            "created_at":  "2026-08-17T13:36:12+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:36:14+03:00",
+                                            "product_id":  8168075591865,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3C39477A-6848-4320-81C3-B8C783DC3528.jpg?v=1786962974",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "650 ml"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167794802873,
+                         "title":  "Hand washing liquid soap Spring Scent125 ml",
+                         "handle":  "سائل-منظف-لليدين-14",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003c/p\u003e\n\u003cp\u003eحجم ١٢٥ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T14:16:38+03:00",
+                         "created_at":  "2025-07-13T14:15:31+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343053840569,
+                                              "title":  "125 ml",
+                                              "option1":  "125 ml",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968656",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "35.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167794802873,
+                                              "created_at":  "2025-09-18T01:56:35+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42173819420857,
+                                            "created_at":  "2026-08-07T15:51:23+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-07T15:51:24+03:00",
+                                            "product_id":  8167794802873,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B2275EC2-6681-4239-A192-5A37BE566848.jpg?v=1786107084",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "125 ml"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167794016441,
+                         "title":  "Hand washing liquid soap Pink sugar Scent  125 ml",
+                         "handle":  "سائل-منظف-لليدين-13",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003c/p\u003e\n\u003cp\u003eحجم ١٢٥ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T14:15:26+03:00",
+                         "created_at":  "2025-07-13T14:14:39+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343055839417,
+                                              "title":  "125 ml",
+                                              "option1":  "125 ml",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968649",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "35.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167794016441,
+                                              "created_at":  "2025-09-18T01:57:29+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42173821681849,
+                                            "created_at":  "2026-08-07T15:52:00+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-07T15:52:01+03:00",
+                                            "product_id":  8167794016441,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C1070E2F-98E1-4DFF-AB40-32FAA3D6EECF.jpg?v=1786107121",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "125 ml"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167793983673,
+                         "title":  "Hand washing liquid soap Dovana Scent 125 ml",
+                         "handle":  "سائل-منظف-لليدين-12",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003c/p\u003e\n\u003cp\u003eحجم ١٢٥ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T14:14:33+03:00",
+                         "created_at":  "2025-07-13T14:13:37+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343057576121,
+                                              "title":  "125 ml",
+                                              "option1":  "125 ml",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968670",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "35.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167793983673,
+                                              "created_at":  "2025-09-18T01:59:02+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42173824827577,
+                                            "created_at":  "2026-08-07T15:52:31+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-07T15:52:33+03:00",
+                                            "product_id":  8167793983673,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E1C749FD-6CAB-4254-A2AA-220D72E365E2.jpg?v=1786107153",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "125 ml"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167793426617,
+                         "title":  "Hand washing liquid soap Clear green Scent 125 ml",
+                         "handle":  "سائل-منظف-لليدين-11",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين بالأعشاب\u003c/p\u003e\n\u003cp\u003eحجم ١٢٥ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T14:13:32+03:00",
+                         "created_at":  "2025-07-13T14:12:32+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343058854073,
+                                              "title":  "125 ml",
+                                              "option1":  "125 ml",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6236898968632",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "35.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167793426617,
+                                              "created_at":  "2025-09-18T01:59:55+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42173828858041,
+                                            "created_at":  "2026-08-07T15:52:59+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-07T15:53:01+03:00",
+                                            "product_id":  8167793426617,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/15154349-84D0-4118-A49C-462654E95FC0.jpg?v=1786107181",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "125 ml"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167793361081,
+                         "title":  "Hand washing liquid soap Green apple Scent 125 ml",
+                         "handle":  "سائل-منظف-لليدين-10",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003c/p\u003e\n\u003cp\u003eحجم ١٢٥ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T14:12:25+03:00",
+                         "created_at":  "2025-07-13T14:11:29+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45343060394169,
+                                              "title":  "125 ml",
+                                              "option1":  "125 ml",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968663",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "35.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167793361081,
+                                              "created_at":  "2025-09-18T02:00:50+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42173829841081,
+                                            "created_at":  "2026-08-07T15:53:29+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-07T15:53:31+03:00",
+                                            "product_id":  8167793361081,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3BA91AB0-6F81-4C11-A910-2D884A54E414.jpg?v=1786107211",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "125 ml"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167793262777,
+                         "title":  "Hand washing liquid soap Spring Scent 500 ml",
+                         "handle":  "سائل-منظف-لليدين-9",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين \u003c/p\u003e\n\u003cp\u003eحجم ٥٠٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T14:11:09+03:00",
+                         "created_at":  "2025-07-13T14:10:17+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167506129081,
+                                              "title":  "500 gm",
+                                              "option1":  "500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "60.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167793262777,
+                                              "created_at":  "2025-07-13T14:10:17+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971898253497,
+                                            "created_at":  "2026-07-22T15:03:43+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:03:44+03:00",
+                                            "product_id":  8167793262777,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/54C3A6BA-34A9-4974-A74E-2442E9B4E5FF.jpg?v=1784721824",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167793197241,
+                         "title":  "Hand washing liquid soap Pink sugar Scent 500 ml",
+                         "handle":  "سائل-منظف-لليدين-8",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003c/p\u003e\n\u003cp\u003eحجم ٥٠٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T14:10:11+03:00",
+                         "created_at":  "2025-07-13T14:09:10+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167505932473,
+                                              "title":  "500 gm",
+                                              "option1":  "500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "60.00",
+                                              "grams":  500,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167793197241,
+                                              "created_at":  "2025-07-13T14:09:10+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41825185136825,
+                                            "created_at":  "2026-07-15T08:45:02+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-15T08:45:03+03:00",
+                                            "product_id":  8167793197241,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/19_jpg.jpg?v=1784094303",
+                                            "width":  2500,
+                                            "height":  2500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167791689913,
+                         "title":  "Hand washing liquid soap Dovana Scent 500 ml",
+                         "handle":  "سائل-منظف-لليدين-7",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003cbr\u003eحجم ٥٠٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:58:50+03:00",
+                         "created_at":  "2025-07-13T13:57:54+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167503245497,
+                                              "title":  "500 gm",
+                                              "option1":  "500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "60.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167791689913,
+                                              "created_at":  "2025-07-13T13:57:54+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971904708793,
+                                            "created_at":  "2026-07-22T15:04:21+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:04:23+03:00",
+                                            "product_id":  8167791689913,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/9CE55F68-BA26-42F9-B9CA-B9D131039563.jpg?v=1784721863",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167791329465,
+                         "title":  "Hand washing liquid soap Clear green Scent 500 ml",
+                         "handle":  "سائل-منظف-لليدين-6",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين بالأعشاب \u003c/p\u003e\n\u003cp\u003eحجم ٥٠٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:57:49+03:00",
+                         "created_at":  "2025-07-13T13:57:04+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167502885049,
+                                              "title":  "500 gm",
+                                              "option1":  "500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "60.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167791329465,
+                                              "created_at":  "2025-07-13T13:57:04+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41825174814905,
+                                            "created_at":  "2026-07-15T08:43:53+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-15T08:43:54+03:00",
+                                            "product_id":  8167791329465,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/20_jpg.jpg?v=1784094234",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167788413113,
+                         "title":  "Hand washing liquid soap Green apple Scent 500 ml",
+                         "handle":  "سائل-منظف-لليدين-5",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين\u003c/p\u003e\n\u003cp\u003eحجم ٥٠٠ مل \u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:52:55+03:00",
+                         "created_at":  "2025-07-13T13:51:57+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167487582393,
+                                              "title":  "500 gm",
+                                              "option1":  "500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "60.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167788413113,
+                                              "created_at":  "2025-07-13T13:51:57+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971923583161,
+                                            "created_at":  "2026-07-22T15:04:56+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:04:58+03:00",
+                                            "product_id":  8167788413113,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E179B9D7-08E3-4945-9062-97DB6E801CC6.jpg?v=1784721898",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167785824441,
+                         "title":  "Hand washing liquid soap Spring Scent 5 k",
+                         "handle":  "سائل-منظف-لليدين-4",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين بالسبرنج \u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:42:59+03:00",
+                         "created_at":  "2025-07-13T13:42:07+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167472574649,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968809",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "400.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167785824441,
+                                              "created_at":  "2025-07-13T13:42:07+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971927089337,
+                                            "created_at":  "2026-07-22T15:05:25+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:05:27+03:00",
+                                            "product_id":  8167785824441,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/F24BA1B2-AFCD-4078-9E3B-675C88D139CC.jpg?v=1784721927",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167785660601,
+                         "title":  "Hand washing liquid soap Pink sugar Scent 5 k",
+                         "handle":  "سائل-منظف-لليدين-3",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين \u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:41:59+03:00",
+                         "created_at":  "2025-07-13T13:40:18+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167472115897,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968816",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "400.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167785660601,
+                                              "created_at":  "2025-07-13T13:40:18+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971933905081,
+                                            "created_at":  "2026-07-22T15:05:51+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:05:53+03:00",
+                                            "product_id":  8167785660601,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B9238D2D-FCF7-4EF4-893E-D250B4A6173D.jpg?v=1784721953",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167785529529,
+                         "title":  "Hand washing liquid soap Clear green Scent 5 k",
+                         "handle":  "سائل-منظف-لليدين-2",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين بالأعشاب \u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:40:13+03:00",
+                         "created_at":  "2025-07-13T13:38:59+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167471984825,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968809",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "400.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167785529529,
+                                              "created_at":  "2025-07-13T13:38:59+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971940786361,
+                                            "created_at":  "2026-07-22T15:06:52+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:06:53+03:00",
+                                            "product_id":  8167785529529,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7C92B80D-B2BA-4FBA-91D5-B548BF5809F5.jpg?v=1784722013",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167783891129,
+                         "title":  "Hand washing liquid soap Dovana Scent 5 k",
+                         "handle":  "سائل-منظف-لليدين",
+                         "body_html":  "\u003cp\u003eسائل منظف لليدين برائحة الدوڤانا \u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:37:35+03:00",
+                         "created_at":  "2025-07-13T13:34:03+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45167464284345,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968830",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "400.00",
+                                              "grams":  5000,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167783891129,
+                                              "created_at":  "2025-07-13T13:34:03+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971956187321,
+                                            "created_at":  "2026-07-22T15:07:22+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:07:23+03:00",
+                                            "product_id":  8167783891129,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/6B79DA87-98E0-49EB-87B4-629595737974.jpg?v=1784722043",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167782875321,
+                         "title":  "Powerful Grease \u0026 Stain Remover for Stove, Hood, and Kitchen Walls (Per Actif650 Gram)",
+                         "handle":  "مزيل-للدهون",
+                         "body_html":  "\u003cp\u003eمزيل للدهون\u003c/p\u003e\n\u003cp\u003eحجم ٦٥٠ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:33:57+03:00",
+                         "created_at":  "2025-07-13T13:32:06+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345020084409,
+                                              "title":  "650 gm",
+                                              "option1":  "650 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968168",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "85.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167782875321,
+                                              "created_at":  "2025-09-18T14:19:31+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282294149305,
+                                            "created_at":  "2026-08-17T13:41:21+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:41:23+03:00",
+                                            "product_id":  8167782875321,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B6D527C4-B9E1-4CB2-83E4-F5A5F2B1FBE1.jpg?v=1786963283",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "650 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167772455097,
+                         "title":  "Pershine with spray\n\n500 ml",
+                         "handle":  "ملمع-زجاج-ببخاخ",
+                         "body_html":  "\u003cp\u003eملمع زجاج ببخاخ \u003c/p\u003e\n\u003cp\u003eحجم ٥٠٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:16:39+03:00",
+                         "created_at":  "2025-07-13T13:15:07+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345024803001,
+                                              "title":  "500 gm",
+                                              "option1":  "500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968052",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "40.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167772455097,
+                                              "created_at":  "2025-09-18T14:23:39+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282282418361,
+                                            "created_at":  "2026-08-17T13:37:21+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:37:22+03:00",
+                                            "product_id":  8167772455097,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B8F7F933-757A-43A9-A4D8-19AC78D22CED.jpg?v=1786963042",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167771570361,
+                         "title":  "Pershine without spray\n\n500 ml",
+                         "handle":  "ملمع-زجاج-بدون-بخاخ",
+                         "body_html":  "\u003cp\u003eملمع زجاج بدون بخاخ \u003c/p\u003e\n\u003cp\u003eحجم ٥٠٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:14:43+03:00",
+                         "created_at":  "2025-07-13T13:13:27+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345025163449,
+                                              "title":  "500 gm",
+                                              "option1":  "500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968151",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "35.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167771570361,
+                                              "created_at":  "2025-09-18T14:24:53+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282285072569,
+                                            "created_at":  "2026-08-17T13:38:05+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:38:06+03:00",
+                                            "product_id":  8167771570361,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E42D76BC-8D6E-4821-9B9E-E78152170C8B.jpg?v=1786963086",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167770947769,
+                         "title":  "Pershine with spray and without spray (Mix)\n\n500 ml",
+                         "handle":  "ملمع-زجاج-ميكس",
+                         "body_html":  "\u003cp\u003eملمع زجاج ببخاخ وبدون بخاخ\u003c/p\u003e\n\u003cp\u003eحجم ٥٠٠ مل\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:13:20+03:00",
+                         "created_at":  "2025-07-13T13:12:06+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345025360057,
+                                              "title":  "2* 500 gm",
+                                              "option1":  "2* 500 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "70.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167770947769,
+                                              "created_at":  "2025-09-18T14:25:40+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282286121145,
+                                            "created_at":  "2026-08-17T13:38:33+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:38:35+03:00",
+                                            "product_id":  8167770947769,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/DECD228C-1B45-4F64-8267-FD5FE6000513.jpg?v=1786963115",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "2* 500 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167770194105,
+                         "title":  "Pershine\n\n5 k",
+                         "handle":  "ملمع-زجاج",
+                         "body_html":  "\u003cp\u003eملمع زجاج\u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:11:58+03:00",
+                         "created_at":  "2025-07-13T13:10:27+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345026244793,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968748",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "150.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167770194105,
+                                              "created_at":  "2025-09-18T14:26:37+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  38400884375737,
+                                            "created_at":  "2025-07-13T13:10:48+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-07-13T13:10:49+03:00",
+                                            "product_id":  8167770194105,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7B63A88F-724F-4060-8EF6-A54E51F53869.jpg?v=1752401449",
+                                            "width":  1500,
+                                            "height":  1500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167769342137,
+                         "title":  "Sanitizing and disinfectant liquid Detergent  (Perclean SD5 k)",
+                         "handle":  "صابون-منظف-بالمطهر-للأغراض-العامة-2",
+                         "body_html":  "\u003cp\u003eصابون منظف بالمطهر للأغراض العامة\u003c/p\u003e\n\u003cp\u003eحجم ٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:10:21+03:00",
+                         "created_at":  "2025-07-13T13:09:00+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345026965689,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  null,
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "470.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167769342137,
+                                              "created_at":  "2025-09-18T14:27:37+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  38400873529529,
+                                            "created_at":  "2025-07-13T13:09:24+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-07-13T13:09:25+03:00",
+                                            "product_id":  8167769342137,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A072B754-2769-423D-A07B-E98302D72EDB.jpg?v=1752401365",
+                                            "width":  1500,
+                                            "height":  1500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167768817849,
+                         "title":  "Sanitizing and disinfectant liquid Detergent  (Per Clean SD 1.5 KG)",
+                         "handle":  "صابون-منظف-بالمطهر-للأغراض-العامة-1",
+                         "body_html":  "\u003cp\u003eصابون منظف بالمطهر للأغراض العامة\u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو \u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:08:52+03:00",
+                         "created_at":  "2025-07-13T13:07:27+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "best seller"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345027326137,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968540",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "170.00",
+                                              "grams":  0,
+                                              "compare_at_price":  "190.00",
+                                              "position":  1,
+                                              "product_id":  8167768817849,
+                                              "created_at":  "2025-09-18T14:28:33+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282287988921,
+                                            "created_at":  "2026-08-17T13:39:12+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:39:14+03:00",
+                                            "product_id":  8167768817849,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/EA6328F0-612A-44CC-B338-AD2012A935E4.jpg?v=1786963154",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167768654009,
+                         "title":  "Sanitizing and disinfectant liquid Detergent  (Per Clean SD 700 Gram)",
+                         "handle":  "صابون-منظف-بالمطهر-للأغراض-العامة",
+                         "body_html":  "\u003cp\u003eصابون منظف بالمطهر للأغراض العامة حجم ٧٠٠ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:07:20+03:00",
+                         "created_at":  "2025-07-13T13:05:51+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345029423289,
+                                              "title":  "700gm",
+                                              "option1":  "700gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968007",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "90.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167768654009,
+                                              "created_at":  "2025-09-18T14:29:44+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282289299641,
+                                            "created_at":  "2026-08-17T13:39:48+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:39:49+03:00",
+                                            "product_id":  8167768654009,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AF0BD408-5F75-4141-AB04-347755599573.jpg?v=1786963189",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "700gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167768326329,
+                         "title":  "dishwashing detergent- morning breeze scent 5 k",
+                         "handle":  "صابون-سائل-للمواعين-بالليمون-والبرتقال-2",
+                         "body_html":  "\u003cp\u003eصابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال\u003c/p\u003e\n\u003cp\u003e حجم ٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:05:45+03:00",
+                         "created_at":  "2025-07-13T13:04:50+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345033060537,
+                                              "title":  "5KG",
+                                              "option1":  "5KG",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968731",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "240.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167768326329,
+                                              "created_at":  "2025-09-18T14:31:31+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971982598329,
+                                            "created_at":  "2026-07-22T15:08:47+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:08:48+03:00",
+                                            "product_id":  8167768326329,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/56938FAC-46BC-48E0-9E6C-781A4E97FBC2.jpg?v=1784722128",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5KG"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167768228025,
+                         "title":  "dishwashing detergent- morning breeze scent 700 gm",
+                         "handle":  "صابون-سائل-للمواعين-بالليمون-والبرتقال-1",
+                         "body_html":  "\u003cp\u003eصابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال\u003c/p\u003e\n\u003cp\u003e حجم ٧٠٠ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:04:44+03:00",
+                         "created_at":  "2025-07-13T13:03:55+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345034764473,
+                                              "title":  "700 gm",
+                                              "option1":  "700 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968236",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "55.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167768228025,
+                                              "created_at":  "2025-09-18T14:32:30+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971985318073,
+                                            "created_at":  "2026-07-22T15:09:19+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:09:20+03:00",
+                                            "product_id":  8167768228025,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/4110F2C5-230F-4DDA-8463-FD15A88F1E99.jpg?v=1784722160",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "700 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167768096953,
+                         "title":  "dishwashing detergent- morning breeze scent 1.5 k",
+                         "handle":  "صابون-سائل-للمواعين-بالليمون-والبرتقال",
+                         "body_html":  "\u003cp\u003eصابون سائل للمواعين بالليمون والبرتقال \u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:03:48+03:00",
+                         "created_at":  "2025-07-13T13:02:43+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "best seller"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345036206265,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968090",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "95.00",
+                                              "grams":  0,
+                                              "compare_at_price":  "105.00",
+                                              "position":  1,
+                                              "product_id":  8167768096953,
+                                              "created_at":  "2025-09-18T14:33:21+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  41971989119161,
+                                            "created_at":  "2026-07-22T15:09:54+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-07-22T15:09:56+03:00",
+                                            "product_id":  8167768096953,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BA46F36A-016C-4C5D-8C68-1B5E28960F9C.jpg?v=1784722196",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167767998649,
+                         "title":  "perfumed and disinfectant Detergent (3 in 1) 700 gm",
+                         "handle":  "منظف-الأرضيات-2",
+                         "body_html":  "\u003cp\u003eمنظف ومطهر ومعطر للأرضيات \u003c/p\u003e\n\u003cp\u003eحجم ٧٠٠ جم\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:02:38+03:00",
+                         "created_at":  "2025-07-13T13:01:38+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345038139577,
+                                              "title":  "700 gm",
+                                              "option1":  "700 gm",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968144",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "75.00",
+                                              "grams":  0,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167767998649,
+                                              "created_at":  "2025-09-18T14:34:25+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282296967353,
+                                            "created_at":  "2026-08-17T13:42:26+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:42:28+03:00",
+                                            "product_id":  8167767998649,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/44EA168B-CFBF-4FCF-BFC8-5D0D45BC60DA.jpg?v=1786963348",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "700 gm"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167767933113,
+                         "title":  "perfumed and disinfectant Detergent (3 in 1) 5 k",
+                         "handle":  "منظف-الأرضيات-1",
+                         "body_html":  "\u003cp\u003eمنظف ومطهر ومعطر الأرضيات حجم ٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:01:33+03:00",
+                         "created_at":  "2025-07-13T13:00:28+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345040695481,
+                                              "title":  "5 kg",
+                                              "option1":  "5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968533",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "350.00",
+                                              "grams":  5000,
+                                              "compare_at_price":  null,
+                                              "position":  1,
+                                              "product_id":  8167767933113,
+                                              "created_at":  "2025-09-18T14:35:19+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  38400717357241,
+                                            "created_at":  "2025-07-13T13:00:45+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2025-07-13T13:00:47+03:00",
+                                            "product_id":  8167767933113,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2A7BED6C-3036-486B-9C25-57E08247C31B.jpg?v=1752400847",
+                                            "width":  1500,
+                                            "height":  1500
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     },
+                     {
+                         "id":  8167767605433,
+                         "title":  "perfumed and disinfectant Detergent (3 in 1) 1.5 k",
+                         "handle":  "منظف-الأرضيات",
+                         "body_html":  "\u003cp\u003eمنظف ومطهر ومعطر الأرضيات\u003c/p\u003e\n\u003cp\u003eحجم ١.٥ كيلو\u003c/p\u003e",
+                         "published_at":  "2025-07-13T13:00:17+03:00",
+                         "created_at":  "2025-07-13T12:56:08+03:00",
+                         "updated_at":  "2026-10-01T00:54:55+03:00",
+                         "vendor":  "Per Clean",
+                         "product_type":  "",
+                         "tags":  [
+                                      "best seller"
+                                  ],
+                         "variants":  [
+                                          {
+                                              "id":  45345041809593,
+                                              "title":  "1.5 kg",
+                                              "option1":  "1.5 kg",
+                                              "option2":  null,
+                                              "option3":  null,
+                                              "sku":  "6224000968137",
+                                              "requires_shipping":  true,
+                                              "taxable":  false,
+                                              "featured_image":  null,
+                                              "available":  true,
+                                              "price":  "130.00",
+                                              "grams":  0,
+                                              "compare_at_price":  "150.00",
+                                              "position":  1,
+                                              "product_id":  8167767605433,
+                                              "created_at":  "2025-09-18T14:35:57+03:00",
+                                              "updated_at":  "2026-10-01T00:54:55+03:00"
+                                          }
+                                      ],
+                         "images":  [
+                                        {
+                                            "id":  42282298179769,
+                                            "created_at":  "2026-08-17T13:42:57+03:00",
+                                            "position":  1,
+                                            "updated_at":  "2026-08-17T13:42:58+03:00",
+                                            "product_id":  8167767605433,
+                                            "variant_ids":  [
+
+                                                            ],
+                                            "src":  "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2BF6CB14-5A71-4C77-8C0D-C666E703AA30.jpg?v=1786963378",
+                                            "width":  1254,
+                                            "height":  1254
+                                        }
+                                    ],
+                         "options":  [
+                                         {
+                                             "name":  "Size",
+                                             "position":  1,
+                                             "values":  [
+                                                            "1.5 kg"
+                                                        ]
+                                         }
+                                     ]
+                     }
+                 ]
+}

@@ -1,149 +1,211 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // Register ScrollTrigger
+    // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Text Splitter for MESS
-    const messText = document.querySelector('.text-mess');
+    const isRtl = document.documentElement.dir === 'rtl';
+
+    // ---------------------------------------------------
+    // 01. CINEMATIC HERO TIMELINE
+    // ---------------------------------------------------
+    const heroTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".scene-wrapper",
+            start: "top top",
+            end: "+=500%", // 500vh of scroll distance
+            scrub: 1, // Smooth scrubbing
+            pin: true,
+            anticipatePin: 1
+        }
+    });
+
+    // Simple text splitter for MESS
+    const messText = document.querySelector('.mess-text');
     if (messText) {
-        const text = messText.textContent;
+        const chars = messText.innerText.split('');
         messText.innerHTML = '';
-        text.split('').forEach(char => {
-            const span = document.createElement('span');
-            span.textContent = char;
-            span.classList.add('char');
+        chars.forEach(c => {
+            let span = document.createElement('span');
+            span.className = 'char';
+            span.innerText = c;
             messText.appendChild(span);
         });
     }
 
-    // 2. Hero Cinematic Scroll Animation
-    const heroTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".hero-cinematic",
-            start: "top top",
-            end: "+=200%",
-            pin: true,
-            scrub: 1,
-            // markers: true
-        }
-    });
-
-    // Animate Logo dropping in and MESS shattering
+    // Sequence Choreography
     heroTl
-    .to(".char", {
-        y: (i) => (Math.random() - 0.5) * 400,
-        x: (i) => (Math.random() - 0.5) * 400,
-        rotation: (i) => (Math.random() - 0.5) * 90,
-        opacity: 0,
-        filter: "blur(10px)",
-        duration: 1,
-        stagger: 0.1,
-        ease: "power2.inOut"
-    }, 0)
-    .to(".subtitle-dirty", {
-        opacity: 0,
-        y: 50,
-        duration: 0.5
-    }, 0)
-    // Logo drops in
-    .to(".brand-catalyst", {
-        marginTop: 0,
-        scale: 1,
-        duration: 1.5,
-        ease: "bounce.out"
-    }, 0.5)
-    // Wipe to clean scene
-    .to(".scene-clean", {
-        clipPath: "circle(150% at 50% 50%)",
-        duration: 2,
-        ease: "power2.inOut"
-    }, 1.5)
-    // Logo flies away or fades out
-    .to(".brand-catalyst", {
-        marginTop: "-20vh",
-        opacity: 0,
-        scale: 0.8,
-        duration: 1,
-        ease: "power2.in"
-    }, 2.5)
-    // Product comes in to replace it
-    .to(".product-hero", {
-        marginTop: -20,
-        scale: 1,
-        opacity: 1,
-        duration: 1.5,
-        ease: "elastic.out(1, 0.7)"
-    }, 3);
+        // 1. Zoom into the mess slightly
+        .to(".mess-bg", { scale: 1.2, duration: 1 }, 0)
+        
+        // 2. Shatter the MESS text
+        .to(".char", {
+            y: (i) => (Math.random() - 0.5) * 800,
+            x: (i) => (Math.random() - 0.5) * 800,
+            rotation: (i) => (Math.random() - 0.5) * 180,
+            opacity: 0,
+            filter: "blur(20px)",
+            duration: 1.5,
+            stagger: 0.1,
+            ease: "power2.inOut"
+        }, 0.5)
+        .to(".mess-sub", { opacity: 0, y: 50, duration: 0.5 }, 0.5)
+
+        // 3. Brand Catalyst enters
+        .to(".brand-catalyst-center", {
+            scale: 1,
+            rotation: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "back.out(1.5)"
+        }, 1)
+
+        // 4. The Transformation (Mask Expansion) triggered by logo hit
+        .to(".layer-clean", {
+            clipPath: "circle(150% at 50% 50%)",
+            duration: 2,
+            ease: "power2.inOut"
+        }, 1.5)
+
+        // 5. Clean text emerges
+        .to(".clean-typography", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out"
+        }, 2.5)
+        
+        // 6. Background subtly zooms out
+        .to(".clean-bg", { scale: 1.1, duration: 2 }, 1.5)
+
+        // 7. Logo fades away
+        .to(".brand-catalyst-center", {
+            y: -200,
+            opacity: 0,
+            scale: 0.5,
+            duration: 1,
+            ease: "power2.in"
+        }, 3)
+
+        // 8. Product Hero rises
+        .to(".product-hero-center", {
+            y: -50,
+            opacity: 1,
+            scale: 1,
+            duration: 1.5,
+            ease: "power3.out"
+        }, 3.5);
 
 
-    // 3. Interactive Stage Logic
-    const catItems = document.querySelectorAll('.cat-item');
-    const stageContents = document.querySelectorAll('.stage-content');
-    const stageBg = document.querySelector('.stage-bg');
+    // ---------------------------------------------------
+    // 02. CATEGORY HORIZONTAL SCROLL
+    // ---------------------------------------------------
+    const track = document.querySelector('.category-track');
+    const panels = gsap.utils.toArray('.cat-panel');
+    
+    if (track && panels.length > 0) {
+        // Horizontal scroll animation
+        gsap.to(track, {
+            xPercent: isRtl ? 100 * (panels.length - 1) : -100 * (panels.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".category-experience",
+                pin: true,
+                scrub: 1,
+                end: () => "+=" + track.offsetWidth
+            }
+        });
 
-    // Color mapping for backgrounds based on category
-    const bgColors = {
-        'kitchen': 'radial-gradient(circle at top right, #e8f7f8, #f0f0f0)',
-        'laundry': 'radial-gradient(circle at top right, #f0e8f8, #f4f0f8)',
-        'softener':  'radial-gradient(circle at top right, #f8f0e8, #f8f4f0)',
-        'surfaces':'radial-gradient(circle at top right, #e8f8f0, #f0f8f4)'
-    };
-
-    catItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (item.classList.contains('active')) return;
-
-            const targetId = item.getAttribute('data-target');
-            
-            // Update Menu
-            catItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-
-            // Hide old content
-            const activeContent = document.querySelector('.stage-content.active');
-            gsap.to(activeContent, {
-                opacity: 0,
-                y: 20,
-                duration: 0.3,
-                onComplete: () => {
-                    activeContent.classList.remove('active');
-                    activeContent.style.pointerEvents = 'none';
-                    activeContent.style.position = 'absolute';
-
-                    // Show new content
-                    const newContent = document.getElementById(`stage-${targetId}`);
-                    newContent.classList.add('active');
-                    newContent.style.pointerEvents = 'auto';
-                    newContent.style.position = 'relative';
-
-                    // Animate background color
-                    const isRtl = document.documentElement.dir === 'rtl';
-                    let newBg = bgColors[targetId];
-                    if (isRtl) {
-                        newBg = newBg.replace('top right', 'top left');
-                    }
-                    gsap.to(stageBg, {
-                        background: newBg,
-                        duration: 0.5
-                    });
-
-                    // Animate new content elements
-                    const xOffset = isRtl ? 30 : -30;
-                    gsap.fromTo(newContent.querySelector('.stage-info'), 
-                        { opacity: 0, x: xOffset },
-                        { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }
-                    );
-
-                    gsap.fromTo(newContent.querySelector('.stage-product img'),
-                        { opacity: 0, scale: 0.8, rotation: -10 },
-                        { opacity: 1, scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.7)" }
-                    );
+        // Add intersection observer to highlight center card
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('is-active');
+                } else {
+                    entry.target.classList.remove('is-active');
                 }
             });
+        }, {
+            root: null,
+            threshold: 0.5 // trigger when 50% visible
         });
-    });
 
-    // 4. Mobile Menu Toggle
+        panels.forEach(panel => observer.observe(panel));
+    }
+
+
+    // ---------------------------------------------------
+    // 03. DYNAMIC DATA FETCH & COMMERCE INJECTION
+    // ---------------------------------------------------
+    fetch('/data.json')
+        .then(res => res.text())
+        .then(text => {
+            // Handle UTF-8 BOM if present
+            if (text.charCodeAt(0) === 0xFEFF) {
+                text = text.slice(1);
+            }
+            const data = JSON.parse(text);
+            const products = data.products;
+
+            const featuredGrid = document.querySelector('.featured-grid');
+            const fullGrid = document.querySelector('.full-grid');
+            
+            if(!featuredGrid || !fullGrid) return;
+
+            products.forEach((product, index) => {
+                // Determine title based on language
+                let title = isRtl ? (product.translations?.ar?.title || product.title) : product.title;
+                // Price (using first variant)
+                let price = product.variants[0] ? product.variants[0].price : "0.00";
+                // Image
+                let imageSrc = (product.images && product.images.length > 0) ? product.images[0].src : '/assets/logo.png';
+
+                const cardHtml = `
+                    <div class="product-card">
+                        <div class="card-image-wrap">
+                            <img src="${imageSrc}" alt="${title}" loading="lazy" />
+                        </div>
+                        <div class="card-info">
+                            <h4 class="card-title">${title}</h4>
+                            <div class="card-footer">
+                                <span class="card-price">${price} EGP</span>
+                                <button class="btn-add-cart">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                if(index < 6) {
+                    featuredGrid.insertAdjacentHTML('beforeend', cardHtml);
+                } else {
+                    fullGrid.insertAdjacentHTML('beforeend', cardHtml);
+                }
+            });
+
+            // Bind Cart Events for dynamically added buttons
+            bindCartEvents();
+        })
+        .catch(err => console.error("Error loading products:", err));
+
+
+    // ---------------------------------------------------
+    // 04. UI INTERACTIONS (Cart & View All)
+    // ---------------------------------------------------
+    
+    // View All Products
+    const btnLoadAll = document.getElementById('btn-load-all');
+    const fullGrid = document.querySelector('.full-grid');
+    if (btnLoadAll && fullGrid) {
+        btnLoadAll.addEventListener('click', () => {
+            if (fullGrid.style.display === 'none') {
+                fullGrid.style.display = 'grid';
+                btnLoadAll.innerText = isRtl ? 'عرض منتجات أقل' : 'VIEW LESS';
+            } else {
+                fullGrid.style.display = 'none';
+                btnLoadAll.innerText = isRtl ? 'عرض كل الـ 46 منتج' : 'VIEW ALL 46 PRODUCTS';
+            }
+        });
+    }
+
+    // Mobile Menu
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     if (menuToggle && navLinks) {
@@ -155,74 +217,67 @@ document.addEventListener("DOMContentLoaded", () => {
                 navLinks.style.top = '100%';
                 navLinks.style.left = '0';
                 navLinks.style.width = '100%';
-                navLinks.style.background = 'rgba(15, 12, 8, 0.95)';
-                navLinks.style.padding = '1rem';
-                navLinks.style.gap = '1rem';
-                navLinks.querySelectorAll('a').forEach(a => {
-                    a.style.margin = '10px 0';
-                });
+                navLinks.style.background = 'rgba(10, 10, 10, 0.95)';
+                navLinks.style.padding = '1.5rem';
+                navLinks.style.gap = '1.5rem';
             }
         });
     }
 
-    // 5. Cart and WhatsApp Ordering Logic
+    // Shopping Cart & WhatsApp Logic
     let cart = [];
-    const isRtl = document.documentElement.dir === 'rtl';
+    const floatingCart = document.querySelector('.floating-cart');
+    const cartCount = document.querySelector('.cart-count');
 
-    // Override the inline onclick alerts generated by the catalog script
-    document.querySelectorAll('.btn-add-cart, .btn-primary').forEach(button => {
-        // Remove existing onclick
-        button.removeAttribute('onclick');
-        
-        button.addEventListener('click', (e) => {
-            const card = e.target.closest('.product-card') || e.target.closest('.stage-info');
-            if (!card) return;
-            
-            let title = card.querySelector('.card-title') ? card.querySelector('.card-title').innerText : card.querySelector('h3').innerText;
-            let price = card.querySelector('.card-price') ? card.querySelector('.card-price').innerText : card.querySelector('.price').innerText;
-            
-            cart.push({ title, price });
-            alert(isRtl ? `تمت الإضافة للسلة: ${title}` : `Added to cart: ${title}`);
-            updateCartIcon();
+    function bindCartEvents() {
+        document.querySelectorAll('.btn-add-cart').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const card = e.target.closest('.product-card');
+                if (!card) return;
+                
+                let title = card.querySelector('.card-title').innerText;
+                let price = card.querySelector('.card-price').innerText;
+                
+                cart.push({ title, price });
+                updateCartIcon();
+                
+                // Button feedback
+                const origText = button.innerText;
+                button.innerText = isRtl ? 'تمت الإضافة' : 'ADDED!';
+                button.style.background = '#054f5c';
+                setTimeout(() => {
+                    button.innerText = origText;
+                    button.style.background = '';
+                }, 1500);
+            });
         });
-    });
+    }
 
     function updateCartIcon() {
-        document.querySelectorAll('.cart-link').forEach(link => {
-            // Update cart visually (simple counter)
-            let badge = link.querySelector('.cart-badge');
-            if (!badge) {
-                badge = document.createElement('span');
-                badge.className = 'cart-badge';
-                badge.style.cssText = 'background: #0c7b8c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; margin-left: 5px;';
-                link.appendChild(badge);
-            }
-            badge.innerText = cart.length;
-        });
+        if (cart.length > 0) {
+            floatingCart.classList.add('visible');
+            cartCount.innerText = cart.length;
+        } else {
+            floatingCart.classList.remove('visible');
+        }
     }
 
-    // Checkout via WhatsApp
-    document.querySelectorAll('.cart-link').forEach(link => {
-        link.addEventListener('click', (e) => {
+    // WhatsApp Checkout
+    if (floatingCart) {
+        floatingCart.addEventListener('click', (e) => {
             e.preventDefault();
-            if (cart.length === 0) {
-                alert(isRtl ? 'السلة فارغة' : 'Your cart is empty');
-                return;
-            }
+            if (cart.length === 0) return;
             
             let orderText = isRtl ? "مرحباً، أود طلب المنتجات التالية:\n\n" : "Hello, I would like to order the following items:\n\n";
             cart.forEach((item, index) => {
                 orderText += `${index + 1}. ${item.title} - ${item.price}\n`;
             });
             
-            const whatsappNumber = "+201000000000"; // Replace with actual client number if available
+            const whatsappNumber = "+201000000000"; // Replace with actual client number
             const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderText)}`;
             window.open(waUrl, '_blank');
             
-            // Clear cart
-            cart = [];
-            updateCartIcon();
+            // Clear cart optionally, but let's keep it in case they close the window
         });
-    });
-
+    }
 });
