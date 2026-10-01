@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Per Clean — The Transformation | Industrial & Household Chemistry</title>
+    <title>Per Clean — The Transformation | Interactive Brand Film & Pure Chemistry</title>
     <meta name="description" content="Experience the transformation from mess to pristine clean. Premium formulated cleaning and disinfectant solutions.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/assets/perclean.css">
 </head>
 <body>
 
-    <!-- Atmospheric Ambient Lighting -->
+    <!-- Atmospheric Deep Lighting -->
     <div class="ambient-glow"></div>
 
     <!-- Navigation Header -->
@@ -26,8 +26,8 @@
             </a>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="#heroScene" class="nav-item">The Story</a>
-                <a href="#categoriesSection" class="nav-item">Categories</a>
+                <a href="#cameraScene" class="nav-item">The Film</a>
+                <a href="#categoriesSection" class="nav-item">Disciplines</a>
                 <a href="#catalogSection" class="nav-item">Collection</a>
                 <a href="#brandPromise" class="nav-item">Brand Science</a>
             </nav>
@@ -49,245 +49,270 @@
     <!-- Mobile Slide Menu -->
     <div class="mobile-nav-drawer" id="mobileNavDrawer">
         <div class="mobile-nav-links">
-            <a href="#heroScene" class="mobile-nav-link">The Story</a>
-            <a href="#categoriesSection" class="mobile-nav-link">Categories</a>
+            <a href="#cameraScene" class="mobile-nav-link">The Film</a>
+            <a href="#categoriesSection" class="mobile-nav-link">Disciplines</a>
             <a href="#catalogSection" class="mobile-nav-link">Collection</a>
             <a href="#brandPromise" class="mobile-nav-link">Brand Science</a>
             <a href="/ar/" class="mobile-nav-link lang-mobile">عربي / Arabic</a>
         </div>
     </div>
 
-    <!-- Persistent Floating Cart Trigger -->
-    <button class="floating-cart-pill" id="floatingCartBtn" aria-label="View Shopping Cart">
-        <div class="cart-pill-icon-wrap">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <path d="M16 10a4 4 0 0 1-8 0"></path>
-            </svg>
-            <span class="floating-cart-badge" id="floatingCartBadge">0</span>
-        </div>
-        <span class="cart-pill-text">Cart</span>
+    <!-- Minimal Floating Cart Button (Shopping Bag + Badge) -->
+    <button class="floating-cart-icon-btn" id="floatingCartBtn" aria-label="View Shopping Cart">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-icon-badge" id="cartBadge">0</span>
     </button>
 
     <!-- MAIN EXPERIENCE -->
     <main>
         
-        <!-- 01. CINEMATIC HERO SEQUENCE (MESS -> TRANSFORMATION -> LOGO -> CLEAN -> PRODUCT) -->
-        <section class="scene-wrapper" id="heroScene">
-            <div class="cinematic-viewport">
+        <!-- =================================================================== -->
+        <!-- 01. THE CAMERA IS THE MAIN CHARACTER (3D SPATIAL FILM SEQUENCE)     -->
+        <!-- =================================================================== -->
+        <section class="camera-film-section" id="cameraScene">
+            <div class="camera-stage" id="cameraStage">
+                <div class="camera-world" id="cameraWorld">
+                    
+                    <!-- SHOT 01: A LITTLE MESS -->
+                    <div class="shot-layer shot-01" id="shot01">
+                        <div class="shot-media-wrap">
+                            <img src="/assets/shot01_mess.jpg" alt="A Little Mess" class="shot-bg-img">
+                            <div class="shot-cinematic-vignette"></div>
+                        </div>
+                        <div class="shot-typography">
+                            <span class="shot-kicker">SCENE 01 // PROBLEM</span>
+                            <h1 class="shot-headline serif">A little mess.</h1>
+                            <p class="shot-caption">REAL EVERYDAY</p>
+                        </div>
+                    </div>
+
+                    <!-- SHOT 02: CARE MOVES THROUGH (Mist Inflow) -->
+                    <div class="shot-layer shot-02" id="shot02">
+                        <div class="shot-media-wrap">
+                            <img src="/assets/shot02_spray.jpg" alt="Care Moves Through" class="shot-bg-img">
+                            <div class="shot-cinematic-vignette"></div>
+                        </div>
+                        <div class="shot-typography">
+                            <span class="shot-kicker">SCENE 02 // INTERVENTION</span>
+                            <h2 class="shot-headline">Care moves through.</h2>
+                            <p class="shot-caption">TARGETED MIST DISPERSION</p>
+                        </div>
+                    </div>
+
+                    <!-- SHOT 03: POWER THAT CLEARS (Foam Emulsion) -->
+                    <div class="shot-layer shot-03" id="shot03">
+                        <div class="shot-media-wrap">
+                            <img src="/assets/shot03_foam.jpg" alt="Power That Clears" class="shot-bg-img">
+                            <div class="shot-cinematic-vignette"></div>
+                        </div>
+                        <div class="shot-typography">
+                            <span class="shot-kicker">SCENE 03 // CATALYSIS</span>
+                            <h2 class="shot-headline">Power that clears.</h2>
+                            <p class="shot-caption">ACTIVE CARBON EMULSIFICATION</p>
+                        </div>
+                    </div>
+
+                    <!-- SHOT 04: FOR A BRIGHTER HOME (Clean Chrome & Steel) -->
+                    <div class="shot-layer shot-04" id="shot04">
+                        <div class="shot-media-wrap">
+                            <img src="/assets/shot04_clean_stove.jpg" alt="Clean Surface" class="shot-bg-img">
+                            <div class="shot-cinematic-vignette"></div>
+                        </div>
+                        <div class="shot-typography">
+                            <span class="shot-kicker">SCENE 04 // RESTORATION</span>
+                            <h2 class="shot-headline serif">For a brighter home.</h2>
+                            <p class="shot-caption">MICRON-LEVEL SURFACE CLARITY</p>
+                        </div>
+                    </div>
+
+                    <!-- SHOT 05: PER CLEAN LOGO VORTEX -->
+                    <div class="shot-layer shot-05" id="shot05">
+                        <div class="shot-media-wrap">
+                            <img src="/assets/shot05_logo_vortex.jpg" alt="Per Clean Vortex" class="shot-bg-img">
+                            <div class="shot-cinematic-vignette"></div>
+                        </div>
+                        <div class="shot-logo-hero">
+                            <img src="/assets/logo.png" alt="Per Clean" class="hero-logo-drop">
+                            <p class="shot-caption" style="margin-top:1.5rem; letter-spacing:4px;">REAL CARE. REAL EVERYDAY.</p>
+                        </div>
+                    </div>
+
+                    <!-- SHOT 06: HERO PRODUCT REVEAL (Wave & Packaging) -->
+                    <div class="shot-layer shot-06" id="shot06">
+                        <div class="shot-media-wrap">
+                            <img src="/assets/shot06_product_wave.jpg" alt="Per Clean Actif" class="shot-bg-img">
+                            <div class="shot-cinematic-vignette"></div>
+                        </div>
+                        <div class="shot-product-details">
+                            <span class="shot-kicker">FLAGSHIP DEGREASER</span>
+                            <h2 class="shot-headline">Per Clean Actif</h2>
+                            <p class="shot-desc">Powerful Grease & Stain Remover. Formulated for stoves, extractors, and industrial cooktops.</p>
+                            <div class="shot-product-action">
+                                <span class="shot-price">450.00 EGP</span>
+                                <button class="btn-film-add-cart" 
+                                    data-id="actif-film" 
+                                    data-title="Per Clean Actif 5KG" 
+                                    data-price="450.00 EGP" 
+                                    data-img="/assets/actif5_isolated.png">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SHOT 07 & 08: THE BRIGHT HOME CONTEXT -->
+                    <div class="shot-layer shot-07" id="shot07">
+                        <div class="shot-media-wrap">
+                            <img src="/assets/shot07_kitchen_wide.jpg" alt="A Cleaner Home" class="shot-bg-img">
+                            <div class="shot-cinematic-vignette"></div>
+                        </div>
+                        <div class="shot-typography">
+                            <h2 class="shot-headline serif" style="font-size: clamp(2.5rem, 6vw, 5rem);">A cleaner home.<br><span style="font-style:italic;">A brighter everyday.</span></h2>
+                            <p class="shot-caption" style="margin-top: 1rem;">SCROLL DOWN TO EXPLORE DISCIPLINES</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Scroll Prompt Indicator -->
+                <div class="film-scroll-prompt" id="filmScrollPrompt">
+                    <span class="prompt-mouse"><span class="prompt-wheel"></span></span>
+                    <span class="prompt-label">SCROLL TO DIRECT THE CAMERA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- 02. CATEGORY CHOREOGRAPHY (ALTERNATING VERTICAL MOVEMENT IN 3D)    -->
+        <!-- =================================================================== -->
+        <section class="category-film-section" id="categoriesSection">
+            <div class="cat-stage-header">
+                <span class="section-kicker">SURFACTANT ARCHITECTURE</span>
+                <h2 class="section-heading">DISCIPLINES OF CARE</h2>
+                <p class="section-subtext">Five targeted chemical formulations engineered for every corner of your home.</p>
+            </div>
+
+            <div class="cat-vertical-stage" id="catVerticalStage">
                 
-                <!-- LAYER 1: THE MESS -->
-                <div class="layer layer-mess" id="layerMess">
-                    <div class="mess-texture-bg"></div>
-                    <div class="mess-vignette"></div>
-                    
-                    <div class="mess-hero-content">
-                        <span class="tag-mess">STAGE 01 — THE PROBLEM</span>
-                        <h1 class="mess-title">
-                            <span class="mess-char">M</span>
-                            <span class="mess-char">E</span>
-                            <span class="mess-char">S</span>
-                            <span class="mess-char">S</span>
-                        </h1>
-                        <p class="mess-subtitle">BURNT OILS. CARBONIZED GREASE. TOUGH STAINS.</p>
-                    </div>
-
-                    <div class="scroll-indicator" id="scrollIndicator">
-                        <span class="scroll-mouse">
-                            <span class="scroll-wheel"></span>
-                        </span>
-                        <span class="scroll-text">SCROLL TO TRANSFORM</span>
-                    </div>
-                </div>
-
-                <!-- LAYER 2: THE LIQUID TRANSFORMATION (Accelerating Wipe) -->
-                <div class="layer layer-clean-reveal" id="layerClean">
-                    <div class="clean-liquid-bg"></div>
-                    <div class="clean-ambient-light"></div>
-                    
-                    <!-- Clean State Typography -->
-                    <div class="clean-hero-content">
-                        <span class="tag-clean">STAGE 02 — THE FORMULATION</span>
-                        <h2 class="clean-title">CLEAN</h2>
-                        <p class="clean-subtitle">SURFACE CLARITY. MOLECULAR PURITY.</p>
-                    </div>
-                </div>
-
-                <!-- LAYER 3: THE BRAND CATALYST (Per Clean Logo) -->
-                <div class="brand-catalyst-container" id="brandCatalyst">
-                    <div class="catalyst-glow-ring"></div>
-                    <div class="catalyst-logo-box">
-                        <img src="/assets/logo.png" alt="Per Clean Brand Logo" class="catalyst-img">
-                    </div>
-                    <div class="catalyst-caption">THE CATALYST</div>
-                </div>
-
-                <!-- LAYER 4: THE PRODUCT HERO (Per Actif 5KG Emerging Solid & Grounded) -->
-                <div class="product-hero-stage" id="productHeroStage">
-                    <div class="product-glow-backdrop"></div>
-                    
-                    <div class="product-bottle-wrapper" id="productBottleWrapper">
-                        <img src="/assets/actif5_isolated.png" alt="Per Actif 5KG Degreaser" class="hero-bottle-img" id="heroBottleImg">
-                        <div class="product-contact-shadow"></div>
-                    </div>
-
-                    <div class="product-hero-specs" id="productHeroSpecs">
-                        <span class="spec-kicker">FLAGSHIP POWER</span>
-                        <h3 class="spec-title">Per Actif 5KG</h3>
-                        <p class="spec-desc">Industrial Alkaline Degreaser & Baked-On Carbon Dissolver. Formulated for stoves, hoods, and commercial cooktops.</p>
-                        <div class="spec-footer">
-                            <span class="spec-price">450.00 EGP</span>
-                            <button class="btn-hero-cart" 
-                                data-id="actif-5kg" 
-                                data-title="Per Actif 5KG Degreaser" 
-                                data-price="450.00 EGP" 
-                                data-img="/assets/actif5_isolated.png"
-                                data-img-element="heroBottleImg">
-                                <span>Add to Cart</span>
-                            </button>
+                <!-- CARD 01: KITCHEN CARE (Enters from Above) -->
+                <div class="cat-vert-card cat-from-top is-active" data-cat="Kitchen" data-index="0">
+                    <div class="cat-vert-card-inner">
+                        <span class="cat-vert-num">01 // 05</span>
+                        <div class="cat-vert-visual">
+                            <div class="cat-vert-halo"></div>
+                            <img src="/assets/actif5_isolated.png" alt="Kitchen Care" class="cat-vert-img">
+                            <div class="cat-vert-shadow"></div>
+                        </div>
+                        <div class="cat-vert-info">
+                            <span class="cat-vert-badge">HEAVY DUTY ALKALINE</span>
+                            <h3 class="cat-vert-title">Kitchen & Cooktop Care</h3>
+                            <p class="cat-vert-desc">Dissolves carbonized cooking oils, baked-on grease, commercial hoods, and stainless steel.</p>
+                            <button class="btn-vert-explore" data-filter="Kitchen">Explore Kitchen Lineup &rarr;</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- CARD 02: LAUNDRY CARE (Enters from Below) -->
+                <div class="cat-vert-card cat-from-bottom" data-cat="Laundry" data-index="1">
+                    <div class="cat-vert-card-inner">
+                        <span class="cat-vert-num">02 // 05</span>
+                        <div class="cat-vert-visual">
+                            <div class="cat-vert-halo"></div>
+                            <img src="/assets/cat_laundry.png" alt="Laundry Care" class="cat-vert-img">
+                            <div class="cat-vert-shadow"></div>
+                        </div>
+                        <div class="cat-vert-info">
+                            <span class="cat-vert-badge">ACTIVE ENZYMATIC GEL</span>
+                            <h3 class="cat-vert-title">Automatic Laundry Care</h3>
+                            <p class="cat-vert-desc">High-efficiency liquid detergent gels with active color protection and stain-lifting bio-enzymes.</p>
+                            <button class="btn-vert-explore" data-filter="Laundry">Explore Laundry Lineup &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 03: BATHROOM & SOFTENERS (Enters from Above) -->
+                <div class="cat-vert-card cat-from-top" data-cat="Softener" data-index="2">
+                    <div class="cat-vert-card-inner">
+                        <span class="cat-vert-num">03 // 05</span>
+                        <div class="cat-vert-visual">
+                            <div class="cat-vert-halo"></div>
+                            <img src="/assets/cat_softener.png" alt="Fabric Softener" class="cat-vert-img">
+                            <div class="cat-vert-shadow"></div>
+                        </div>
+                        <div class="cat-vert-info">
+                            <span class="cat-vert-badge">MICRO-ENCAPSULATED SCENT</span>
+                            <h3 class="cat-vert-title">Fabric Conditioning</h3>
+                            <p class="cat-vert-desc">Anti-static softening agents with concentrated micro-encapsulated floral aromas that linger for weeks.</p>
+                            <button class="btn-vert-explore" data-filter="Softener">Explore Softeners &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 04: SURFACE CARE (Enters from Below) -->
+                <div class="cat-vert-card cat-from-bottom" data-cat="Disinfectant" data-index="3">
+                    <div class="cat-vert-card-inner">
+                        <span class="cat-vert-num">04 // 05</span>
+                        <div class="cat-vert-visual">
+                            <div class="cat-vert-halo"></div>
+                            <img src="/assets/cat_surfaces.png" alt="Surface Disinfectant" class="cat-vert-img">
+                            <div class="cat-vert-shadow"></div>
+                        </div>
+                        <div class="cat-vert-info">
+                            <span class="cat-vert-badge">99.9% MEDICAL SANITIZATION</span>
+                            <h3 class="cat-vert-title">Hospital-Grade Disinfection</h3>
+                            <p class="cat-vert-desc">Germol and active hospital-grade surface sanitizers for ceramic, marble, and multi-contact zones.</p>
+                            <button class="btn-vert-explore" data-filter="Disinfectant">Explore Disinfectants &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 05: HOME ESSENTIALS (Enters from Above) -->
+                <div class="cat-vert-card cat-from-top" data-cat="Hand Soap" data-index="4">
+                    <div class="cat-vert-card-inner">
+                        <span class="cat-vert-num">05 // 05</span>
+                        <div class="cat-vert-visual">
+                            <div class="cat-vert-halo"></div>
+                            <img src="/assets/cat_soaps.png" alt="Hand Soaps" class="cat-vert-img">
+                            <div class="cat-vert-shadow"></div>
+                        </div>
+                        <div class="cat-vert-info">
+                            <span class="cat-vert-badge">BOTANICAL MOISTURIZING</span>
+                            <h3 class="cat-vert-title">Luxury Hand Wash</h3>
+                            <p class="cat-vert-desc">Gentle foaming botanical formulas with Pink Sugar, Spring, and Green Apple infusions.</p>
+                            <button class="btn-vert-explore" data-filter="Hand Soap">Explore Hand Soaps &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mobile Indicators -->
+            <div class="cat-vert-indicators">
+                <span class="vert-dot active" data-index="0"></span>
+                <span class="vert-dot" data-index="1"></span>
+                <span class="vert-dot" data-index="2"></span>
+                <span class="vert-dot" data-index="3"></span>
+                <span class="vert-dot" data-index="4"></span>
             </div>
         </section>
 
-        <!-- 02. CATEGORY EXPERIENCE (Choreographed Horizontal Carousel) -->
-        <section class="category-experience-section" id="categoriesSection">
-            <div class="category-section-intro">
-                <span class="section-kicker">DISCIPLINES OF CARE</span>
-                <h2 class="section-heading">WHAT ARE YOU CLEANING?</h2>
-                <p class="section-subtext">Five targeted surfactant and biocidal disciplines engineered for uncompromising performance.</p>
-            </div>
-
-            <div class="category-viewport" id="categoryViewport">
-                <div class="category-track" id="categoryTrack">
-                    
-                    <!-- Card 01: Kitchen Care -->
-                    <div class="cat-card-item is-dominant" data-index="0">
-                        <div class="cat-card-inner">
-                            <span class="cat-num">01 // 05</span>
-                            <div class="cat-visual">
-                                <div class="cat-img-halo"></div>
-                                <img src="/assets/actif5_isolated.png" alt="Kitchen Care" class="cat-floating-product">
-                                <div class="cat-item-shadow"></div>
-                            </div>
-                            <div class="cat-details">
-                                <span class="cat-badge">HEAVY DUTY DEGREASING</span>
-                                <h3 class="cat-name">Kitchen & Cooktop Care</h3>
-                                <p class="cat-desc">Deep-acting alkaline agents dissolve baked-on oils, burnt grease, hoods, and stainless steel.</p>
-                                <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Kitchen">Explore Kitchen Lineup &rarr;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 02: Laundry Care -->
-                    <div class="cat-card-item" data-index="1">
-                        <div class="cat-card-inner">
-                            <span class="cat-num">02 // 05</span>
-                            <div class="cat-visual">
-                                <div class="cat-img-halo"></div>
-                                <img src="/assets/cat_laundry.png" alt="Laundry Care" class="cat-floating-product">
-                                <div class="cat-item-shadow"></div>
-                            </div>
-                            <div class="cat-details">
-                                <span class="cat-badge">ENZYMATIC GEL FORMULA</span>
-                                <h3 class="cat-name">Automatic Laundry Care</h3>
-                                <p class="cat-desc">High-efficiency liquid detergent gels with active color protection and stain-lifting enzymes.</p>
-                                <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Laundry">Explore Laundry Lineup &rarr;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 03: Fabric Softeners -->
-                    <div class="cat-card-item" data-index="2">
-                        <div class="cat-card-inner">
-                            <span class="cat-num">03 // 05</span>
-                            <div class="cat-visual">
-                                <div class="cat-img-halo"></div>
-                                <img src="/assets/cat_softener.png" alt="Fabric Softener" class="cat-floating-product">
-                                <div class="cat-item-shadow"></div>
-                            </div>
-                            <div class="cat-details">
-                                <span class="cat-badge">LONG LASTING MICRO-AROMA</span>
-                                <h3 class="cat-name">Fabric Conditioning</h3>
-                                <p class="cat-desc">Anti-static softening agents with concentrated micro-encapsulated floral aromas that linger for weeks.</p>
-                                <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Softener">Explore Softeners &rarr;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 04: Disinfectants -->
-                    <div class="cat-card-item" data-index="3">
-                        <div class="cat-card-inner">
-                            <span class="cat-num">04 // 05</span>
-                            <div class="cat-visual">
-                                <div class="cat-img-halo"></div>
-                                <img src="/assets/cat_surfaces.png" alt="Surface Disinfectant" class="cat-floating-product">
-                                <div class="cat-item-shadow"></div>
-                            </div>
-                            <div class="cat-details">
-                                <span class="cat-badge">99.9% MEDICAL SANITIZATION</span>
-                                <h3 class="cat-name">Surface Disinfection</h3>
-                                <p class="cat-desc">Germol and active hospital-grade surface sanitizers for ceramic, marble, and multi-contact zones.</p>
-                                <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Disinfectant">Explore Disinfectants &rarr;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 05: Hand Care -->
-                    <div class="cat-card-item" data-index="4">
-                        <div class="cat-card-inner">
-                            <span class="cat-num">05 // 05</span>
-                            <div class="cat-visual">
-                                <div class="cat-img-halo"></div>
-                                <img src="/assets/cat_soaps.png" alt="Hand Soaps" class="cat-floating-product">
-                                <div class="cat-item-shadow"></div>
-                            </div>
-                            <div class="cat-details">
-                                <span class="cat-badge">BOTANICAL MOISTURIZING</span>
-                                <h3 class="cat-name">Luxury Hand Wash</h3>
-                                <p class="cat-desc">Gentle foaming botanical formulas with Pink Sugar, Spring, and Green Apple infusions.</p>
-                                <div class="cat-actions">
-                                    <button class="btn-cat-explore" data-filter="Hand Soap">Explore Hand Soaps &rarr;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Category Mobile Indicators -->
-            <div class="category-mobile-indicators">
-                <span class="cat-dot active" data-target="0"></span>
-                <span class="cat-dot" data-target="1"></span>
-                <span class="cat-dot" data-target="2"></span>
-                <span class="cat-dot" data-target="3"></span>
-                <span class="cat-dot" data-target="4"></span>
-            </div>
-        </section>
-
-        <!-- 03. UNIFIED EDITORIAL PRODUCT SHOWROOM (ONE SEAMLESS DESIGN WORLD) -->
+        <!-- =================================================================== -->
+        <!-- 03. UNIFIED EDITORIAL PRODUCT SHOWROOM (ONE BRAND WORLD)           -->
+        <!-- =================================================================== -->
         <section class="catalog-showroom-section" id="catalogSection">
             <div class="showroom-container">
                 
                 <div class="showroom-header">
                     <span class="section-kicker">FACTORY-DIRECT FORMULATIONS</span>
                     <h2 class="section-heading">THE PER CLEAN COLLECTION</h2>
-                    <p class="section-subtext">Every formulation is manufactured to industrial concentrations. Select a category below or explore the full catalog.</p>
+                    <p class="section-subtext">Manufactured to industrial standards. Select a category below or explore the full 46-product catalog.</p>
                 </div>
 
-                <!-- Editorial Toolbar (Tabs & Keyword Search) -->
+                <!-- Showroom Toolbar -->
                 <div class="showroom-toolbar">
                     <div class="filter-tab-bar" id="categoryFilterBar">
                         <button class="tab-btn active" data-cat="ALL">All Formulas (<span class="tab-count" id="countAll">46</span>)</button>
@@ -303,7 +328,7 @@
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
-                        <input type="text" id="showroomSearchInput" placeholder="Filter by product name, volume, or keywords...">
+                        <input type="text" id="showroomSearchInput" placeholder="Filter by name, volume, or formula...">
                         <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear Search" style="display:none;">&times;</button>
                     </div>
                 </div>
@@ -332,7 +357,9 @@
             </div>
         </section>
 
-        <!-- 04. SHORT BRAND SCIENCE PROMISE -->
+        <!-- =================================================================== -->
+        <!-- 04. SHORT BRAND SCIENCE PROMISE                                    -->
+        <!-- =================================================================== -->
         <section class="brand-promise-section" id="brandPromise">
             <div class="promise-backdrop"></div>
             <div class="promise-content">
@@ -356,7 +383,9 @@
             </div>
         </section>
 
-        <!-- 05. DIRECT CALL TO ACTION -->
+        <!-- =================================================================== -->
+        <!-- 05. DIRECT CALL TO ACTION                                          -->
+        <!-- =================================================================== -->
         <section class="cta-direct-section">
             <div class="cta-card">
                 <div class="cta-text">
@@ -386,7 +415,7 @@
             <div class="footer-links">
                 <div class="footer-col">
                     <h4>Navigation</h4>
-                    <a href="#heroScene">The Story</a>
+                    <a href="#cameraScene">The Film</a>
                     <a href="#categoriesSection">Disciplines</a>
                     <a href="#catalogSection">Full Collection</a>
                     <a href="#brandPromise">Formulation Science</a>
@@ -412,9 +441,9 @@
         </div>
     </footer>
 
-    <!-- ======================================================= -->
-    <!-- SLIDE-OVER CART DRAWER (LUXURY OBSIDIAN & CYAN FINISH) -->
-    <!-- ======================================================= -->
+    <!-- =================================================================== -->
+    <!-- SLIDE-OVER CART DRAWER (LUXURY OBSIDIAN & CYAN FINISH)              -->
+    <!-- =================================================================== -->
     <div class="cart-drawer-overlay" id="cartDrawerOverlay">
         <div class="cart-drawer" id="cartDrawer">
             

@@ -1,10 +1,10 @@
 /**
- * PER CLEAN — UNIFIED LUXURY FLAGSHIP CONTROLLER
- * Full GSAP Scroll Choreography, Parabolic Product-to-Cart Flight, Showroom Filtering & RTL
+ * PER CLEAN — 3D SPATIAL FILM & UNIFIED LUXURY FLAGSHIP CONTROLLER
+ * Full Camera Choreography, Alternating Vertical Category 3D Animation, Parabolic Flight & RTL
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Register GSAP plugins
+    // Register GSAP Plugins
     gsap.registerPlugin(ScrollTrigger);
 
     const isRtl = document.documentElement.dir === 'rtl' || document.body.classList.contains('rtl-mode');
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, { passive: true });
 
-    // Mobile Navigation Menu
+    // Mobile Navigation Drawer Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileNavDrawer = document.getElementById('mobileNavDrawer');
     if (mobileMenuBtn && mobileNavDrawer) {
@@ -36,285 +36,308 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================================================================
-    // 01. CINEMATIC HERO CHOREOGRAPHY (GSAP MatchMedia)
+    // 01. 3D SPATIAL FILM SEQUENCE (THE CAMERA IS THE MAIN CHARACTER)
     // =========================================================================
     const mm = gsap.matchMedia();
-    const messChars = document.querySelectorAll('.mess-char');
 
-    // DESKTOP HERO (>= 769px)
+    // DESKTOP CAMERA CHOREOGRAPHY (>= 769px)
     mm.add("(min-width: 769px)", () => {
-        const desktopHeroTl = gsap.timeline({
+        const filmTl = gsap.timeline({
             scrollTrigger: {
-                trigger: "#heroScene",
+                trigger: "#cameraScene",
                 start: "top top",
-                end: "+=280%",
+                end: "+=420%",
                 scrub: 0.8,
                 pin: true,
                 anticipatePin: 1
             }
         });
 
-        desktopHeroTl
-            // 1. Mess Shattering with physical velocity
-            .to(".mess-texture-bg", {
-                scale: 1.25,
-                filter: "brightness(0.22) contrast(1.4)",
-                ease: "power2.inOut",
-                duration: 1.2
-            }, 0)
-            .to(".scroll-indicator", {
-                opacity: 0,
-                y: 20,
-                duration: 0.4
-            }, 0)
-            .to(messChars, {
-                y: (i) => (i % 2 === 0 ? -280 : 280),
-                x: (i) => (i < 2 ? -320 : 320),
-                rotation: (i) => (i % 2 === 0 ? -45 : 45),
-                opacity: 0,
-                filter: "blur(14px)",
-                stagger: 0.05,
-                ease: "power3.in",
-                duration: 1.2
-            }, 0.2)
-            .to(".mess-subtitle, .tag-mess", {
-                opacity: 0,
-                y: 50,
-                filter: "blur(8px)",
-                duration: 0.8
-            }, 0.4);
+        // Set initial states for shot layers
+        gsap.set("#shot01", { opacity: 1, zIndex: 1, scale: 1 });
+        gsap.set(["#shot02", "#shot03", "#shot04", "#shot05", "#shot06", "#shot07"], {
+            opacity: 0,
+            scale: 0.92,
+            filter: "blur(6px)"
+        });
 
-        // 2. Brand Catalyst Logo Lands
-        desktopHeroTl
-            .fromTo("#brandCatalyst", 
-                { scale: 0, rotation: -18, opacity: 0, y: -100 },
-                { scale: 1, rotation: 0, opacity: 1, y: 0, ease: "back.out(2)", duration: 1.0 },
-                1.0
+        filmTl
+            // --- SHOT 01 -> SHOT 02 ---
+            // Camera pushes into mess, then Shot 02 (Spray mist) enters
+            .to("#shot01 .shot-bg-img", { scale: 1.15, filter: "brightness(0.35) contrast(1.3)", duration: 1.2 }, 0)
+            .to("#shot01 .shot-typography", { opacity: 0, y: -70, filter: "blur(8px)", duration: 0.8 }, 0.4)
+            .to(".film-scroll-prompt", { opacity: 0, duration: 0.3 }, 0)
+            
+            .fromTo("#shot02", 
+                { opacity: 0, scale: 1.15, filter: "blur(8px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.0, ease: "power2.out" },
+                0.8
             )
-            .fromTo(".catalyst-glow-ring",
-                { scale: 0.4, opacity: 1 },
-                { scale: 2.4, opacity: 0, duration: 1.0, ease: "power2.out" },
-                1.3
-            );
+            .to("#shot01", { opacity: 0, duration: 0.5 }, 1.3)
 
-        // 3. Clean Mask Expands
-        desktopHeroTl
-            .to("#layerClean", {
-                clipPath: "circle(160% at 50% 50%)",
-                duration: 2.2,
-                ease: "power2.inOut"
-            }, 1.4)
-            .fromTo(".clean-liquid-bg",
-                { scale: 1.2, rotation: 2 },
-                { scale: 1.0, rotation: 0, duration: 2.2, ease: "power2.out" },
-                1.4
-            )
-            .to(".clean-hero-content", {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-                duration: 1.0,
-                ease: "power2.out"
-            }, 2.0);
+            // --- SHOT 02 -> SHOT 03 ---
+            // Spray mist sweeps across, Camera tracks into Shot 03 (Active Foam)
+            .to("#shot02 .shot-bg-img", { scale: 1.12, duration: 1.0 }, 1.5)
+            .to("#shot02 .shot-typography", { opacity: 0, y: -60, filter: "blur(6px)", duration: 0.6 }, 1.8)
 
-        // 4. Logo Transitions & Product Hero Rises
-        desktopHeroTl
-            .to("#brandCatalyst", {
-                scale: 0.45,
-                y: -180,
-                opacity: 0,
-                duration: 0.9,
-                ease: "power2.in"
-            }, 2.5)
-            .to(".clean-hero-content", {
-                opacity: 0,
-                y: -60,
-                duration: 0.8,
-                ease: "power2.in"
-            }, 2.7)
-            .fromTo("#productHeroStage",
-                { y: "100vh", opacity: 1 },
-                { y: "0vh", opacity: 1, ease: "power3.out", duration: 1.8 },
-                2.8
+            .fromTo("#shot03",
+                { opacity: 0, scale: 1.18, filter: "blur(10px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.0, ease: "power2.out" },
+                2.0
             )
-            .fromTo(".hero-bottle-img",
-                { scale: 0.8, rotation: 6 },
-                { scale: 1, rotation: -1, ease: "back.out(1.2)", duration: 1.8 },
-                2.8
-            )
-            .fromTo(".product-contact-shadow",
-                { scale: 0.3, opacity: 0 },
-                { scale: 1, opacity: 0.9, ease: "power2.out", duration: 1.5 },
+            .to("#shot02", { opacity: 0, duration: 0.5 }, 2.5)
+
+            // --- SHOT 03 -> SHOT 04 ---
+            // Active foam breaks apart grease, Camera wipes into Shot 04 (Clean Chrome Stove)
+            .to("#shot03 .shot-bg-img", { scale: 1.15, filter: "brightness(0.5)", duration: 1.0 }, 2.6)
+            .to("#shot03 .shot-typography", { opacity: 0, y: -60, duration: 0.6 }, 2.8)
+
+            .fromTo("#shot04",
+                { opacity: 0, scale: 0.94, filter: "blur(8px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.0, ease: "power2.out" },
                 3.1
             )
-            .to("#productHeroSpecs", {
-                opacity: 1,
-                x: 0,
-                duration: 1.0,
-                ease: "power2.out"
-            }, 3.3);
+            .to("#shot03", { opacity: 0, duration: 0.4 }, 3.5)
 
-        // Category Horizontal Choreography
-        const catTrack = document.getElementById('categoryTrack');
-        const catCards = gsap.utils.toArray('.cat-card-item');
+            // --- SHOT 04 -> SHOT 05 ---
+            // Clean chrome gleam, Camera dives into Shot 05 (Per Clean Logo Vortex)
+            .to("#shot04 .shot-bg-img", { scale: 1.1, duration: 1.0 }, 3.7)
+            .to("#shot04 .shot-typography", { opacity: 0, y: -60, duration: 0.6 }, 3.9)
 
-        if (catTrack && catCards.length > 0) {
-            const totalShift = (catCards.length - 1) * 38;
+            .fromTo("#shot05",
+                { opacity: 0, scale: 1.25, filter: "blur(12px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.0, ease: "back.out(1.2)" },
+                4.2
+            )
+            .fromTo(".hero-logo-drop",
+                { scale: 0.4, rotation: isRtl ? 15 : -15 },
+                { scale: 1, rotation: 0, duration: 1.0, ease: "back.out(2)" },
+                4.3
+            )
+            .to("#shot04", { opacity: 0, duration: 0.4 }, 4.6)
+
+            // --- SHOT 05 -> SHOT 06 ---
+            // Logo vortex dissolves into Shot 06 (Hero Wave & Actif Spray Bottle)
+            .to("#shot05", { opacity: 0, scale: 0.85, filter: "blur(10px)", duration: 0.8 }, 5.2)
+
+            .fromTo("#shot06",
+                { opacity: 0, scale: 1.08, filter: "blur(8px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.0, ease: "power2.out" },
+                5.4
+            )
+            .fromTo(".shot-product-details",
+                { opacity: 0, x: isRtl ? 40 : -40 },
+                { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
+                5.8
+            )
+
+            // --- SHOT 06 -> SHOT 07 ---
+            // Camera tracks out to Shot 07 (Wide Sunlit Home Context)
+            .to("#shot06", { opacity: 0, y: -60, duration: 0.8 }, 6.5)
+
+            .fromTo("#shot07",
+                { opacity: 0, scale: 1.1, filter: "blur(8px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.0, ease: "power2.out" },
+                6.7
+            );
+
+        // =========================================================================
+        // CATEGORY EXPERIENCE (ALTERNATING VERTICAL MOVEMENT IN 3D)
+        // =========================================================================
+        const catCards = gsap.utils.toArray('.cat-vert-card');
+        if (catCards.length > 0) {
             const catTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#categoriesSection",
                     start: "top top",
-                    end: "+=320%",
+                    end: "+=360%",
                     pin: true,
                     scrub: 0.8,
                     anticipatePin: 1
                 }
             });
 
-            catTl.to(catTrack, {
-                xPercent: isRtl ? totalShift : -totalShift,
-                ease: "none",
-                duration: 4
-            });
-
+            // Card 0 (Kitchen) starts active, then exits upwards
+            // Card 1 (Laundry) enters from below, becomes dominant, exits downwards
+            // Card 2 (Softener) enters from above, becomes dominant, exits upwards
+            // Card 3 (Disinfectant) enters from below, becomes dominant, exits downwards
+            // Card 4 (Hand Soap) enters from above, becomes dominant
             catCards.forEach((card, idx) => {
-                const startTime = idx * 0.9;
-                catTl.to(card, {
-                    scale: 1.0,
-                    opacity: 1,
-                    filter: "blur(0px)",
-                    rotateY: 0,
-                    duration: 0.6,
-                    ease: "power2.out",
-                    onStart: () => setCardDominant(idx)
-                }, startTime);
-
-                if (idx > 0) {
-                    const prevCard = catCards[idx - 1];
-                    catTl.to(prevCard, {
-                        scale: 0.86,
-                        opacity: 0.35,
-                        filter: "blur(5px)",
-                        rotateY: isRtl ? -12 : 12,
-                        duration: 0.6,
+                if (idx === 0) {
+                    gsap.set(card, { y: 0, rotateX: 0, opacity: 1, scale: 1 });
+                    catTl.to(card, {
+                        y: "-110vh",
+                        rotateX: 18,
+                        scale: 0.85,
+                        opacity: 0,
+                        filter: "blur(8px)",
+                        duration: 1.0,
                         ease: "power2.in"
-                    }, startTime);
+                    }, 0.8);
+                } else if (idx === 1) {
+                    // Enters from below
+                    gsap.set(card, { y: "110vh", rotateX: -18, opacity: 0, scale: 0.85, filter: "blur(8px)" });
+                    catTl.to(card, {
+                        y: 0,
+                        rotateX: 0,
+                        opacity: 1,
+                        scale: 1,
+                        filter: "blur(0px)",
+                        duration: 1.0,
+                        ease: "power2.out",
+                        onStart: () => updateVertIndicator(1)
+                    }, 0.8)
+                    .to(card, {
+                        y: "110vh",
+                        rotateX: -18,
+                        scale: 0.85,
+                        opacity: 0,
+                        filter: "blur(8px)",
+                        duration: 1.0,
+                        ease: "power2.in"
+                    }, 1.8);
+                } else if (idx === 2) {
+                    // Enters from above
+                    gsap.set(card, { y: "-110vh", rotateX: 18, opacity: 0, scale: 0.85, filter: "blur(8px)" });
+                    catTl.to(card, {
+                        y: 0,
+                        rotateX: 0,
+                        opacity: 1,
+                        scale: 1,
+                        filter: "blur(0px)",
+                        duration: 1.0,
+                        ease: "power2.out",
+                        onStart: () => updateVertIndicator(2)
+                    }, 1.8)
+                    .to(card, {
+                        y: "-110vh",
+                        rotateX: 18,
+                        scale: 0.85,
+                        opacity: 0,
+                        filter: "blur(8px)",
+                        duration: 1.0,
+                        ease: "power2.in"
+                    }, 2.8);
+                } else if (idx === 3) {
+                    // Enters from below
+                    gsap.set(card, { y: "110vh", rotateX: -18, opacity: 0, scale: 0.85, filter: "blur(8px)" });
+                    catTl.to(card, {
+                        y: 0,
+                        rotateX: 0,
+                        opacity: 1,
+                        scale: 1,
+                        filter: "blur(0px)",
+                        duration: 1.0,
+                        ease: "power2.out",
+                        onStart: () => updateVertIndicator(3)
+                    }, 2.8)
+                    .to(card, {
+                        y: "110vh",
+                        rotateX: -18,
+                        scale: 0.85,
+                        opacity: 0,
+                        filter: "blur(8px)",
+                        duration: 1.0,
+                        ease: "power2.in"
+                    }, 3.8);
+                } else if (idx === 4) {
+                    // Enters from above and locks center
+                    gsap.set(card, { y: "-110vh", rotateX: 18, opacity: 0, scale: 0.85, filter: "blur(8px)" });
+                    catTl.to(card, {
+                        y: 0,
+                        rotateX: 0,
+                        opacity: 1,
+                        scale: 1,
+                        filter: "blur(0px)",
+                        duration: 1.0,
+                        ease: "power2.out",
+                        onStart: () => updateVertIndicator(4)
+                    }, 3.8);
                 }
             });
         }
     });
 
-    // MOBILE HERO (<= 768px)
+    // MOBILE CAMERA CHOREOGRAPHY (<= 768px, tested 320px, 360px, 390px, 430px)
     mm.add("(max-width: 768px)", () => {
-        const mobileHeroTl = gsap.timeline({
+        const mobileFilmTl = gsap.timeline({
             scrollTrigger: {
-                trigger: "#heroScene",
+                trigger: "#cameraScene",
                 start: "top top",
-                end: "+=150%",
-                scrub: 0.5,
+                end: "+=220%",
+                scrub: 0.6,
                 pin: true,
                 anticipatePin: 1
             }
         });
 
-        mobileHeroTl
-            .to(messChars, {
-                y: -100,
-                opacity: 0,
-                filter: "blur(10px)",
-                stagger: 0.04,
-                duration: 0.6
-            }, 0)
-            .to(".mess-subtitle, .tag-mess, .scroll-indicator", {
-                opacity: 0,
-                duration: 0.4
-            }, 0)
-            .to(".mess-texture-bg", {
-                scale: 1.15,
-                filter: "brightness(0.2)",
-                duration: 0.8
-            }, 0)
-            .fromTo("#brandCatalyst",
-                { scale: 0, opacity: 0, y: -40 },
-                { scale: 0.88, opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.5)" },
-                0.5
-            )
-            .to("#layerClean", {
-                clipPath: "circle(150% at 50% 50%)",
-                duration: 1.2,
-                ease: "power2.inOut"
-            }, 0.8)
-            .to("#brandCatalyst", {
-                scale: 0.4,
-                opacity: 0,
-                y: -80,
-                duration: 0.5
-            }, 1.2)
-            .fromTo("#productHeroStage",
-                { y: "60vh", opacity: 1 },
-                { y: "0vh", opacity: 1, duration: 1.0, ease: "power2.out" },
-                1.3
-            )
-            .to("#productHeroSpecs", {
-                opacity: 1,
-                duration: 0.5
-            }, 1.7);
+        gsap.set("#shot01", { opacity: 1, zIndex: 1 });
+        gsap.set(["#shot02", "#shot03", "#shot04", "#shot05", "#shot06", "#shot07"], { opacity: 0 });
 
-        // Mobile Category Dots
-        const catViewport = document.getElementById('categoryViewport');
-        const catDots = document.querySelectorAll('.cat-dot');
-        const catCards = document.querySelectorAll('.cat-card-item');
+        mobileFilmTl
+            .to("#shot01", { opacity: 0, duration: 0.6 }, 0.4)
+            .to("#shot02", { opacity: 1, duration: 0.6 }, 0.4)
+            .to("#shot02", { opacity: 0, duration: 0.6 }, 1.0)
+            .to("#shot03", { opacity: 1, duration: 0.6 }, 1.0)
+            .to("#shot03", { opacity: 0, duration: 0.6 }, 1.6)
+            .to("#shot04", { opacity: 1, duration: 0.6 }, 1.6)
+            .to("#shot04", { opacity: 0, duration: 0.6 }, 2.2)
+            .to("#shot05", { opacity: 1, duration: 0.6 }, 2.2)
+            .to("#shot05", { opacity: 0, duration: 0.6 }, 2.8)
+            .to("#shot06", { opacity: 1, duration: 0.6 }, 2.8)
+            .to("#shot06", { opacity: 0, duration: 0.6 }, 3.4)
+            .to("#shot07", { opacity: 1, duration: 0.6 }, 3.4);
 
-        if (catViewport && catDots.length > 0) {
-            catViewport.addEventListener('scroll', () => {
-                const scrollLeft = Math.abs(catViewport.scrollLeft);
-                const cardWidth = catCards[0]?.offsetWidth || 300;
-                const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), catCards.length - 1);
-                
-                catDots.forEach((dot, idx) => {
-                    dot.classList.toggle('active', idx === activeIndex);
-                });
-            }, { passive: true });
+        // Mobile Category Carousel
+        const catCards = gsap.utils.toArray('.cat-vert-card');
+        if (catCards.length > 0) {
+            const mobileCatTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#categoriesSection",
+                    start: "top top",
+                    end: "+=200%",
+                    pin: true,
+                    scrub: 0.6,
+                    anticipatePin: 1
+                }
+            });
 
-            catDots.forEach(dot => {
-                dot.addEventListener('click', (e) => {
-                    const targetIdx = parseInt(e.target.dataset.target, 10);
-                    const cardWidth = catCards[0]?.offsetWidth || 300;
-                    catViewport.scrollTo({
-                        left: targetIdx * cardWidth,
-                        behavior: 'smooth'
-                    });
-                });
+            catCards.forEach((card, i) => {
+                if (i === 0) {
+                    gsap.set(card, { opacity: 1, scale: 1 });
+                    mobileCatTl.to(card, { opacity: 0, scale: 0.85, duration: 0.6 }, 0.4);
+                } else {
+                    gsap.set(card, { opacity: 0, scale: 0.85 });
+                    mobileCatTl.to(card, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.6,
+                        onStart: () => updateVertIndicator(i)
+                    }, i * 0.5)
+                    .to(card, { opacity: 0, scale: 0.85, duration: 0.5 }, (i * 0.5) + 0.5);
+                }
             });
         }
     });
 
-    function setCardDominant(index) {
-        const cards = document.querySelectorAll('.cat-card-item');
-        cards.forEach((card, idx) => {
-            if (idx === index) {
-                card.classList.add('is-dominant');
-            } else {
-                card.classList.remove('is-dominant');
-            }
-        });
+    function updateVertIndicator(index) {
+        const dots = document.querySelectorAll('.vert-dot');
+        const cards = document.querySelectorAll('.cat-vert-card');
+        dots.forEach((dot, idx) => dot.classList.toggle('active', idx === index));
+        cards.forEach((card, idx) => card.classList.toggle('is-active', idx === index));
     }
 
-    // =========================================================================
-    // 02. CATEGORY -> PRODUCT SMOOTH TRANSITION
-    // =========================================================================
-    document.querySelectorAll('.btn-cat-explore, .footer-cat-link').forEach(btn => {
+    // Category click handler to scroll to collection & set tab
+    document.querySelectorAll('.btn-vert-explore, .footer-cat-link').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const filterCat = btn.dataset.filter;
             if (!filterCat) return;
 
-            // Smooth scroll to Showroom
-            const targetSection = document.getElementById('catalogSection');
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+            const target = document.getElementById('catalogSection');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
             }
 
-            // Switch Tab
             setTimeout(() => {
                 setCategoryTab(filterCat);
             }, 400);
@@ -322,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // =========================================================================
-    // 03. DYNAMIC COMMERCE INGESTION & EDITORIAL SHOWROOM
+    // 02. DYNAMIC COMMERCE INGESTION & EDITORIAL SHOWROOM
     // =========================================================================
     fetch('/data.json')
         .then(res => res.text())
@@ -355,7 +378,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function getProductImage(product) {
-        // High-DPI isolated assets for curated flagship items
         const t = product.title.toLowerCase();
         if (t.includes('actif') && t.includes('5k')) return '/assets/actif5_isolated.png';
         if (t.includes('actif') && t.includes('650')) return '/assets/feat_actif650.png';
@@ -367,6 +389,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return (product.images && product.images[0]) ? product.images[0].src : '/assets/logo.png';
     }
 
+    function extractVolume(title) {
+        const match = title.match(/(\d+(?:\.\d+)?\s*(?:KG|K|GM|Gram|ML|k|gm|ml))/i);
+        return match ? match[1].toUpperCase() : 'STANDARD';
+    }
+
     function renderShowroomProducts() {
         const grid = document.getElementById('showroomGrid');
         const countIndicator = document.getElementById('visibleItemsCount');
@@ -376,7 +403,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const searchVal = document.getElementById('showroomSearchInput')?.value.trim().toLowerCase() || '';
 
-        // Filter products by current active tab & search
         let filtered = allProductsData.filter(p => {
             const cat = categorizeProduct(p.title);
             const title = isRtl ? (p.translations?.ar?.title || p.title) : p.title;
@@ -385,15 +411,11 @@ document.addEventListener("DOMContentLoaded", () => {
             return matchCat && matchSearch;
         });
 
-        // If category is "ALL" and user has not clicked expand, show initial curated 6 items
         const displayLimit = (currentCategoryFilter === 'ALL' && !isCatalogExpanded && searchVal === '') ? 6 : filtered.length;
         const toDisplay = filtered.slice(0, displayLimit);
 
-        if (countIndicator) {
-            countIndicator.innerText = filtered.length;
-        }
+        if (countIndicator) countIndicator.innerText = filtered.length;
 
-        // Show/hide expand button
         if (expandBtnRow) {
             if (currentCategoryFilter === 'ALL' && searchVal === '') {
                 expandBtnRow.style.display = 'block';
@@ -411,7 +433,7 @@ document.addEventListener("DOMContentLoaded", () => {
             grid.innerHTML = `
                 <div style="grid-column: 1 / -1; text-align: center; padding: 4rem; color: var(--text-muted);">
                     <p style="font-size: 1.2rem; margin-bottom: 1rem;">${isRtl ? 'لم يتم العثور على تركيبات مطابقة.' : 'No formulations found matching your filter.'}</p>
-                    <button class="btn-cat-explore" onclick="window.resetShowroomFilters()">${isRtl ? 'إعادة ضبط البحث' : 'Reset Search'}</button>
+                    <button class="btn-vert-explore" onclick="window.resetShowroomFilters()">${isRtl ? 'إعادة ضبط البحث' : 'Reset Search'}</button>
                 </div>
             `;
             return;
@@ -453,7 +475,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }).join('');
 
-        // Animate entrance of newly rendered cards
         gsap.fromTo(".showroom-card", 
             { opacity: 0, y: 25 },
             { opacity: 1, y: 0, duration: 0.45, stagger: 0.05, ease: "power2.out" }
@@ -462,13 +483,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bindAddToCartTriggers();
     }
 
-    function extractVolume(title) {
-        const match = title.match(/(\d+(?:\.\d+)?\s*(?:KG|K|GM|Gram|ML|k|gm|ml))/i);
-        return match ? match[1].toUpperCase() : 'STANDARD';
-    }
-
     function initShowroomControls() {
-        // Tab Filters
         const tabBtns = document.querySelectorAll('.tab-btn');
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -477,7 +492,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // Search Input
         const searchInput = document.getElementById('showroomSearchInput');
         const clearBtn = document.getElementById('clearSearchBtn');
         const resetBtn = document.getElementById('btnResetFilters');
@@ -500,7 +514,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.resetShowroomFilters();
         });
 
-        // Expand Catalog Toggle
         const btnExpandCatalog = document.getElementById('btnExpandCatalog');
         btnExpandCatalog?.addEventListener('click', () => {
             isCatalogExpanded = !isCatalogExpanded;
@@ -544,10 +557,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // =========================================================================
-    // 04. PRODUCT -> CART PARABOLIC FLIGHT ANIMATION (FLIP / GSAP)
+    // 03. PARABOLIC PRODUCT-TO-CART FLIGHT ANIMATION (FLIP / GSAP)
     // =========================================================================
     function bindAddToCartTriggers() {
-        document.querySelectorAll('.btn-card-add, .btn-hero-cart').forEach(btn => {
+        document.querySelectorAll('.btn-card-add, .btn-film-add-cart').forEach(btn => {
             btn.onclick = (e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -558,8 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const img = btn.dataset.img;
                 const imgElemId = btn.dataset.imgElement;
 
-                // Animate product flight to floating cart
-                const sourceImg = document.getElementById(imgElemId) || btn.closest('.showroom-card')?.querySelector('.card-product-img');
+                const sourceImg = document.getElementById(imgElemId) || btn.closest('.showroom-card')?.querySelector('.card-product-img') || document.querySelector('.hero-bottle-img');
                 const targetCart = document.getElementById('floatingCartBtn');
 
                 if (sourceImg && targetCart) {
@@ -570,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     addToCart({ id, title, price, img });
                 }
 
-                // Button visual confirmation
+                // Tactile feedback
                 const textSpan = btn.querySelector('span') || btn;
                 const origText = textSpan.innerText;
                 textSpan.innerText = isRtl ? '✓ أضيف للسلة' : '✓ Added to Cart';
@@ -581,7 +593,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     textSpan.innerText = origText;
                     btn.style.background = '';
                     btn.style.color = '';
-                }, 1500);
+                }, 1400);
             };
         });
     }
@@ -590,7 +602,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const startRect = sourceImg.getBoundingClientRect();
         const endRect = targetCart.getBoundingClientRect();
 
-        // Create temporary animated clone
         const ghost = document.createElement('img');
         ghost.src = sourceImg.src;
         ghost.className = 'flying-cart-ghost';
@@ -603,20 +614,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const deltaX = (endRect.left + endRect.width / 2) - (startRect.left + startRect.width / 2);
         const deltaY = (endRect.top + endRect.height / 2) - (startRect.top + startRect.height / 2);
 
-        // GSAP Parabolic Arc
         gsap.timeline({
             onComplete: () => {
                 ghost.remove();
 
-                // Target Cart reaction bounce
+                // Target Cart elastic reaction bounce
                 gsap.timeline()
                     .to(targetCart, { scale: 1.35, duration: 0.12, ease: "power2.out" })
                     .to(targetCart, { scale: 1.0, duration: 0.35, ease: "elastic.out(1.2, 0.4)" });
 
-                // Call add to cart and animate badge
                 onArrive();
 
-                const badge = document.getElementById('floatingCartBadge');
+                const badge = document.getElementById('cartBadge');
                 if (badge) {
                     gsap.fromTo(badge, 
                         { scale: 0.2, rotation: isRtl ? 20 : -20 },
@@ -637,12 +646,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================================================================
-    // 05. CART DRAWER & WHATSAPP CHECKOUT
+    // 04. CART DRAWER & WHATSAPP CHECKOUT
     // =========================================================================
     const floatingCartBtn = document.getElementById('floatingCartBtn');
     const cartDrawerOverlay = document.getElementById('cartDrawerOverlay');
     const cartCloseBtn = document.getElementById('cartCloseBtn');
-    const floatingCartBadge = document.getElementById('floatingCartBadge');
+    const cartBadge = document.getElementById('cartBadge');
     const cartDrawerCount = document.getElementById('cartDrawerCount');
     const cartItemsList = document.getElementById('cartItemsList');
     const cartTotalValue = document.getElementById('cartTotalValue');
@@ -682,7 +691,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateCartUI() {
         const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
-        if (floatingCartBadge) floatingCartBadge.innerText = totalItems;
+        if (cartBadge) cartBadge.innerText = totalItems;
         if (cartDrawerCount) {
             cartDrawerCount.innerText = isRtl ? `${totalItems} منتج` : `${totalItems} Items`;
         }
@@ -756,7 +765,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `\nالإجمالي التقديري: ${totalEGP.toFixed(2)} ج.م\nيرجى تأكيد التوصيل وبيانات الشحن.` : 
             `\nEstimated Total: ${totalEGP.toFixed(2)} EGP\nPlease confirm product availability and doorstep delivery details.`;
 
-        const phone = "201000000000"; // Replace with verified brand phone
+        const phone = "201000000000";
         const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank');
     });
