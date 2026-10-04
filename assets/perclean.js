@@ -1153,78 +1153,84 @@
     const cards = [...document.querySelectorAll('.category-card')];
     if (categories && rail && cards.length) {
       if (mobile) {
+        // Enforce initial hidden state immediately on all cards
+        cards.forEach((card, i) => {
+          const isSecondInRow = (i % 2 === 1);
+          const xOffset = isSecondInRow ? (isArabic ? -12 : 12) : (isArabic ? 12 : -12);
+          gsap.set(card, {
+            y: 48,
+            x: xOffset,
+            scale: 0.92,
+            opacity: 0,
+            force3D: true
+          });
+          const productImg = card.querySelector('.category-product');
+          if (productImg) {
+            gsap.set(productImg, {
+              y: 20,
+              scale: 0.90,
+              opacity: 0.4,
+              force3D: true
+            });
+          }
+        });
+
+        // Individual scroll-triggered reveals for each card
         cards.forEach((card, i) => {
           const productImg = card.querySelector('.category-product');
           const isSecondInRow = (i % 2 === 1);
-          const yOffset = 26 + (i % 3) * 4;
-          const xOffset = isSecondInRow ? (isArabic ? -8 : 8) : (isArabic ? 8 : -8);
-          const staggerDelay = isSecondInRow ? 0.08 : 0;
+          const staggerDelay = isSecondInRow ? 0.12 : 0;
 
-          gsap.fromTo(card,
-            {
-              y: yOffset,
-              x: xOffset,
-              scale: 0.96,
-              opacity: 0
-            },
-            {
-              y: 0,
-              x: 0,
-              scale: 1,
-              opacity: 1,
-              duration: 0.65,
-              delay: staggerDelay,
-              ease: 'power3.out',
-              scrollTrigger: {
-                trigger: card,
-                start: 'top 88%',
-                once: true
-              }
+          gsap.to(card, {
+            y: 0,
+            x: 0,
+            scale: 1,
+            opacity: 1,
+            duration: 0.72,
+            delay: staggerDelay,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 82%',
+              once: true
             }
-          );
+          });
 
           if (productImg) {
-            gsap.fromTo(productImg,
-              { y: 14, opacity: 0.7 },
-              {
-                y: 0,
-                opacity: 1,
-                duration: 0.72,
-                delay: staggerDelay + 0.04,
-                ease: 'power2.out',
-                scrollTrigger: {
-                  trigger: card,
-                  start: 'top 88%',
-                  once: true
-                }
+            gsap.to(productImg, {
+              y: 0,
+              scale: 1,
+              opacity: 1,
+              duration: 0.80,
+              delay: staggerDelay + 0.05,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: card,
+                start: 'top 82%',
+                once: true
               }
-            );
+            });
           }
         });
 
         const brandNote = document.getElementById('brand-note');
         if (brandNote) {
-          gsap.fromTo(brandNote,
-            { y: 22, opacity: 0 },
-            {
-              y: 0,
-              opacity: 1,
-              duration: 0.6,
-              ease: 'power2.out',
-              scrollTrigger: {
-                trigger: brandNote,
-                start: 'top 90%',
-                once: true
-              }
+          gsap.set(brandNote, { y: 28, opacity: 0, force3D: true });
+          gsap.to(brandNote, {
+            y: 0,
+            opacity: 1,
+            duration: 0.70,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: brandNote,
+              start: 'top 86%',
+              once: true
             }
-          );
+          });
         }
-
-        ScrollTrigger.refresh();
-        return;
-      }
-      const sequence = gsap.timeline({
-        scrollTrigger: {
+      } else {
+        const sequence = gsap.timeline({
+          scrollTrigger: {
           trigger: categories,
           start: 'top top',
           end: () => '+=' + Math.round(window.innerHeight * 1.15),
@@ -1261,6 +1267,7 @@
           offset
         );
       });
+      }
     }
     ScrollTrigger.refresh();
     if (window.Lenis && window.matchMedia('(pointer: fine)').matches && !reducedMotion) {
