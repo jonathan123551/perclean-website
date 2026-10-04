@@ -1,0 +1,8 @@
+.git
+.agents
+work
+scratch
+*.py
+serve.js
+ANTIGRAVITY_CHECKPOINT.md
+ANTIGRAVITY_HANDOFF.md
