@@ -794,7 +794,7 @@
     scene.add(spray);
 
     // Scratch vectors
-    const nozzleLocal = new T.Vector3(isArabic ? 0.48 : -0.48, 1.80, 0.02);
+    const nozzleLocal = new T.Vector3(isArabic ? 0.70 : -0.52, 1.76, 0.02);
     const nozzleWorld = new T.Vector3();
     const targetWorld = new T.Vector3();
     const streamDir = new T.Vector3();
@@ -851,10 +851,10 @@
       foam.rotation.x = -Math.PI / 7;
 
       const startX = sign * (mobile ? 3.0 : 4.4);
-      const targetX = sign * (mobile ? 0.50 : 1.90);
-      const settleX = sign * (mobile ? 0.55 : 2.15);
-      const baseScale = mobile ? 0.54 : 0.82;
-      const baseY = mobile ? -0.85 : -1.02;
+      const targetX = sign * (mobile ? (isArabic ? 0.38 : 0.50) : 1.90);
+      const settleX = sign * (mobile ? (isArabic ? 0.44 : 0.55) : 2.15);
+      const baseScale = mobile ? (isArabic ? 0.52 : 0.54) : 0.82;
+      const baseY = mobile ? (isArabic ? -0.74 : -0.82) : -1.02;
 
       if (p < 0.22) {
         product.visible = false;
@@ -1153,56 +1153,70 @@
     const cards = [...document.querySelectorAll('.category-card')];
     if (categories && rail && cards.length) {
       if (mobile) {
-        const mobileTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: categories,
-            start: 'top 75%',
-            once: true
+        cards.forEach((card, i) => {
+          const productImg = card.querySelector('.category-product');
+          const isSecondInRow = (i % 2 === 1);
+          const yOffset = 26 + (i % 3) * 4;
+          const xOffset = isSecondInRow ? (isArabic ? -8 : 8) : (isArabic ? 8 : -8);
+          const staggerDelay = isSecondInRow ? 0.08 : 0;
+
+          gsap.fromTo(card,
+            {
+              y: yOffset,
+              x: xOffset,
+              scale: 0.96,
+              opacity: 0
+            },
+            {
+              y: 0,
+              x: 0,
+              scale: 1,
+              opacity: 1,
+              duration: 0.65,
+              delay: staggerDelay,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: card,
+                start: 'top 88%',
+                once: true
+              }
+            }
+          );
+
+          if (productImg) {
+            gsap.fromTo(productImg,
+              { y: 14, opacity: 0.7 },
+              {
+                y: 0,
+                opacity: 1,
+                duration: 0.72,
+                delay: staggerDelay + 0.04,
+                ease: 'power2.out',
+                scrollTrigger: {
+                  trigger: card,
+                  start: 'top 88%',
+                  once: true
+                }
+              }
+            );
           }
         });
 
-        // Card 0 (Kitchen Care): rise from below + subtle scale
-        if (cards[0]) {
-          mobileTl.fromTo(cards[0],
-            { y: 45, scale: 0.90, opacity: 0, rotationX: 8 },
-            { y: 0, scale: 1, opacity: 1, rotationX: 0, duration: 0.65, ease: 'power2.out' },
-            0.0
-          );
-        }
-
-        // Card 1 (Laundry Care): enter from side + slight rotation
-        if (cards[1]) {
-          mobileTl.fromTo(cards[1],
-            { x: isArabic ? -40 : 40, rotation: isArabic ? -3 : 3, opacity: 0, scale: 0.93 },
-            { x: 0, rotation: 0, opacity: 1, scale: 1, duration: 0.68, ease: 'power2.out' },
-            0.12
-          );
-        }
-
-        // Card 2 (Bathroom Care): rise from depth (3D Z) + scale
-        if (cards[2]) {
-          mobileTl.fromTo(cards[2],
-            { z: -120, y: 35, scale: 0.88, opacity: 0, rotationY: isArabic ? 6 : -6 },
-            { z: 0, y: 0, scale: 1, opacity: 1, rotationY: 0, duration: 0.72, ease: 'back.out(1.2)' },
-            0.24
-          );
-        }
-
-        // Card 3 (Surface Care): diagonal entrance + softer movement
-        if (cards[3]) {
-          mobileTl.fromTo(cards[3],
-            { x: isArabic ? 30 : -30, y: 35, scale: 0.92, opacity: 0, rotation: isArabic ? 2 : -2 },
-            { x: 0, y: 0, scale: 1, opacity: 1, rotation: 0, duration: 0.70, ease: 'power2.out' },
-            0.36
-          );
-        }
-
-        // Card 4 (Home Essentials): float upward + soft spring settling
-        if (cards[4]) {
-          mobileTl.fromTo(cards[4],
-            { y: 50, scale: 0.92, opacity: 0 },
-            { y: 0, scale: 1, opacity: 1, duration: 0.75, ease: 'back.out(1.3)' },
-            0.48
+        const brandNote = document.getElementById('brand-note');
+        if (brandNote) {
+          gsap.fromTo(brandNote,
+            { y: 22, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.6,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: brandNote,
+                start: 'top 90%',
+                once: true
+              }
+            }
           );
         }
 
