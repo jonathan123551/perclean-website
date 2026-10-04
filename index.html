@@ -15,15 +15,15 @@
   <link rel="icon" href="/assets/logo.png" type="image/png">
   <link rel="preconnect" href="https://cdn.shopify.com">
   <link rel="preconnect" href="https://nvwk1p-si.myshopify.com">
-  <link rel="preload" href="/assets/kitchen_360_dirty.jpg" as="image">
-  <link rel="preload" href="/assets/kitchen_360_clean.jpg" as="image">
+  <link rel="preload" href="/assets/kitchen-film-dirty.png" as="image">
+  <link rel="preload" href="/assets/kitchen-film-clean.png" as="image">
   <link rel="preload" href="/assets/per-actif-cutout.png" as="image">
-  <link rel="stylesheet" href="/assets/perclean.css?v=home-360-12">
+  <link rel="stylesheet" href="/assets/perclean.css?v=film-final-1">
   <script defer src="/assets/three.min.js"></script>
   <script defer src="/assets/vendor/gsap.min.js"></script>
   <script defer src="/assets/vendor/ScrollTrigger.min.js"></script>
   <script defer src="/assets/vendor/lenis.min.js"></script>
-  <script src="/assets/perclean.js?v=home-360-12" defer></script>
+  <script src="/assets/perclean.js?v=film-final-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,55 +34,40 @@
   </header>
   <main id="main">
     <section class="hero opening" aria-labelledby="hero-title" id="opening">
-      <!-- 360° THREE.JS CINEMATIC STAGE -->
       <div class="cinema-3d-stage" id="cinema-3d-stage" aria-hidden="true">
         <canvas id="cinema-canvas" class="cinema-canvas"></canvas>
       </div>
-
       <div class="opening-copy">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> REAL CARE · REAL EVERYDAY</p>
-        <h1 id="hero-title">A little mess.<br><em>Care moves through.</em></h1>
-        <p>Everyday care that clears the way for a brighter home.</p>
-        <a class="hero-cta-btn" href="#collection">Explore Products &rarr;</a>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> REAL CARE, EVERY DAY</p>
+        <h1 id="hero-title">The mess has<br><em>a life.</em></h1>
+        <p>Per Clean interrupts it with care you can see.</p>
+        <a class="hero-cta-btn" href="#collection">Explore the collection</a>
       </div>
-
-      <div class="opening-action-callout" aria-hidden="true">
-        <span class="action-tag">SURFACTANT ACTIVE FORMULA</span>
-        <h3>Dissolves grease on contact.</h3>
-      </div>
-
-      <button class="hero-product-stage opening-product-stage cinema-product-stage cinema-bottle-actor" type="button" data-product="مزيل-للدهون" aria-label="Explore Per Actif 650g">
-        <div class="cinema-contact-shadow"></div>
-        <img id="hero-product-img" class="hero-product cinema-product" src="/assets/per-actif-cutout.png" alt="Per Actif 650 Gram product from Per Clean" fetchpriority="high">
-        <img class="hero-reflection cinema-reflection" src="/assets/per-actif-cutout.png" alt="" aria-hidden="true">
-      </button>
+      <button class="opening-product-stage cinema-product-hit" type="button" data-product="مزيل-للدهون" aria-label="Explore Per Actif 650 Gram"><span class="sr-only">Explore Per Actif 650 Gram</span></button>
 
       <div class="opening-lockup">
         <img class="opening-logo" src="/assets/logo.png" alt="Per Clean">
         <span>CARE FOR THE EVERYDAY</span>
         <h2>A cleaner home.<br><em>A brighter everyday.</em></h2>
-        <p class="lockup-sub">Per Clean products for a cleaner home and a brighter everyday.</p>
       </div>
-
-      <span class="opening-index"><span class="opening-num">01</span> <i>—</i> 06 <span class="opening-step">MESS</span></span>
-      <a class="scroll-cue opening-cue" href="#categories"><span class="scroll-line"></span> SCROLL TO TRANSFORM <span class="scroll-arrow" aria-hidden="true">↓</span></a>
+      <span class="opening-index"><span class="opening-num">01</span><span class="opening-step">MESS</span></span>
     </section>
 
     <section class="categories-section" id="categories" aria-labelledby="categories-title"><div class="categories-layout"><div class="categories-main"><div class="section-heading"><p class="eyebrow">FIND YOUR CARE</p><h2 id="categories-title">Care for every<br><em>corner of home.</em></h2></div><div class="category-rail" id="category-rail">
         <a class="category-card category-kitchen" href="#collection" data-category-link="kitchen" data-category-card="dish-care" aria-label="Explore Kitchen Care">
-          <span class="category-index">01 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Kitchen Care</strong><span>For the messes that meet every meal.</span><i aria-hidden="true">↗</i></span>
+          <span class="category-index">01 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Kitchen Care</strong><span>For the messes that meet every meal.</span></span>
         </a>
         <a class="category-card category-laundry" href="#collection" data-category-link="laundry" data-category-card="perwash" aria-label="Explore Laundry Care">
-          <span class="category-index">02 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Laundry Care</strong><span>Fresh starts, built into every wash.</span><i aria-hidden="true">↗</i></span>
+          <span class="category-index">02 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Laundry Care</strong><span>Fresh starts, built into every wash.</span></span>
         </a>
         <a class="category-card category-bathroom" href="#collection" data-category-link="home-care" data-category-card="germol" aria-label="Explore Bathroom Care">
-          <span class="category-index">03 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Bathroom Care</strong><span>A cleaner space to slow down.</span><i aria-hidden="true">↗</i></span>
+          <span class="category-index">03 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Bathroom Care</strong><span>A cleaner space to slow down.</span></span>
         </a>
         <a class="category-card category-surface" href="#collection" data-category-link="home-care" data-category-card="hard-cleaner" aria-label="Explore Surface Care">
-          <span class="category-index">04 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Surface Care</strong><span>Clear the way for everyday living.</span><i aria-hidden="true">↗</i></span>
+          <span class="category-index">04 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Surface Care</strong><span>Clear the way for everyday living.</span></span>
         </a>
         <a class="category-card category-home" href="#collection" data-category-link="all" data-category-card="hand-care" aria-label="Explore Home Essentials">
-          <span class="category-index">05 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Home Essentials</strong><span>Small rituals. A home that feels yours.</span><i aria-hidden="true">↗</i></span>
+          <span class="category-index">05 / PER CLEAN</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>Home Essentials</strong><span>Small rituals. A home that feels yours.</span></span>
         </a>
         </div></div><aside class="brand-message" id="brand-note"><span>BRAND MESSAGE</span><img src="/assets/logo.png" alt="Per Clean"><h3>A cleaner home<br>for a brighter<br><em>everyday.</em></h3><p>منزل أنظف ليوم أفضل.</p></aside></div></section>
 
@@ -90,33 +75,34 @@
       <div class="collection-top section-wrap">
       <p class="eyebrow">REAL PRODUCTS · DIRECT FROM THE OFFICIAL STORE</p>
         <div class="collection-heading"><h2 id="collection-title">Made for home.<br><em>Ready for yours.</em></h2><p>Real products, current prices and available sizes from the Per Clean store.</p></div>
-        <button class="button button-light catalog-toggle" id="browse-all" type="button" aria-expanded="false">Browse all products <span class="filter-total"></span> <span aria-hidden="true">↘</span></button>
+        <button class="button button-light catalog-toggle" id="browse-all" type="button" aria-expanded="false">View full collection <span class="filter-total"></span></button>
         <div class="catalog-tools" id="catalog-tools" hidden>
-          <label class="search-box"><span class="sr-only">Search products</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="product-search" type="search" placeholder="Find your product" autocomplete="off"><kbd>/</kbd></label>
+          <label class="search-box"><span class="search-label">Search products</span><span class="search-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="product-search" type="search" placeholder="Search by product, room, or need" autocomplete="off"><kbd>/</kbd></span></label>
           <div class="filter-list" role="group" aria-label="Filter by product category">
             <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All products <span class="filter-total"></span></button>
-            <button class="filter-chip" type="button" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+            <button class="filter-chip" type="button" data-filter="kitchen" aria-pressed="false">Dish Care</button>
             <button class="filter-chip" type="button" data-filter="laundry" aria-pressed="false">Laundry</button>
-            <button class="filter-chip" type="button" data-filter="hand-care" aria-pressed="false">Hand care</button>
-            <button class="filter-chip" type="button" data-filter="home-care" aria-pressed="false">Home care</button>
+            <button class="filter-chip" type="button" data-filter="bathroom" aria-pressed="false">Bathroom</button>
+            <button class="filter-chip" type="button" data-filter="surface" aria-pressed="false">Surface</button>
+            <button class="filter-chip" type="button" data-filter="hand-care" aria-pressed="false">Home Essentials</button>
           </div>
           <label class="sort-box"><span>Sort</span><select id="product-sort" aria-label="Sort products"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A to Z</option></select></label>
         </div>
       </div>
       <div class="catalog-status section-wrap"><p class="results-line" id="results-line" aria-live="polite"></p><p class="catalog-loading" id="catalog-loading" role="status">Opening the collection…</p></div>
       <div class="product-grid section-wrap" id="product-grid" aria-live="polite" aria-busy="true"></div>
-      <div class="empty-state section-wrap" id="empty-state" hidden><span class="empty-mark">—</span><h3>No matches this time.</h3><p>Try another search or browse the full collection.</p><button class="text-button" id="clear-search" type="button">Clear search ↗</button></div>
+      <div class="empty-state section-wrap" id="empty-state" hidden><span class="empty-mark">—</span><h3>No matches this time.</h3><p>Try another search or browse the full collection.</p><button class="text-button" id="clear-search" type="button">Clear search</button></div>
     </section>
 
-    <section class="trust-strip" aria-labelledby="trust-title"><img src="/assets/logo.png" alt="Per Clean"><div><p class="eyebrow">CARE YOU CAN COUNT ON</p><h2 id="trust-title">Real homes. Real products.<br><em>A little more care, every day.</em></h2></div><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">OFFICIAL SHOPIFY STORE ↗</a></section>
-    <section class="brand-close" id="about"><div class="close-content"><img class="close-logo-large" src="/assets/logo.png" alt="Per Clean"><p class="eyebrow">A LITTLE MORE CARE, EVERY DAY.</p><h2>Make room for<br><em>better everyday.</em></h2><a class="button button-light" href="#collection">Shop Per Clean <span aria-hidden="true">↗</span></a></div><footer class="site-footer"><div class="footer-mark">PER CLEAN<br><small>CARE FOR THE EVERYDAY</small></div><div class="footer-links"><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">Official store ↗</a><a href="https://wa.me/201552110621" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="/ar/" lang="ar">العربية</a><small>© <span id="year">2026</span> Per Clean</small></div></footer></section>
+    <section class="trust-strip" aria-labelledby="trust-title"><img src="/assets/logo.png" alt="Per Clean"><div><p class="eyebrow">CARE YOU CAN COUNT ON</p><h2 id="trust-title">Real homes. Real products.<br><em>A little more care, every day.</em></h2></div><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">Official Shopify store</a></section>
+    <section class="brand-close" id="about"><div class="close-content"><img class="close-logo-large" src="/assets/logo.png" alt="Per Clean"><p class="eyebrow">A LITTLE MORE CARE, EVERY DAY.</p><h2>Make room for<br><em>better everyday.</em></h2><a class="button button-light" href="#collection">Shop Per Clean</a></div><footer class="site-footer"><div class="footer-mark">PER CLEAN<br><small>CARE FOR THE EVERYDAY</small></div><div class="footer-links"><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">Official store</a><a href="https://wa.me/201552110621" target="_blank" rel="noreferrer">WhatsApp</a><a href="/ar/" lang="ar">العربية</a><small>© <span id="year">2026</span> Per Clean</small></div></footer></section>
   </main>
   <button class="cart-float cart-trigger" type="button" aria-label="Open shopping bag" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-count">0</span></button>
   <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
   <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert tabindex="-1">
     <div class="drawer-head"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cart-title">Shopping bag <span class="drawer-count">(0)</span></h2></div><button class="close-button" type="button" aria-label="Close shopping bag">×</button></div>
-    <div class="cart-lines" id="cart-lines"></div><div class="cart-empty" id="cart-empty"><span class="empty-mark">—</span><p>Your bag is taking a breather.</p><button class="text-button continue-shopping" type="button">Continue browsing ↗</button></div>
-    <div class="drawer-foot" id="drawer-foot" hidden><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal"></strong></div><p>Shipping and payment are completed securely at the official Per Clean store.</p><a class="button button-dark checkout-button" id="checkout-button" href="https://nvwk1p-si.myshopify.com/" rel="noreferrer">Continue to checkout <span aria-hidden="true">↗</span></a></div>
+    <div class="cart-lines" id="cart-lines"></div><div class="cart-empty" id="cart-empty"><span class="empty-mark">—</span><p>Your bag is taking a breather.</p><button class="text-button continue-shopping" type="button">Continue browsing</button></div>
+    <div class="drawer-foot" id="drawer-foot" hidden><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal"></strong></div><p>Shipping and payment are completed securely at the official Per Clean store.</p><a class="button button-dark checkout-button" id="checkout-button" href="https://nvwk1p-si.myshopify.com/" rel="noreferrer">Continue to checkout</a></div>
   </aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title"><button class="dialog-close close-button" type="button" aria-label="Close product details">×</button><div id="product-detail"></div></dialog>

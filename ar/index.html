@@ -15,15 +15,15 @@
   <link rel="icon" href="/assets/logo.png" type="image/png">
   <link rel="preconnect" href="https://cdn.shopify.com">
   <link rel="preconnect" href="https://nvwk1p-si.myshopify.com">
-  <link rel="preload" href="/assets/kitchen_360_dirty.jpg" as="image">
-  <link rel="preload" href="/assets/kitchen_360_clean.jpg" as="image">
+  <link rel="preload" href="/assets/kitchen-film-dirty.png" as="image">
+  <link rel="preload" href="/assets/kitchen-film-clean.png" as="image">
   <link rel="preload" href="/assets/per-actif-cutout.png" as="image">
-  <link rel="stylesheet" href="/assets/perclean.css?v=home-360-12">
+  <link rel="stylesheet" href="/assets/perclean.css?v=film-final-1">
   <script defer src="/assets/three.min.js"></script>
   <script defer src="/assets/vendor/gsap.min.js"></script>
   <script defer src="/assets/vendor/ScrollTrigger.min.js"></script>
   <script defer src="/assets/vendor/lenis.min.js"></script>
-  <script src="/assets/perclean.js?v=home-360-12" defer></script>
+  <script src="/assets/perclean.js?v=film-final-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
@@ -34,69 +34,54 @@
   </header>
   <main id="main">
     <section class="hero opening" aria-labelledby="hero-title" id="opening">
-      <!-- 360° THREE.JS CINEMATIC STAGE -->
       <div class="cinema-3d-stage" id="cinema-3d-stage" aria-hidden="true">
         <canvas id="cinema-canvas" class="cinema-canvas"></canvas>
       </div>
-
       <div class="opening-copy">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> عناية حقيقية · كل يوم</p>
-        <h1 id="hero-title">قليل من الفوضى.<br><em>والعناية تمضي.</em></h1>
-        <p>عناية يومية تفسح الطريق لبيت أكثر إشراقًا.</p>
-        <a class="hero-cta-btn" href="#collection">اكتشف المنتجات &larr;</a>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> عناية حقيقية كل يوم</p>
+        <h1 id="hero-title">للفوضى<br><em>حياة.</em></h1>
+        <p>بير كلين يوقفها بعناية يمكنك رؤيتها.</p>
+        <a class="hero-cta-btn" href="#collection">اكتشف المجموعة</a>
       </div>
-
-      <div class="opening-action-callout" aria-hidden="true">
-        <span class="action-tag">تركيبة فعالة لإذابة الدهون</span>
-        <h3>تزيل أصعب التراكمات فورًا.</h3>
-      </div>
-
-      <button class="hero-product-stage opening-product-stage cinema-product-stage cinema-bottle-actor" type="button" data-product="مزيل-للدهون" aria-label="اكتشف بير أكتيف ٦٥٠ جم">
-        <div class="cinema-contact-shadow"></div>
-        <img id="hero-product-img" class="hero-product cinema-product" src="/assets/per-actif-cutout.png" alt="بير أكتيف ٦٥٠ جم من بير كلين" fetchpriority="high">
-        <img class="hero-reflection cinema-reflection" src="/assets/per-actif-cutout.png" alt="" aria-hidden="true">
-      </button>
+      <button class="opening-product-stage cinema-product-hit" type="button" data-product="مزيل-للدهون" aria-label="اكتشف بير أكتيف ٦٥٠ جم"><span class="sr-only">اكتشف بير أكتيف ٦٥٠ جم</span></button>
 
       <div class="opening-lockup">
         <img class="opening-logo" src="/assets/logo.png" alt="بير كلين">
         <span>عناية لكل يوم</span>
         <h2>بيت أنظف.<br><em>ليوم أفضل.</em></h2>
-        <p class="lockup-sub">منتجات بير كلين لبيت أنظف ويوم أكثر إشراقاً في كل تفاصيل البيت.</p>
       </div>
-
-      <span class="opening-index"><span class="opening-num">٠١</span> <i>—</i> ٠٦ <span class="opening-step">فوضى</span></span>
-      <a class="scroll-cue opening-cue" href="#categories"><span class="scroll-line"></span> تابع التحوّل <span class="scroll-arrow" aria-hidden="true">↓</span></a>
+      <span class="opening-index"><span class="opening-num">٠١</span><span class="opening-step">فوضى</span></span>
     </section>
     <section class="categories-section" id="categories" aria-labelledby="categories-title"><div class="categories-layout"><div class="categories-main"><div class="section-heading"><p class="eyebrow">اكتشف العناية المناسبة</p><h2 id="categories-title">عناية لكل<br><em>تفاصيل البيت.</em></h2></div><div class="category-rail" id="category-rail">
-        <a class="category-card category-kitchen" href="#collection" data-category-link="kitchen" data-category-card="dish-care" aria-label="اكتشف عناية المطبخ"><span class="category-index">٠1 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>عناية المطبخ</strong><span>للفوضى الصغيرة التي ترافق كل وجبة.</span><i aria-hidden="true">↗</i></span></a>
-        <a class="category-card category-laundry" href="#collection" data-category-link="laundry" data-category-card="perwash" aria-label="اكتشف عناية الملابس"><span class="category-index">٠2 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>عناية الملابس</strong><span>بدايات منعشة مع كل غسلة.</span><i aria-hidden="true">↗</i></span></a>
-        <a class="category-card category-bathroom" href="#collection" data-category-link="home-care" data-category-card="germol" aria-label="اكتشف عناية الحمام"><span class="category-index">٠3 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>عناية الحمام</strong><span>مساحة أنقى للحظات هادئة.</span><i aria-hidden="true">↗</i></span></a>
-        <a class="category-card category-surface" href="#collection" data-category-link="home-care" data-category-card="hard-cleaner" aria-label="اكتشف العناية بالأسطح"><span class="category-index">٠4 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>العناية بالأسطح</strong><span>مساحة أصفى لتفاصيل يومك.</span><i aria-hidden="true">↗</i></span></a>
-        <a class="category-card category-home" href="#collection" data-category-link="all" data-category-card="hand-care" aria-label="اكتشف أساسيات المنزل"><span class="category-index">٠5 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>أساسيات المنزل</strong><span>عادات صغيرة تجعل البيت مكانك.</span><i aria-hidden="true">↗</i></span></a>
+        <a class="category-card category-kitchen" href="#collection" data-category-link="kitchen" data-category-card="dish-care" aria-label="اكتشف عناية المطبخ"><span class="category-index">٠1 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>عناية المطبخ</strong><span>للفوضى الصغيرة التي ترافق كل وجبة.</span></span></a>
+        <a class="category-card category-laundry" href="#collection" data-category-link="laundry" data-category-card="perwash" aria-label="اكتشف عناية الملابس"><span class="category-index">٠2 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>عناية الملابس</strong><span>بدايات منعشة مع كل غسلة.</span></span></a>
+        <a class="category-card category-bathroom" href="#collection" data-category-link="bathroom" data-category-card="germol" aria-label="اكتشف عناية الحمام"><span class="category-index">٠3 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>عناية الحمام</strong><span>مساحة أنقى للحظات هادئة.</span></span></a>
+        <a class="category-card category-surface" href="#collection" data-category-link="surface" data-category-card="hard-cleaner" aria-label="اكتشف العناية بالأسطح"><span class="category-index">٠4 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>العناية بالأسطح</strong><span>مساحة أصفى لتفاصيل يومك.</span></span></a>
+        <a class="category-card category-home" href="#collection" data-category-link="hand-care" data-category-card="hand-care" aria-label="اكتشف أساسيات المنزل"><span class="category-index">٠5 / بير كلين</span><span class="category-glow" aria-hidden="true"></span><img class="category-product" alt="" loading="lazy"><span class="category-label"><strong>أساسيات المنزل</strong><span>عادات صغيرة تجعل البيت مكانك.</span></span></a>
         </div></div><aside class="brand-message" id="brand-note"><span>رسالة بير كلين</span><img src="/assets/logo.png" alt="بير كلين"><h3>منزل أنظف<br>ليوم أكثر<br><em>إشراقًا.</em></h3><p>عناية لكل يوم.</p></aside></div></section>
 
     <section class="collection-section" id="collection" aria-labelledby="collection-title">
       <div class="collection-top section-wrap"><p class="eyebrow">مجموعة بير كلين <span class="eyebrow-dot"></span> مباشرة من المتجر الرسمي</p>
         <div class="collection-heading"><h2 id="collection-title">عادات صغيرة.<br><em>تفاصيل أجمل.</em></h2><p>تصفّح مجموعة بير كلين كاملة. تفاصيل المنتجات وأسعارها وتوافرها من المتجر الرسمي.</p></div>
-        <button class="button button-light catalog-toggle" id="browse-all" type="button" aria-expanded="false">تصفّح المنتجات <span class="filter-total"></span> <span aria-hidden="true">↙</span></button>
-        <div class="catalog-tools" id="catalog-tools" hidden><label class="search-box"><span class="sr-only">ابحث عن المنتجات</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="product-search" type="search" placeholder="ابحث عن منتج" autocomplete="off"><kbd>/</kbd></label>
+        <button class="button button-light catalog-toggle" id="browse-all" type="button" aria-expanded="false">تصفّح المجموعة كاملة <span class="filter-total"></span></button>
+        <div class="catalog-tools" id="catalog-tools" hidden><label class="search-box"><span class="search-label">ابحث عن المنتجات</span><span class="search-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="product-search" type="search" placeholder="ابحث بالمنتج أو المساحة أو الاستخدام" autocomplete="off"><kbd>/</kbd></span></label>
           <div class="filter-list" role="group" aria-label="تصفية حسب نوع المنتج">
-            <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">كل المنتجات <span class="filter-total"></span></button><button class="filter-chip" type="button" data-filter="kitchen" aria-pressed="false">المطبخ</button><button class="filter-chip" type="button" data-filter="laundry" aria-pressed="false">العناية بالملابس</button><button class="filter-chip" type="button" data-filter="hand-care" aria-pressed="false">العناية باليدين</button><button class="filter-chip" type="button" data-filter="home-care" aria-pressed="false">العناية بالمنزل</button>
+            <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">كل المنتجات <span class="filter-total"></span></button><button class="filter-chip" type="button" data-filter="kitchen" aria-pressed="false">العناية بالأطباق</button><button class="filter-chip" type="button" data-filter="laundry" aria-pressed="false">الغسيل</button><button class="filter-chip" type="button" data-filter="bathroom" aria-pressed="false">الحمام</button><button class="filter-chip" type="button" data-filter="surface" aria-pressed="false">الأسطح</button><button class="filter-chip" type="button" data-filter="hand-care" aria-pressed="false">أساسيات المنزل</button>
           </div><label class="sort-box"><span>ترتيب حسب</span><select id="product-sort" aria-label="ترتيب المنتجات"><option value="featured">المقترح</option><option value="price-asc">السعر: الأقل أولًا</option><option value="price-desc">السعر: الأعلى أولًا</option><option value="name">الاسم</option></select></label>
         </div>
       </div><div class="catalog-status section-wrap"><p class="results-line" id="results-line" aria-live="polite"></p><p class="catalog-loading" id="catalog-loading" role="status">جارٍ فتح المجموعة…</p></div>
       <div class="product-grid section-wrap" id="product-grid" aria-live="polite" aria-busy="true"></div>
-      <div class="empty-state section-wrap" id="empty-state" hidden><span class="empty-mark">—</span><h3>لا توجد نتائج مطابقة.</h3><p>جرّب البحث باسم آخر أو تصفّح المجموعة كاملة.</p><button class="text-button" id="clear-search" type="button">عرض المجموعة كاملة ↗</button></div>
+      <div class="empty-state section-wrap" id="empty-state" hidden><span class="empty-mark">—</span><h3>لا توجد نتائج مطابقة.</h3><p>جرّب البحث باسم آخر أو تصفّح المجموعة كاملة.</p><button class="text-button" id="clear-search" type="button">عرض المجموعة كاملة</button></div>
     </section>
-    <section class="trust-strip" aria-labelledby="trust-title"><img src="/assets/logo.png" alt="بير كلين"><div><p class="eyebrow">عناية يمكنك الوثوق بها</p><h2 id="trust-title">منتجات حقيقية. لبيوت حقيقية.<br><em>عناية صغيرة، كل يوم.</em></h2></div><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">المتجر الرسمي ↗</a></section>
-    <section class="brand-close" id="about"><div class="close-content"><img class="close-logo-large" src="/assets/logo.png" alt="بير كلين"><p class="eyebrow">قليل من العناية، كل يوم.</p><h2>مساحة أكبر<br><em>لتفاصيل أجمل.</em></h2><a class="button button-light" href="#collection">تسوّق بير كلين <span aria-hidden="true">↗</span></a></div><footer class="site-footer"><div class="footer-mark">بير كلين<br><small>عناية لكل يوم</small></div><div class="footer-links"><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">المتجر الرسمي ↗</a><a href="https://wa.me/201552110621" target="_blank" rel="noreferrer">واتساب ↗</a><a href="/" lang="en">English</a><small>© <span id="year">2026</span> بير كلين</small></div></footer></section>
+    <section class="trust-strip" aria-labelledby="trust-title"><img src="/assets/logo.png" alt="بير كلين"><div><p class="eyebrow">عناية يمكنك الوثوق بها</p><h2 id="trust-title">منتجات حقيقية. لبيوت حقيقية.<br><em>عناية صغيرة، كل يوم.</em></h2></div><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">المتجر الرسمي</a></section>
+    <section class="brand-close" id="about"><div class="close-content"><img class="close-logo-large" src="/assets/logo.png" alt="بير كلين"><p class="eyebrow">قليل من العناية، كل يوم.</p><h2>مساحة أكبر<br><em>لتفاصيل أجمل.</em></h2><a class="button button-light" href="#collection">تسوّق بير كلين</a></div><footer class="site-footer"><div class="footer-mark">بير كلين<br><small>عناية لكل يوم</small></div><div class="footer-links"><a href="https://nvwk1p-si.myshopify.com/" target="_blank" rel="noreferrer">المتجر الرسمي</a><a href="https://wa.me/201552110621" target="_blank" rel="noreferrer">واتساب</a><a href="/" lang="en">English</a><small>© <span id="year">2026</span> بير كلين</small></div></footer></section>
   </main>
   <button class="cart-float cart-trigger" type="button" aria-label="فتح حقيبة التسوق" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-count">٠</span></button>
   <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
   <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert tabindex="-1">
     <div class="drawer-head"><div><p class="eyebrow">اختياراتك</p><h2 id="cart-title">حقيبة التسوق <span class="drawer-count">(٠)</span></h2></div><button class="close-button" type="button" aria-label="إغلاق حقيبة التسوق">×</button></div>
-    <div class="cart-lines" id="cart-lines"></div><div class="cart-empty" id="cart-empty"><span class="empty-mark">—</span><p>حقيبتك بانتظار اختياراتك.</p><button class="text-button continue-shopping" type="button">متابعة التصفح ↗</button></div>
-    <div class="drawer-foot" id="drawer-foot" hidden><div class="subtotal-row"><span>الإجمالي الفرعي</span><strong id="cart-subtotal"></strong></div><p>الشحن والدفع يُستكملان بأمان عبر متجر بير كلين الرسمي.</p><a class="button button-dark checkout-button" id="checkout-button" href="https://nvwk1p-si.myshopify.com/" rel="noreferrer">متابعة للدفع <span aria-hidden="true">↗</span></a></div>
+    <div class="cart-lines" id="cart-lines"></div><div class="cart-empty" id="cart-empty"><span class="empty-mark">—</span><p>حقيبتك بانتظار اختياراتك.</p><button class="text-button continue-shopping" type="button">متابعة التصفح</button></div>
+    <div class="drawer-foot" id="drawer-foot" hidden><div class="subtotal-row"><span>الإجمالي الفرعي</span><strong id="cart-subtotal"></strong></div><p>الشحن والدفع يُستكملان بأمان عبر متجر بير كلين الرسمي.</p><a class="button button-dark checkout-button" id="checkout-button" href="https://nvwk1p-si.myshopify.com/" rel="noreferrer">متابعة للدفع</a></div>
   </aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title"><button class="dialog-close close-button" type="button" aria-label="إغلاق تفاصيل المنتج">×</button><div id="product-detail"></div></dialog>

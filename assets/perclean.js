@@ -181,7 +181,8 @@
     if (!dataReady) return;
     document.getElementById('catalog-loading').hidden = true;
     let list = products.filter(product => {
-      const matchesCategory = activeFilter === 'all' || categoryFor(product) === activeFilter;
+      const productCategory = categoryFor(product);
+      const matchesCategory = activeFilter === 'all' || productCategory === activeFilter || ((activeFilter === 'bathroom' || activeFilter === 'surface') && productCategory === 'home-care');
       const searchable = `${product.title} ${product.titleAr} ${product.handle} ${textFromHtml(product.descriptionHtml)}`.toLocaleLowerCase(isArabic ? 'ar' : 'en');
       return matchesCategory && (!searchTerm || searchable.includes(searchTerm));
     });
@@ -211,6 +212,9 @@
     }).join('');
     grid.querySelectorAll('.product-card').forEach((card, index) => { card.dataset.category = categoryFor(list[index]); });
     grid.classList.toggle('is-expanded', allProductsVisible || activeFilter !== 'all' || Boolean(searchTerm));
+    if (window.gsap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.gsap.fromTo(grid.querySelectorAll('.product-card'), { y: 22, opacity: 0, rotateX: -3 }, { y: 0, opacity: 1, rotateX: 0, duration: .48, stagger: .055, ease: 'power3.out', overwrite: true });
+    }
   }
 
   const catalogSection = document.querySelector('.collection-section');
@@ -222,8 +226,8 @@
     catalogTools.hidden = !allProductsVisible;
     browseAll.setAttribute('aria-expanded', String(allProductsVisible));
     browseAll.innerHTML = allProductsVisible
-      ? `${isArabic ? 'إخفاء المجموعة الكاملة' : 'Show featured only'} <span aria-hidden="true">↗</span>`
-      : `${isArabic ? 'تصفّح المنتجات' : 'Browse all products'} <span class="filter-total"></span> <span aria-hidden="true">↘</span>`;
+      ? `${isArabic ? 'عرض المختارات' : 'Show featured products'}`
+      : `${isArabic ? 'تصفّح المجموعة كاملة' : 'View full collection'} <span class="filter-total"></span>`;
     activeFilter = 'all'; searchTerm = '';
     if (search) search.value = '';
     document.querySelectorAll('.filter-chip').forEach(button => { const active = button.dataset.filter === 'all'; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
@@ -416,7 +420,7 @@
       <div class="detail-copy"><p class="eyebrow">${escape(category)} / PER CLEAN</p><h2 id="dialog-title">${escape(productName(product))}</h2>${detailDescription(product)}
       <p class="detail-meta">${escape(variantLabel(product) ? strings.sizeLabel(variantLabel(product)) : strings.detail)}</p><p class="detail-price">${escape(formatPrice(variant?.price || 0))}</p>
       ${related.length > 1 ? `<div class="related-products"><strong>${escape(strings.size)}</strong>${related.map(item => `<a class="related-link${item.handle === product.handle ? ' is-current' : ''}" href="?product=${encodeURIComponent(item.handle)}" data-product="${escape(item.handle)}">${escape(variantLabel(item))}</a>`).join('')}</div>` : ''}
-      <button class="button button-dark detail-add" data-add="${escape(product.handle)}" type="button" ${available(product) ? '' : 'disabled'}>${escape(available(product) ? strings.add : strings.sold)} <span aria-hidden="true">↗</span></button>
+      <button class="button button-dark detail-add" data-add="${escape(product.handle)}" type="button" ${available(product) ? '' : 'disabled'}>${escape(available(product) ? strings.add : strings.sold)}</button>
       </div></div>`;
     const dialog = document.getElementById('product-dialog');
     if (!dialog.open) dialog.showModal();
@@ -452,7 +456,7 @@
     if (categoryLink) {
       activeFilter = categoryLink.dataset.categoryLink;
       if (activeFilter !== 'all') allProductsVisible = true;
-      if (allProductsVisible) { catalogSection?.classList.add('all-products'); if (catalogTools) catalogTools.hidden = false; if (browseAll) { browseAll.setAttribute('aria-expanded', 'true'); browseAll.innerHTML = `${isArabic ? 'إخفاء المجموعة الكاملة' : 'Show featured only'} <span aria-hidden="true">↗</span>`; } }
+      if (allProductsVisible) { catalogSection?.classList.add('all-products'); if (catalogTools) catalogTools.hidden = false; if (browseAll) { browseAll.setAttribute('aria-expanded', 'true'); browseAll.innerHTML = `${isArabic ? 'عرض المختارات' : 'Show featured products'}`; } }
       document.querySelectorAll('.filter-chip').forEach(button => { const active = button.dataset.filter === activeFilter; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
       renderProducts();
     }
@@ -498,7 +502,7 @@
   if (search) { search.placeholder = strings.search; search.addEventListener('input', () => { searchTerm = search.value.trim().toLocaleLowerCase(isArabic ? 'ar' : 'en'); renderProducts(); }); }
   if (sort) sort.addEventListener('change', () => { sortMode = sort.value; renderProducts(); });
   document.querySelectorAll('.filter-chip').forEach(button => button.addEventListener('click', () => {
-    activeFilter = button.dataset.filter; allProductsVisible = true; catalogSection?.classList.add('all-products'); if (catalogTools) catalogTools.hidden = false; if (browseAll) { browseAll.setAttribute('aria-expanded', 'true'); browseAll.innerHTML = `${isArabic ? 'إخفاء المجموعة الكاملة' : 'Show featured only'} <span aria-hidden="true">↗</span>`; }
+    activeFilter = button.dataset.filter; allProductsVisible = true; catalogSection?.classList.add('all-products'); if (catalogTools) catalogTools.hidden = false; if (browseAll) { browseAll.setAttribute('aria-expanded', 'true'); browseAll.innerHTML = `${isArabic ? 'عرض المختارات' : 'Show featured products'}`; }
     document.querySelectorAll('.filter-chip').forEach(item => { const active = item === button; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', String(active)); });
     renderProducts();
   }));
@@ -509,9 +513,9 @@
   document.querySelectorAll('.filter-chip[data-filter="all"]').forEach(button => { button.firstChild.textContent = strings.all + ' '; });
   document.querySelectorAll('.filter-total').forEach(filterTotal => { filterTotal.textContent = ' (46)'; });
   const browseLabel = document.getElementById('browse-all');
-  if (browseLabel) browseLabel.innerHTML = `${isArabic ? 'تصفّح المنتجات' : 'Browse all products'} <span class="filter-total"> (46)</span> <span aria-hidden="true">↘</span>`;
+  if (browseLabel) browseLabel.innerHTML = `${isArabic ? 'تصفّح المجموعة كاملة' : 'View full collection'} <span class="filter-total"> (46)</span>`;
   document.querySelectorAll('.footer-links a').forEach(link => { if (link.href.includes('/ar/')) link.textContent = isArabic ? 'English' : 'العربية'; });
-  document.querySelectorAll('.continue-shopping').forEach(button => button.textContent = isArabic ? 'متابعة التسوق ↗' : 'Continue browsing ↗');
+  document.querySelectorAll('.continue-shopping').forEach(button => button.textContent = isArabic ? 'متابعة التسوق' : 'Continue browsing');
   document.querySelector('.cart-empty p').textContent = strings.emptyBag;
   const closeDialog = document.querySelector('.dialog-close');
   closeDialog.setAttribute('aria-label', strings.close);
@@ -578,7 +582,7 @@
     grid.setAttribute('aria-busy', 'false');
     document.getElementById('catalog-loading').hidden = true;
     document.getElementById('results-line').textContent = strings.error;
-    grid.innerHTML = `<div class="catalog-error" role="alert"><p>${escape(strings.error)}</p><button class="text-button" id="retry-catalog" type="button">${escape(strings.retry)} ↗</button></div>`;
+    grid.innerHTML = `<div class="catalog-error" role="alert"><p>${escape(strings.error)}</p><button class="text-button" id="retry-catalog" type="button">${escape(strings.retry)}</button></div>`;
     document.getElementById('retry-catalog').addEventListener('click', () => location.reload());
     renderCart();
   }));
@@ -588,386 +592,392 @@
 
   function init3DCinematicWorld(hero, canvas, isArabic, mobile) {
     if (!window.THREE) return null;
-    const THREE = window.THREE;
-
+    const T = window.THREE;
     let width = hero.clientWidth || window.innerWidth;
     let height = hero.clientHeight || window.innerHeight;
 
     let renderer;
     try {
-      renderer = new THREE.WebGLRenderer({
+      renderer = new T.WebGLRenderer({
         canvas: canvas,
         antialias: true,
-        alpha: true,
+        alpha: false,
         powerPreference: 'high-performance'
       });
-    } catch (e) {
-      console.warn('WebGL init failed:', e);
+    } catch (_) {
       return null;
     }
 
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
     renderer.setSize(width, height, false);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    if (THREE.SRGBColorSpace) renderer.outputColorSpace = THREE.SRGBColorSpace;
+    if (T.SRGBColorSpace) renderer.outputColorSpace = T.SRGBColorSpace;
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(mobile ? 58 : 50, width / height, 0.1, 1000);
-    camera.position.set(0, 0.08, 0);
-    camera.lookAt(0.05, -0.16, 1.0);
-    camera.updateProjectionMatrix();
-    camera.updateMatrixWorld(true);
+    const scene = new T.Scene();
+    scene.background = new T.Color(0x10171b);
 
-    const textureLoader = new THREE.TextureLoader();
-    const tDirty = textureLoader.load('/assets/kitchen_360_dirty.jpg', () => render());
-    const tClean = textureLoader.load('/assets/kitchen_360_clean.jpg', () => render());
-    const tTowel = textureLoader.load('/assets/dirty_towel.png', () => render());
-    const tFoam = textureLoader.load('/assets/foam_texture.jpg', () => render());
+    const camera = new T.PerspectiveCamera(
+      (width <= 700) ? 54 : 46,
+      width / height,
+      0.1,
+      100
+    );
+    camera.position.set(0, 0.12, 6.4);
+    camera.lookAt(0, 0, -1.0);
 
-    [tDirty, tClean, tTowel, tFoam].forEach(tex => {
-      if (THREE.SRGBColorSpace) tex.colorSpace = THREE.SRGBColorSpace;
-      tex.wrapS = THREE.RepeatWrapping;
-      tex.wrapT = THREE.ClampToEdgeWrapping;
-    });
-
-    // 1. 360 Environment Sphere with Radial Wavefront Shader
-    const sphereGeo = new THREE.SphereGeometry(60, 64, 44);
-    sphereGeo.scale(-1, 1, 1);
-
-    const vertexShader = `
-      varying vec2 vUv;
-      void main() {
-        vUv = uv;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-      }
-    `;
-
-    const fragmentShader = `
-      uniform sampler2D tDirty;
-      uniform sampler2D tClean;
-      uniform float uRadius;
-      uniform vec2 uImpactUv;
-      uniform float uSheen;
-      uniform float uTime;
-      varying vec2 vUv;
-
-      void main() {
-        vec4 colDirty = texture2D(tDirty, vUv);
-        vec4 colClean = texture2D(tClean, vUv);
-
-        vec2 d = vUv - uImpactUv;
-        if (d.x > 0.5) d.x -= 1.0;
-        if (d.x < -0.5) d.x += 1.0;
-        d.x *= 2.0;
-
-        float dist = length(d);
-        float edge = 0.08;
-        float wave = smoothstep(uRadius - edge, uRadius + edge, dist);
-
-        float sheenDist = abs(dist - uRadius);
-        float sheen = smoothstep(0.06, 0.0, sheenDist) * uSheen;
-        float shimmer = sin(dist * 50.0 - uTime * 5.0) * 0.15 + 0.85;
-        vec3 sheenColor = vec3(0.80, 0.94, 1.0) * sheen * shimmer * 2.0;
-
-        vec3 finalRgb = mix(colClean.rgb, colDirty.rgb, wave) + sheenColor;
-        gl_FragColor = vec4(finalRgb, 1.0);
-      }
-    `;
-
-    const uniforms = {
-      tDirty: { value: tDirty },
-      tClean: { value: tClean },
-      uRadius: { value: 0.0 },
-      uImpactUv: { value: new THREE.Vector2(isArabic ? 0.38 : 0.32, 0.42) },
-      uSheen: { value: 0.0 },
-      uTime: { value: 0.0 }
+    let currentP = 0;
+    const loader = new T.TextureLoader();
+    const loadTex = (url) => {
+      const t = loader.load(url, () => {
+        if (typeof fitPlate === 'function') fitPlate();
+        if (typeof computeTarget === 'function') computeTarget();
+        if (typeof update === 'function') update(currentP);
+      });
+      if (T.SRGBColorSpace) t.colorSpace = T.SRGBColorSpace;
+      return t;
     };
 
-    const sphereMat = new THREE.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
-      uniforms
+    const dirtyTex = loadTex('/assets/kitchen-film-dirty.png');
+    const cleanTex = loadTex('/assets/kitchen-film-clean.png');
+    const bottleTex = loadTex(isArabic ? '/assets/per-actif-cutout-ar.png' : '/assets/per-actif-cutout.png');
+    const foamTex = loadTex('/assets/foam_texture.jpg');
+
+    // In RTL (Arabic), the photo plate is mirrored so cutting board is on the right,
+    // balancing the Arabic headline & logo on the right and bottle on the left.
+    const sign = isArabic ? -1 : 1;
+    const impactUv = new T.Vector2(isArabic ? 0.67 : 0.33, 0.35);
+
+    // 1. Background Film Plate with Aspect-Corrected Clean Wave Shader
+    const filmUniforms = {
+      tDirty: { value: dirtyTex },
+      tClean: { value: cleanTex },
+      uClean: { value: 0 },
+      uImpact: { value: impactUv },
+      uAspect: { value: 16 / 9 },
+      uFlipX: { value: isArabic ? 1.0 : 0.0 }
+    };
+
+    const plateMat = new T.ShaderMaterial({
+      uniforms: filmUniforms,
+      vertexShader: `
+        uniform float uFlipX;
+        varying vec2 vUv;
+        void main() {
+          vUv = vec2(uFlipX > 0.5 ? (1.0 - uv.x) : uv.x, uv.y);
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform sampler2D tDirty;
+        uniform sampler2D tClean;
+        uniform float uClean;
+        uniform vec2 uImpact;
+        uniform float uAspect;
+        varying vec2 vUv;
+
+        void main() {
+          vec4 colDirty = texture2D(tDirty, vUv);
+          vec4 colClean = texture2D(tClean, vUv);
+
+          vec2 diff = vUv - uImpact;
+          diff.x *= uAspect;
+          float dist = length(diff);
+
+          float r = mix(-0.06, 1.72, uClean);
+          float mask = smoothstep(0.08, -0.06, dist - r);
+
+          float sheenDist = abs(dist - r);
+          float sheen = smoothstep(0.065, 0.0, sheenDist) * smoothstep(0.0, 0.12, uClean) * smoothstep(1.0, 0.88, uClean);
+          vec3 sheenColor = vec3(0.85, 0.95, 1.0) * sheen * 1.5;
+
+          vec3 finalColor = mix(colDirty.rgb, colClean.rgb, mask) + sheenColor;
+          gl_FragColor = vec4(finalColor, 1.0);
+        }
+      `
     });
 
-    const sphere = new THREE.Mesh(sphereGeo, sphereMat);
-    sphere.rotation.y = isArabic ? 2.10 : 1.65;
-    scene.add(sphere);
+    const plate = new T.Mesh(new T.PlaneGeometry(16, 9), plateMat);
+    plate.position.set(0, 0, -4.0);
+    scene.add(plate);
 
-    // 2. Countertop Towel Plane Actor (slides away during wipe)
-    const towelGeo = new THREE.PlaneGeometry(0.7, 0.55);
-    const towelMat = new THREE.MeshBasicMaterial({
-      map: tTowel,
-      transparent: true,
-      opacity: 0.95,
-      depthWrite: false
-    });
-    const towel = new THREE.Mesh(towelGeo, towelMat);
-    const towelBaseX = isArabic ? -0.22 : 0.12;
-    towel.position.set(towelBaseX, -0.42, 1.85);
-    towel.rotation.x = -Math.PI / 2.5;
-    towel.rotation.z = isArabic ? -0.15 : -0.15;
-    scene.add(towel);
+    // Fit plate to camera frustum so zero black voids occur at any aspect ratio
+    function fitPlate() {
+      if (typeof camera === 'undefined' || !camera || typeof plate === 'undefined' || !plate) return;
+      const dist = camera.position.z - plate.position.z;
+      const vFov = (camera.fov * Math.PI) / 180;
+      const vHeight = 2 * dist * Math.tan(vFov / 2);
+      const vWidth = vHeight * camera.aspect;
+      const plateAspect = 16 / 9;
+      let s;
+      if (camera.aspect > plateAspect) {
+        s = (vWidth / 16) * 1.34;
+      } else {
+        s = (vHeight / 9) * 1.34;
+      }
+      plate.scale.set(s, s, 1);
+    }
 
-    // 3. Countertop Foam Lather (blooms on impact)
-    const foamGeo = new THREE.PlaneGeometry(0.95, 0.75);
-    const foamMat = new THREE.MeshBasicMaterial({
-      map: tFoam,
-      transparent: true,
-      opacity: 0,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false
-    });
-    const foam = new THREE.Mesh(foamGeo, foamMat);
-    foam.position.set(isArabic ? -0.25 : -0.05, -0.40, 1.80);
-    foam.rotation.x = -Math.PI / 2.5;
+    // 2. Product Group (Bottle + Grounded Contact Shadow)
+    const product = new T.Group();
+    scene.add(product);
+
+    const bottleMesh = new T.Mesh(
+      new T.PlaneGeometry(1.65, 4.14),
+      new T.MeshBasicMaterial({ map: bottleTex, transparent: true, depthWrite: false })
+    );
+    // Uses authentic per-actif-cutout-ar.png so Arabic label text is 100% legible while nozzle aims right
+    product.add(bottleMesh);
+
+    // Contact shadow canvas
+    const shadowCanvas = document.createElement('canvas');
+    shadowCanvas.width = 128;
+    shadowCanvas.height = 128;
+    const sCtx = shadowCanvas.getContext('2d');
+    const sGrad = sCtx.createRadialGradient(64, 64, 2, 64, 64, 60);
+    sGrad.addColorStop(0, 'rgba(0, 0, 0, 0.82)');
+    sGrad.addColorStop(0.35, 'rgba(0, 0, 0, 0.55)');
+    sGrad.addColorStop(0.7, 'rgba(0, 0, 0, 0.18)');
+    sGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    sCtx.fillStyle = sGrad;
+    sCtx.fillRect(0, 0, 128, 128);
+    const shadowTex = new T.CanvasTexture(shadowCanvas);
+
+    const shadow = new T.Mesh(
+      new T.PlaneGeometry(2.35, 0.62),
+      new T.MeshBasicMaterial({ map: shadowTex, transparent: true, opacity: 0.85, depthWrite: false })
+    );
+    shadow.position.set(0, -2.06, -0.12);
+    product.add(shadow);
+
+    // 3. Foam Lather on the Cutting Board
+    const foam = new T.Mesh(
+      new T.PlaneGeometry(2.2, 1.25),
+      new T.MeshBasicMaterial({ map: foamTex, transparent: true, opacity: 0, blending: T.AdditiveBlending, depthWrite: false })
+    );
     scene.add(foam);
 
-    // 4. Physical Nozzle Spray Particles
-    const pCanvas = document.createElement('canvas');
-    pCanvas.width = 64;
-    pCanvas.height = 64;
-    const pCtx = pCanvas.getContext('2d');
-    const grad = pCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
-    grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    grad.addColorStop(0.3, 'rgba(235, 248, 255, 0.9)');
-    grad.addColorStop(0.65, 'rgba(180, 225, 255, 0.35)');
-    grad.addColorStop(1, 'rgba(180, 225, 255, 0)');
-    pCtx.fillStyle = grad;
-    pCtx.fillRect(0, 0, 64, 64);
-    const pTex = new THREE.CanvasTexture(pCanvas);
-    pTex.needsUpdate = true;
-
-    const pCount = 550;
-    const sprayPositions = new Float32Array(pCount * 3);
-    const sprayColors = new Float32Array(pCount * 3);
-    const sprayVelocities = [];
-
+    // 4. Mist Spray Particle Stream
+    const pCount = 280;
+    const pPositions = new Float32Array(pCount * 3);
+    const pSpeeds = new Float32Array(pCount);
+    const pAngles = new Float32Array(pCount);
+    const pRadii = new Float32Array(pCount);
     for (let i = 0; i < pCount; i++) {
-      sprayPositions[i * 3 + 0] = 0;
-      sprayPositions[i * 3 + 1] = 0;
-      sprayPositions[i * 3 + 2] = 0;
-
-      sprayColors[i * 3 + 0] = 0.94;
-      sprayColors[i * 3 + 1] = 0.98;
-      sprayColors[i * 3 + 2] = 1.0;
-
-      const angle = Math.random() * Math.PI * 2;
-      const rad = Math.sqrt(Math.random());
-      sprayVelocities.push({
-        spreadX: Math.cos(angle) * rad,
-        spreadY: Math.sin(angle) * rad,
-        speed: 5.5 + Math.random() * 2.2,
-        phase: i / pCount
-      });
+      pSpeeds[i] = 0.85 + Math.random() * 0.45;
+      pAngles[i] = Math.random() * Math.PI * 2;
+      pRadii[i] = Math.sqrt(Math.random());
     }
+    const sprayGeo = new T.BufferGeometry();
+    sprayGeo.setAttribute('position', new T.BufferAttribute(pPositions, 3));
 
-    const sprayGeo = new THREE.BufferGeometry();
-    sprayGeo.setAttribute('position', new THREE.BufferAttribute(sprayPositions, 3));
-    sprayGeo.setAttribute('color', new THREE.BufferAttribute(sprayColors, 3));
+    const mistCanvas = document.createElement('canvas');
+    mistCanvas.width = 64;
+    mistCanvas.height = 64;
+    const mCtx = mistCanvas.getContext('2d');
+    const mGrad = mCtx.createRadialGradient(32, 32, 0, 32, 32, 30);
+    mGrad.addColorStop(0, 'rgba(255, 255, 255, 1.0)');
+    mGrad.addColorStop(0.2, 'rgba(240, 250, 255, 0.85)');
+    mGrad.addColorStop(0.55, 'rgba(200, 235, 255, 0.35)');
+    mGrad.addColorStop(1, 'rgba(200, 235, 255, 0)');
+    mCtx.fillStyle = mGrad;
+    mCtx.fillRect(0, 0, 64, 64);
+    const mistTex = new T.CanvasTexture(mistCanvas);
 
-    const sprayMat = new THREE.PointsMaterial({
-      size: mobile ? 0.065 : 0.055,
-      map: pTex,
+    const sprayMat = new T.PointsMaterial({
+      size: mobile ? 0.08 : 0.065,
+      map: mistTex,
       transparent: true,
       opacity: 0,
-      vertexColors: true,
-      blending: THREE.AdditiveBlending,
+      blending: T.AdditiveBlending,
       depthWrite: false
     });
-    const spraySystem = new THREE.Points(sprayGeo, sprayMat);
-    scene.add(spraySystem);
+    const spray = new T.Points(sprayGeo, sprayMat);
+    scene.add(spray);
 
-    // 5. Impact Splatter Mesh
-    const impactGeo = new THREE.PlaneGeometry(0.42, 0.32);
-    const impactMat = new THREE.MeshBasicMaterial({
-      map: pTex,
-      transparent: true,
-      opacity: 0,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false
-    });
-    const impactMesh = new THREE.Mesh(impactGeo, impactMat);
-    impactMesh.rotation.x = -Math.PI / 2.3;
-    scene.add(impactMesh);
+    // Scratch vectors
+    const nozzleLocal = new T.Vector3(isArabic ? 0.48 : -0.48, 1.80, 0.02);
+    const nozzleWorld = new T.Vector3();
+    const targetWorld = new T.Vector3();
+    const streamDir = new T.Vector3();
+    const upVec = new T.Vector3(0, 1, 0);
+    const sideVec = new T.Vector3();
+    const coneUpVec = new T.Vector3();
 
-    function onResize() {
-      width = hero.clientWidth || window.innerWidth;
-      height = hero.clientHeight || window.innerHeight;
-      camera.aspect = width / height;
-      camera.fov = mobile ? 58 : 50;
-      camera.updateProjectionMatrix();
-      camera.updateMatrixWorld(true);
-      renderer.setSize(width, height, false);
-      render();
+    function computeTarget() {
+      if (typeof plate === 'undefined' || !plate) return;
+      const u = isArabic ? 0.67 : 0.33;
+      const v = 0.35;
+      targetWorld.set(
+        (u - 0.5) * 16 * plate.scale.x + plate.position.x,
+        (v - 0.5) * 9 * plate.scale.y + plate.position.y,
+        plate.position.z + 0.12
+      );
     }
-    window.addEventListener('resize', onResize);
 
     function render() {
+      if (typeof renderer === 'undefined' || !renderer || typeof camera === 'undefined' || !camera) return;
       renderer.render(scene, camera);
     }
 
-    const raycaster = new THREE.Raycaster();
-    const tempNozzle = new THREE.Vector3();
-    const tempTarget = new THREE.Vector3();
-
-    const counterPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0.42);
-    const nozzlePlane = new THREE.Plane(new THREE.Vector3(0, 0, -1), 1.50);
-
-    function computeRayPoints() {
-      camera.updateProjectionMatrix();
-      camera.updateMatrixWorld(true);
-
-      const nozzleNdcX = mobile ? -0.10 : (isArabic ? -0.44 : -0.06);
-      const nozzleNdcY = mobile ? -0.02 : 0.28;
-      raycaster.setFromCamera(new THREE.Vector2(nozzleNdcX, nozzleNdcY), camera);
-      raycaster.ray.intersectPlane(nozzlePlane, tempNozzle);
-
-      const targetNdcX = mobile ? -0.24 : (isArabic ? -0.58 : -0.25);
-      const targetNdcY = mobile ? -0.32 : -0.28;
-      raycaster.setFromCamera(new THREE.Vector2(targetNdcX, targetNdcY), camera);
-      raycaster.ray.intersectPlane(counterPlane, tempTarget);
-    }
-
-    function update(p, time) {
-      if (time !== undefined) uniforms.uTime.value = time;
-
-      // CONTINUOUS CAMERA CHOREOGRAPHY ACROSS 6 MOMENTS
+    function update(p) {
+      if (typeof camera === 'undefined' || !camera || typeof plate === 'undefined' || !plate || typeof product === 'undefined' || !product || typeof foam === 'undefined' || !foam || typeof sprayMat === 'undefined' || !sprayMat) return;
+      currentP = p;
       if (p < 0.20) {
-        // Shot 01: Wide Mess Establishing (0.00 -> 0.20)
         const t = p / 0.20;
-        camera.position.set(0, 0.08 - t * 0.03, t * 0.18);
-        camera.lookAt(0.05 + t * 0.03, -0.16 - t * 0.04, 1.0);
-      } else if (p < 0.40) {
-        // Shot 02: Physical Camera Approach (0.20 -> 0.40)
-        const t = (p - 0.20) / 0.20;
-        camera.position.set(0, 0.05 - t * 0.06, 0.18 + t * 0.30);
-        camera.lookAt(0.08 + t * 0.04, -0.20 - t * 0.05, 1.0);
-      } else if (p < 0.50) {
-        // Shot 03: Macro Tension / Trigger Ready (0.40 -> 0.50)
-        const t = (p - 0.40) / 0.10;
-        camera.position.set(0, -0.01 - t * 0.03, 0.48 + t * 0.08);
-        camera.lookAt(0.12 + t * 0.03, -0.25 - t * 0.03, 1.0);
-      } else if (p < 0.64) {
-        // Shot 04: Spray Action Tracking (0.50 -> 0.64)
-        const t = (p - 0.50) / 0.14;
-        camera.position.set(0, -0.04 + t * 0.02, 0.56);
-        camera.lookAt(0.15, -0.28, 1.0);
-      } else if (p < 0.82) {
-        // Shot 05: Foam Spread & Clean Wave Sweeps (0.64 -> 0.82)
-        const t = (p - 0.64) / 0.18;
-        camera.position.set(0, -0.02 + t * 0.12, 0.56 - t * 0.40);
-        camera.lookAt(0.15 - t * 0.08, -0.28 + t * 0.15, 1.0);
+        camera.position.set(0, 0.12 - t * 0.04, 6.4 - t * 0.2);
+        camera.lookAt(sign * -0.35, -0.32, -1.0);
+      } else if (p < 0.45) {
+        const t = (p - 0.20) / 0.25;
+        camera.position.set(sign * -t * 0.15, 0.08 - t * 0.14, 6.2 - t * 0.7);
+        camera.lookAt(sign * (-0.35 - t * 0.10), -0.32 - t * 0.12, -1.0);
+      } else if (p < 0.65) {
+        camera.position.set(sign * -0.15, -0.06, 5.5);
+        camera.lookAt(sign * -0.45, -0.44, -1.0);
+      } else if (p < 0.85) {
+        const t = (p - 0.65) / 0.20;
+        camera.position.set(sign * (-0.15 + t * 0.15), -0.06 + t * 0.12, 5.5 + t * 0.6);
+        camera.lookAt(sign * (-0.45 + t * 0.15), -0.44 + t * 0.15, -1.0);
       } else {
-        // Shot 06: Clean Kitchen Reveal & Brand Climax (0.82 -> 1.00)
-        const t = (p - 0.82) / 0.18;
-        camera.position.set(0, 0.10 + t * 0.05, 0.16 - t * 0.16);
-        camera.lookAt(0.07 - t * 0.02, -0.13 + t * 0.03, 1.0);
+        const t = (p - 0.85) / 0.15;
+        camera.position.set(0, 0.06 + t * 0.04, 6.1 + t * 0.2);
+        camera.lookAt(sign * (-0.30 + t * 0.10), -0.29 + t * 0.05, -1.0);
       }
 
-      computeRayPoints();
-      impactMesh.position.copy(tempTarget);
-      impactMesh.position.y += 0.01;
+      fitPlate();
+      computeTarget();
 
-      // SPRAY SYSTEM (Shot 04: 0.48 -> 0.64)
-      if (p >= 0.48 && p <= 0.64) {
-        const sp = (p - 0.48) / 0.16;
-        sprayMat.opacity = Math.sin(sp * Math.PI) * 0.96;
-        impactMat.opacity = Math.min(1.0, Math.sin(sp * Math.PI) * 1.35);
+      foam.position.copy(targetWorld);
+      foam.position.y += 0.05;
+      foam.position.z += 0.03;
+      foam.rotation.x = -Math.PI / 7;
 
-        const dir = new THREE.Vector3().subVectors(tempTarget, tempNozzle);
-        const dist = dir.length();
-        const normDir = dir.clone().normalize();
+      const startX = sign * (mobile ? 3.0 : 4.4);
+      const targetX = sign * (mobile ? 0.50 : 1.90);
+      const settleX = sign * (mobile ? 0.55 : 2.15);
+      const baseScale = mobile ? 0.54 : 0.82;
+      const baseY = mobile ? -0.85 : -1.02;
 
-        const upVec = new THREE.Vector3(0, 1, 0);
-        const rightVec = new THREE.Vector3().crossVectors(normDir, upVec).normalize();
-        const coneUp = new THREE.Vector3().crossVectors(rightVec, normDir).normalize();
+      if (p < 0.22) {
+        product.visible = false;
+        product.position.set(startX, baseY, 0.4);
+      } else if (p < 0.46) {
+        product.visible = true;
+        const t = (p - 0.22) / 0.24;
+        const ease = 1 - Math.pow(1 - t, 3);
+        const bounce = Math.sin(t * Math.PI) * 0.12;
+        product.position.x = startX + (targetX - startX) * ease;
+        product.position.y = baseY + bounce;
+        product.rotation.z = sign * (1 - ease) * 0.08;
+        product.scale.setScalar(baseScale);
+      } else if (p < 0.65) {
+        product.visible = true;
+        product.position.x = targetX;
+        product.position.y = baseY;
+        const sprayT = Math.sin(Math.min(1, Math.max(0, (p - 0.48) / 0.17)) * Math.PI);
+        product.rotation.z = sign * -sprayT * 0.045;
+        product.scale.setScalar(baseScale);
+      } else if (p < 0.85) {
+        product.visible = true;
+        const t = (p - 0.65) / 0.20;
+        product.position.x = targetX + (settleX - targetX) * t;
+        product.position.y = baseY;
+        product.rotation.z = 0;
+        product.scale.setScalar(baseScale);
+      } else {
+        product.visible = p < 0.99;
+        const t = (p - 0.85) / 0.15;
+        product.position.x = settleX + sign * t * 0.15;
+        product.position.y = baseY;
+        product.rotation.z = 0;
+        product.scale.setScalar(baseScale * (1 - t * 0.06));
+      }
 
-        const posAttr = sprayGeo.attributes.position.array;
+      product.updateMatrixWorld(true);
+      product.localToWorld(nozzleWorld.copy(nozzleLocal));
+
+      if (p >= 0.48 && p <= 0.65) {
+        const action = (p - 0.48) / 0.17;
+        const mistAlpha = Math.sin(action * Math.PI);
+        sprayMat.opacity = mistAlpha * 0.92;
+
+        streamDir.subVectors(targetWorld, nozzleWorld);
+        const dist = streamDir.length();
+        const normDir = streamDir.clone().normalize();
+
+        sideVec.crossVectors(normDir, upVec).normalize();
+        coneUpVec.crossVectors(sideVec, normDir).normalize();
+
+        const arr = sprayGeo.attributes.position.array;
         for (let i = 0; i < pCount; i++) {
-          const item = sprayVelocities[i];
-          const travel = (sp * item.speed + item.phase) % 1.0;
-          const spread = 0.008 + Math.pow(travel, 1.2) * 0.13;
-          const gravityDip = travel * travel * 0.035;
+          const travel = ((action * 2.4 * pSpeeds[i]) + (i / pCount)) % 1.0;
+          const coneSpread = (0.012 + travel * 0.22) * pRadii[i];
+          const angle = pAngles[i];
+          const gravityDip = travel * travel * 0.10;
 
-          const px = tempNozzle.x + normDir.x * travel * dist + (rightVec.x * item.spreadX + coneUp.x * item.spreadY) * spread;
-          const py = tempNozzle.y + normDir.y * travel * dist + (rightVec.y * item.spreadX + coneUp.y * item.spreadY) * spread - gravityDip;
-          const pz = tempNozzle.z + normDir.z * travel * dist + (rightVec.z * item.spreadX + coneUp.z * item.spreadY) * spread;
+          const px = nozzleWorld.x + normDir.x * travel * dist + (sideVec.x * Math.cos(angle) + coneUpVec.x * Math.sin(angle)) * coneSpread;
+          const py = nozzleWorld.y + normDir.y * travel * dist + (sideVec.y * Math.cos(angle) + coneUpVec.y * Math.sin(angle)) * coneSpread - gravityDip;
+          const pz = nozzleWorld.z + normDir.z * travel * dist + (sideVec.z * Math.cos(angle) + coneUpVec.z * Math.sin(angle)) * coneSpread;
 
-          posAttr[i * 3 + 0] = px;
-          posAttr[i * 3 + 1] = py;
-          posAttr[i * 3 + 2] = pz;
+          arr[i * 3 + 0] = px;
+          arr[i * 3 + 1] = py;
+          arr[i * 3 + 2] = pz;
         }
         sprayGeo.attributes.position.needsUpdate = true;
       } else {
         sprayMat.opacity = 0;
-        impactMat.opacity = 0;
       }
 
-      // ACTIVE FOAM LATHER (0.50 -> 0.82)
-      foam.position.copy(tempTarget);
-      foam.position.y += 0.015;
-      foam.rotation.x = -Math.PI / 2.3;
-
-      if (p < 0.50) {
-        foamMat.opacity = 0;
-        foam.scale.set(0.1, 0.1, 0.1);
-      } else if (p < 0.64) {
-        const t = (p - 0.50) / 0.14;
-        foamMat.opacity = t * 0.95;
-        const s = 0.2 + t * 1.05;
-        foam.scale.set(s, s * 0.8, s);
+      if (p < 0.52) {
+        foam.material.opacity = 0;
+        foam.scale.set(0.1, 0.1, 1);
+      } else if (p < 0.65) {
+        const t = (p - 0.52) / 0.13;
+        foam.material.opacity = t * 0.85;
+        const s = 0.2 + t * 0.85;
+        foam.scale.set(s * 1.3, s * 0.75, 1);
       } else if (p < 0.82) {
-        const t = (p - 0.64) / 0.18;
-        foamMat.opacity = Math.max(0, 1.0 - t * 1.25) * 0.95;
-        const s = 1.25 + t * 0.25;
-        foam.scale.set(s, s * 0.8, s);
+        const t = (p - 0.65) / 0.17;
+        foam.material.opacity = Math.max(0, (1 - t * 1.25) * 0.85);
+        const s = 1.05 + t * 0.15;
+        foam.scale.set(s * 1.3, s * 0.75, 1);
       } else {
-        foamMat.opacity = 0;
+        foam.material.opacity = 0;
       }
 
-      // COUNTERTOP TOWEL PHYSICAL REACTION (0.62 -> 0.80)
-      if (p < 0.62) {
-        towel.position.x = towelBaseX;
-        towelMat.opacity = 0.95;
-      } else if (p < 0.80) {
-        const t = (p - 0.62) / 0.18;
-        const slideDist = isArabic ? 0.65 : -0.65;
-        towel.position.x = towelBaseX + t * slideDist;
-        towelMat.opacity = 0.95 * (1 - t);
-      } else {
-        towelMat.opacity = 0;
-      }
-
-      // 360 CLEAN RADIAL WAVEFRONT SHADER (0.62 -> 0.85)
-      if (p < 0.62) {
-        uniforms.uRadius.value = 0.0;
-        uniforms.uSheen.value = 0.0;
+      if (p < 0.58) {
+        filmUniforms.uClean.value = 0;
       } else if (p < 0.85) {
-        const t = (p - 0.62) / 0.23;
-        uniforms.uRadius.value = t * 2.2;
-        uniforms.uSheen.value = Math.sin(t * Math.PI) * 1.1;
+        const t = (p - 0.58) / 0.27;
+        filmUniforms.uClean.value = t;
       } else {
-        uniforms.uRadius.value = 2.5;
-        uniforms.uSheen.value = 0.0;
+        filmUniforms.uClean.value = 1;
       }
 
       render();
     }
 
-    render();
+    function resize() {
+      width = hero.clientWidth || window.innerWidth;
+      height = hero.clientHeight || window.innerHeight;
+      camera.aspect = width / height;
+      camera.fov = (width <= 700) ? 54 : 46;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height, false);
+      fitPlate();
+      computeTarget();
+      render();
+    }
+
+    window.addEventListener('resize', resize);
+    update(0);
 
     return {
       update,
-      sphere,
-      scene,
-      camera,
-      uniforms,
-      destroy: () => {
-        window.removeEventListener('resize', onResize);
+      destroy() {
+        window.removeEventListener('resize', resize);
         renderer.dispose();
       }
     };
   }
-
   function initCinematicMotion() {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion || !window.gsap || !window.ScrollTrigger) return;
