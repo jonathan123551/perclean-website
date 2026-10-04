@@ -1,0 +1,1109 @@
+{
+  "shop": "https://nvwk1p-si.myshopify.com",
+  "products": [
+    {
+      "id": 8315006353593,
+      "handle": "xp-toilet-125gm",
+      "title": "perfumed and disinfectant  Detergent for toilet flusher (XP toilet125gm)",
+      "titleAr": "سائل منظف ومطهر و معطر  للتواليت للتعليق داخل صندوق الطرد",
+      "descriptionHtml": "<p>سائل منظف ومطهر و معطر  للتواليت للتعليق داخل صندوق الطرد</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/ChatGPTImageDec19_2025_10_17_32AM.png?v=1766131869",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/ChatGPTImageDec19_2025_10_17_32AM.png?v=1766131869"
+      ],
+      "variants": [
+        {
+          "id": 45717625274553,
+          "title": "125gm",
+          "price": "55.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "125gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8286851301561,
+      "handle": "peractif-5kg",
+      "title": "Powerful Grease & Stain Remover for Stove, Hood, and Kitchen Walls (Per Actif 5KG)",
+      "titleAr": "مزيل للدهون",
+      "descriptionHtml": "<p>مزيل للدهون</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/Actif5.jpg?v=1763982121"
+      ],
+      "variants": [
+        {
+          "id": 46646515269817,
+          "title": "5 kg",
+          "price": "450.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8281973194937,
+      "handle": "hand-wash-spring-1-5k",
+      "title": "Hand washing liquid soap  (spring scent) 1.5k",
+      "titleAr": "سائل تنظيف اليدين برائحة السبرنج  حجم ١.٥ كيلو",
+      "descriptionHtml": "<p>سائل تنظيف اليدين برائحة السبرنج  حجم ١.٥ كيلو</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/1C06BF29-BCAC-43EF-8938-ECC97D29B292.jpg?v=1784721432",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/1C06BF29-BCAC-43EF-8938-ECC97D29B292.jpg?v=1784721432"
+      ],
+      "variants": [
+        {
+          "id": 46646602432697,
+          "title": "1.5KG",
+          "price": "140.00",
+          "available": true,
+          "compareAtPrice": "155.00",
+          "option1": "1.5KG",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8260706304185,
+      "handle": "منعم-ومعطر-للملابس-حجم-٥-كيلو",
+      "title": "Fabric softener and fragrance, anti-static (Per soft  5KG)",
+      "titleAr": "منعم ومعطر للملابس ومضاد للشحنات الاستاتيكية",
+      "descriptionHtml": "<p>منعم ومعطر للملابس ومضاد للشحنات الاستاتيكية </p>\n<p>حجم ٥ كيلو</p>",
+      "category": "laundry",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/IMG-4633.jpg?v=1761828559",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/IMG-4633.jpg?v=1761828559"
+      ],
+      "variants": [
+        {
+          "id": 46646603579577,
+          "title": "5 KG",
+          "price": "380.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 KG",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168081621177,
+      "handle": "سائل-مطهر-لجميع-الأسطح-1",
+      "title": "Hard surfaces disinfectant liquid 700 GM",
+      "titleAr": "سائل مطهر لجميع الأسطح حجم ٧٠٠ جم",
+      "descriptionHtml": "<p>سائل مطهر لجميع الأسطح <br>حجم ٧٠٠ جم</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C11CA7CF-42E1-4ED3-B45D-DC4EFDF8E34D.jpg?v=1784132598",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C11CA7CF-42E1-4ED3-B45D-DC4EFDF8E34D.jpg?v=1784132598"
+      ],
+      "variants": [
+        {
+          "id": 45342918213817,
+          "title": "700 gm",
+          "price": "150.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "700 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168081195193,
+      "handle": "سائل-مطهر-لجميع-الأسطح",
+      "title": "(Germol) Hard surfaces disinfectant liquid 5KG",
+      "titleAr": "سائل مطهر لجميع الاسطح يقضي على (99%) من الجراثيم  يصلح لجميع الاغراض المنزلية و هو آمن على الغسالات الاوتوماتيكية 5 كيلوجرام",
+      "descriptionHtml": "<p>سائل مطهر لجميع الاسطح يقضي على (99%) من الجراثيم  <br>يصلح لجميع الاغراض المنزلية و هو آمن على الغسالات الاوتوماتيكية <br>5 كيلوجرام</p>\n<p><br></p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3DD3BB6C-75FE-472B-B1AC-3A6FFBDF35F5.jpg?v=1784721511",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3DD3BB6C-75FE-472B-B1AC-3A6FFBDF35F5.jpg?v=1784721511"
+      ],
+      "variants": [
+        {
+          "id": 45342920245433,
+          "title": "5 kg",
+          "price": "870.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168080834745,
+      "handle": "سائل-منظف-لليدين-18",
+      "title": "Hand washing liquid soap Pink sugar scent 1.5 k",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين</p>\n<p>حجم ١.٥ كيلو </p>\n<p>pink sugar </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A6D5B9C8-EF53-4542-B5BA-D78F04596B90.jpg?v=1784721575",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A6D5B9C8-EF53-4542-B5BA-D78F04596B90.jpg?v=1784721575"
+      ],
+      "variants": [
+        {
+          "id": 45343033786553,
+          "title": "1.5 kg",
+          "price": "140.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168080539833,
+      "handle": "سائل-منظف-لليدين-17",
+      "title": "Hand washing liquid soap Clear green Scent 1.5 k",
+      "titleAr": "سائل منظف لليدين بالأعشاب",
+      "descriptionHtml": "<p>سائل منظف لليدين بالأعشاب </p>\n<p>حجم ١.٥ كيلو </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/10D1C703-99B8-40C4-BFC9-2F1B09A61AFE.jpg?v=1784721657",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/10D1C703-99B8-40C4-BFC9-2F1B09A61AFE.jpg?v=1784721657"
+      ],
+      "variants": [
+        {
+          "id": 45343035654329,
+          "title": "1.5 kg",
+          "price": "140.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168080179385,
+      "handle": "سائل-منظف-لليدين-16",
+      "title": "Hand washing liquid soap Dovana Scent 1.5 k",
+      "titleAr": "سائل منظف لليدين بالدوڤانا",
+      "descriptionHtml": "<p>سائل منظف لليدين بالدوڤانا</p>\n<p>حجم ١.٥ كيلو </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E2E79F84-A1D9-4453-8FCE-B2A01B39E5CC.jpg?v=1784721689",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E2E79F84-A1D9-4453-8FCE-B2A01B39E5CC.jpg?v=1784721689"
+      ],
+      "variants": [
+        {
+          "id": 45343037751481,
+          "title": "1.5 kg",
+          "price": "140.00",
+          "available": true,
+          "compareAtPrice": "155.00",
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168079655097,
+      "handle": "سائل-منظف-لليدين-15",
+      "title": "Hand washing liquid soap Green apple Scent 1.5 k",
+      "titleAr": "سائل منظف لليدين بالتفاح",
+      "descriptionHtml": "<p>سائل منظف لليدين بالتفاح</p>\n<p>حجم ١.٥ كيلو </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BD93F18F-80B4-483E-9D17-7D466CCFC612.jpg?v=1784721613",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BD93F18F-80B4-483E-9D17-7D466CCFC612.jpg?v=1784721613"
+      ],
+      "variants": [
+        {
+          "id": 45343039357113,
+          "title": "1.5 kg",
+          "price": "140.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168079294649,
+      "handle": "منظف-سائل-للأغراض-المنزلية-بالليمون",
+      "title": "Dish washing liquid detergent Lemon scent (Mencopol 5 k)",
+      "titleAr": "منظف سائل للأغراض المنزلية بالليمون",
+      "descriptionHtml": "<p><span>منظف سائل للأغراض المنزلية بالليمون </span></p>\n<p><span>حجم ٥ كيلو </span></p>",
+      "category": "kitchen",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2CF9170E-88BB-40D0-9B4D-5ACC01763B6A.jpg?v=1784721747",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2CF9170E-88BB-40D0-9B4D-5ACC01763B6A.jpg?v=1784721747"
+      ],
+      "variants": [
+        {
+          "id": 45343040503993,
+          "title": "5 kg",
+          "price": "240.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168078901433,
+      "handle": "منظف-للأغراض-المنزلية",
+      "title": "Dish washing liquid detergent Lemon scent (Mencopol 1 k)",
+      "titleAr": "منظف سائل للأغراض المنزلية بالليمون",
+      "descriptionHtml": "<p>منظف سائل للأغراض المنزلية بالليمون</p>\n<p>حجم ١ لتر </p>",
+      "category": "kitchen",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/170CC148-1C7E-4951-B9D8-3CF8A2488EEF.jpg?v=1784721779",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/170CC148-1C7E-4951-B9D8-3CF8A2488EEF.jpg?v=1784721779"
+      ],
+      "variants": [
+        {
+          "id": 45343041913017,
+          "title": "1 L",
+          "price": "55.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "1 L",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168078573753,
+      "handle": "چل-منظف-للملابس-للغسالات-الاتوماتيك",
+      "title": "Premium Liquid Laundry Detergent Gel for Automatic Washing Machines (Perwash 5 k)",
+      "titleAr": "چل منظف للملابس للغسالات الاتوماتيك",
+      "descriptionHtml": "<p><span>چل منظف للملابس للغسالات الاتوماتيك </span></p>\n<p><span>حجم ٥ كيلو </span></p>",
+      "category": "laundry",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AEE95EF3-AAA8-40DF-8004-C457503CF8FF.jpg?v=1752437946",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AEE95EF3-AAA8-40DF-8004-C457503CF8FF.jpg?v=1752437946"
+      ],
+      "variants": [
+        {
+          "id": 45343043518649,
+          "title": "5 kg",
+          "price": "410.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168077885625,
+      "handle": "چل-منظف-للملابس",
+      "title": "Premium Liquid Laundry Detergent Gel for Automatic Washing Machines (Perwash1.65 k)",
+      "titleAr": "چل منظف للملابس للغسالات الاتوماتيك",
+      "descriptionHtml": "<p>چل منظف للملابس للغسالات الاتوماتيك </p>\n<p>حجم ١.٦٥ كيلو </p>",
+      "category": "laundry",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BE5EA4CF-ADD5-4EB5-A47C-B45F2E7CA08F.jpg?v=1786962853",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BE5EA4CF-ADD5-4EB5-A47C-B45F2E7CA08F.jpg?v=1786962853"
+      ],
+      "variants": [
+        {
+          "id": 45343044829369,
+          "title": "1.65 L",
+          "price": "165.00",
+          "available": true,
+          "compareAtPrice": "195.00",
+          "option1": "1.65 L",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168077000889,
+      "handle": "منعم-الملابس",
+      "title": "Fabric softener and fragrance, anti-static (Softener 1.5 k)",
+      "titleAr": "منعم الملابس ومعطر ومضاد للشحنات الاستاتيكية",
+      "descriptionHtml": "<p>منعم الملابس ومعطر ومضاد للشحنات الاستاتيكية</p>\n<p>حجم ١.٥ كيلو</p>",
+      "category": "laundry",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A248BC5F-6F80-49A9-9AE2-9FB901EE35D3.jpg?v=1786962892",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A248BC5F-6F80-49A9-9AE2-9FB901EE35D3.jpg?v=1786962892"
+      ],
+      "variants": [
+        {
+          "id": 45343046566073,
+          "title": "1.5 kg",
+          "price": "130.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168076771513,
+      "handle": "مزيل-البقع-والأصفرار-من-الملابس-2",
+      "title": "Powerful Stain & Yellowing Remover for Clothes (Perwash Ox bleach 5 k)",
+      "titleAr": "مزيل البقع والأصفرار من الملابس",
+      "descriptionHtml": "<p>مزيل البقع والأصفرار من الملابس</p>\n<p>حجم ٥ كيلو </p>",
+      "category": "laundry",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/FA1DB7CD-7B81-4902-9192-2F203AE33AEA.jpg?v=1752437609",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/FA1DB7CD-7B81-4902-9192-2F203AE33AEA.jpg?v=1752437609"
+      ],
+      "variants": [
+        {
+          "id": 45343048597689,
+          "title": "5 kg",
+          "price": "450.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168076509369,
+      "handle": "مزيل-البقع-والأصفرار-من-الملابس-1",
+      "title": "Powerful Stain & Yellowing Remover for Clothes (Perwash Ox bleach 1.5 k)",
+      "titleAr": "مزيل البقع والأصفرار من الملابس",
+      "descriptionHtml": "<p>مزيل البقع والأصفرار من الملابس</p>\n<p>حجم ١.٥ كيلو </p>",
+      "category": "laundry",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/8FA4FEB7-0FF0-4F51-92E6-0DBE568BF2FB.jpg?v=1786962937",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/8FA4FEB7-0FF0-4F51-92E6-0DBE568BF2FB.jpg?v=1786962937"
+      ],
+      "variants": [
+        {
+          "id": 45343049777337,
+          "title": "1.5 kg",
+          "price": "155.00",
+          "available": true,
+          "compareAtPrice": "170.00",
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8168075591865,
+      "handle": "مزيل-البقع-والأصفرار-من-الملابس",
+      "title": "Powerful Stain & Yellowing Remover for Clothes (Perwash Ox bleach 650 ml)",
+      "titleAr": "مزيل البقع والأصفرار من الملابس",
+      "descriptionHtml": "<p>مزيل البقع والأصفرار من الملابس</p>\n<p>حجم ٦٥٠ مل</p>",
+      "category": "laundry",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3C39477A-6848-4320-81C3-B8C783DC3528.jpg?v=1786962974",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3C39477A-6848-4320-81C3-B8C783DC3528.jpg?v=1786962974"
+      ],
+      "variants": [
+        {
+          "id": 45343051153593,
+          "title": "650 ml",
+          "price": "75.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "650 ml",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167794802873,
+      "handle": "سائل-منظف-لليدين-14",
+      "title": "Hand washing liquid soap Spring Scent125 ml",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين</p>\n<p>حجم ١٢٥ مل</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B2275EC2-6681-4239-A192-5A37BE566848.jpg?v=1786107084",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B2275EC2-6681-4239-A192-5A37BE566848.jpg?v=1786107084"
+      ],
+      "variants": [
+        {
+          "id": 45343053840569,
+          "title": "125 ml",
+          "price": "35.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "125 ml",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167794016441,
+      "handle": "سائل-منظف-لليدين-13",
+      "title": "Hand washing liquid soap Pink sugar Scent  125 ml",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين</p>\n<p>حجم ١٢٥ مل</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C1070E2F-98E1-4DFF-AB40-32FAA3D6EECF.jpg?v=1786107121",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/C1070E2F-98E1-4DFF-AB40-32FAA3D6EECF.jpg?v=1786107121"
+      ],
+      "variants": [
+        {
+          "id": 45343055839417,
+          "title": "125 ml",
+          "price": "35.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "125 ml",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167793983673,
+      "handle": "سائل-منظف-لليدين-12",
+      "title": "Hand washing liquid soap Dovana Scent 125 ml",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين</p>\n<p>حجم ١٢٥ جم</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E1C749FD-6CAB-4254-A2AA-220D72E365E2.jpg?v=1786107153",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E1C749FD-6CAB-4254-A2AA-220D72E365E2.jpg?v=1786107153"
+      ],
+      "variants": [
+        {
+          "id": 45343057576121,
+          "title": "125 ml",
+          "price": "35.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "125 ml",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167793426617,
+      "handle": "سائل-منظف-لليدين-11",
+      "title": "Hand washing liquid soap Clear green Scent 125 ml",
+      "titleAr": "سائل منظف لليدين بالأعشاب",
+      "descriptionHtml": "<p>سائل منظف لليدين بالأعشاب</p>\n<p>حجم ١٢٥ جم</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/15154349-84D0-4118-A49C-462654E95FC0.jpg?v=1786107181",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/15154349-84D0-4118-A49C-462654E95FC0.jpg?v=1786107181"
+      ],
+      "variants": [
+        {
+          "id": 45343058854073,
+          "title": "125 ml",
+          "price": "35.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "125 ml",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167793361081,
+      "handle": "سائل-منظف-لليدين-10",
+      "title": "Hand washing liquid soap Green apple Scent 125 ml",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين</p>\n<p>حجم ١٢٥ جم</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3BA91AB0-6F81-4C11-A910-2D884A54E414.jpg?v=1786107211",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/3BA91AB0-6F81-4C11-A910-2D884A54E414.jpg?v=1786107211"
+      ],
+      "variants": [
+        {
+          "id": 45343060394169,
+          "title": "125 ml",
+          "price": "35.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "125 ml",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167793262777,
+      "handle": "سائل-منظف-لليدين-9",
+      "title": "Hand washing liquid soap Spring Scent 500 ml",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين </p>\n<p>حجم ٥٠٠ مل</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/54C3A6BA-34A9-4974-A74E-2442E9B4E5FF.jpg?v=1784721824",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/54C3A6BA-34A9-4974-A74E-2442E9B4E5FF.jpg?v=1784721824"
+      ],
+      "variants": [
+        {
+          "id": 45167506129081,
+          "title": "500 gm",
+          "price": "60.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167793197241,
+      "handle": "سائل-منظف-لليدين-8",
+      "title": "Hand washing liquid soap Pink sugar Scent 500 ml",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين</p>\n<p>حجم ٥٠٠ مل</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/19_jpg.jpg?v=1784094303",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/19_jpg.jpg?v=1784094303"
+      ],
+      "variants": [
+        {
+          "id": 45167505932473,
+          "title": "500 gm",
+          "price": "60.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167791689913,
+      "handle": "سائل-منظف-لليدين-7",
+      "title": "Hand washing liquid soap Dovana Scent 500 ml",
+      "titleAr": "سائل منظف لليدينحجم ٥٠٠ مل",
+      "descriptionHtml": "<p>سائل منظف لليدين<br>حجم ٥٠٠ مل</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/9CE55F68-BA26-42F9-B9CA-B9D131039563.jpg?v=1784721863",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/9CE55F68-BA26-42F9-B9CA-B9D131039563.jpg?v=1784721863"
+      ],
+      "variants": [
+        {
+          "id": 45167503245497,
+          "title": "500 gm",
+          "price": "60.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167791329465,
+      "handle": "سائل-منظف-لليدين-6",
+      "title": "Hand washing liquid soap Clear green Scent 500 ml",
+      "titleAr": "سائل منظف لليدين بالأعشاب",
+      "descriptionHtml": "<p>سائل منظف لليدين بالأعشاب </p>\n<p>حجم ٥٠٠ مل</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/20_jpg.jpg?v=1784094234",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/20_jpg.jpg?v=1784094234"
+      ],
+      "variants": [
+        {
+          "id": 45167502885049,
+          "title": "500 gm",
+          "price": "60.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167788413113,
+      "handle": "سائل-منظف-لليدين-5",
+      "title": "Hand washing liquid soap Green apple Scent 500 ml",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين</p>\n<p>حجم ٥٠٠ مل </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E179B9D7-08E3-4945-9062-97DB6E801CC6.jpg?v=1784721898",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E179B9D7-08E3-4945-9062-97DB6E801CC6.jpg?v=1784721898"
+      ],
+      "variants": [
+        {
+          "id": 45167487582393,
+          "title": "500 gm",
+          "price": "60.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167785824441,
+      "handle": "سائل-منظف-لليدين-4",
+      "title": "Hand washing liquid soap Spring Scent 5 k",
+      "titleAr": "سائل منظف لليدين بالسبرنج",
+      "descriptionHtml": "<p>سائل منظف لليدين بالسبرنج </p>\n<p>حجم ٥ كيلو </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/F24BA1B2-AFCD-4078-9E3B-675C88D139CC.jpg?v=1784721927",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/F24BA1B2-AFCD-4078-9E3B-675C88D139CC.jpg?v=1784721927"
+      ],
+      "variants": [
+        {
+          "id": 45167472574649,
+          "title": "5 kg",
+          "price": "400.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167785660601,
+      "handle": "سائل-منظف-لليدين-3",
+      "title": "Hand washing liquid soap Pink sugar Scent 5 k",
+      "titleAr": "سائل منظف لليدين",
+      "descriptionHtml": "<p>سائل منظف لليدين </p>\n<p>حجم ٥ كيلو</p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B9238D2D-FCF7-4EF4-893E-D250B4A6173D.jpg?v=1784721953",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B9238D2D-FCF7-4EF4-893E-D250B4A6173D.jpg?v=1784721953"
+      ],
+      "variants": [
+        {
+          "id": 45167472115897,
+          "title": "5 kg",
+          "price": "400.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167785529529,
+      "handle": "سائل-منظف-لليدين-2",
+      "title": "Hand washing liquid soap Clear green Scent 5 k",
+      "titleAr": "سائل منظف لليدين بالأعشاب",
+      "descriptionHtml": "<p>سائل منظف لليدين بالأعشاب </p>\n<p>حجم ٥ كيلو </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7C92B80D-B2BA-4FBA-91D5-B548BF5809F5.jpg?v=1784722013",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7C92B80D-B2BA-4FBA-91D5-B548BF5809F5.jpg?v=1784722013"
+      ],
+      "variants": [
+        {
+          "id": 45167471984825,
+          "title": "5 kg",
+          "price": "400.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167783891129,
+      "handle": "سائل-منظف-لليدين",
+      "title": "Hand washing liquid soap Dovana Scent 5 k",
+      "titleAr": "سائل منظف لليدين برائحة الدوڤانا",
+      "descriptionHtml": "<p>سائل منظف لليدين برائحة الدوڤانا </p>\n<p>حجم ٥ كيلو </p>",
+      "category": "hand-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/6B79DA87-98E0-49EB-87B4-629595737974.jpg?v=1784722043",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/6B79DA87-98E0-49EB-87B4-629595737974.jpg?v=1784722043"
+      ],
+      "variants": [
+        {
+          "id": 45167464284345,
+          "title": "5 kg",
+          "price": "400.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167782875321,
+      "handle": "مزيل-للدهون",
+      "title": "Powerful Grease & Stain Remover for Stove, Hood, and Kitchen Walls (Per Actif650 Gram)",
+      "titleAr": "مزيل للدهون",
+      "descriptionHtml": "<p>مزيل للدهون</p>\n<p>حجم ٦٥٠ جم</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B6D527C4-B9E1-4CB2-83E4-F5A5F2B1FBE1.jpg?v=1786963283",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B6D527C4-B9E1-4CB2-83E4-F5A5F2B1FBE1.jpg?v=1786963283"
+      ],
+      "variants": [
+        {
+          "id": 45345020084409,
+          "title": "650 gm",
+          "price": "85.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "650 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167772455097,
+      "handle": "ملمع-زجاج-ببخاخ",
+      "title": "Pershine with spray\n\n500 ml",
+      "titleAr": "ملمع زجاج ببخاخ",
+      "descriptionHtml": "<p>ملمع زجاج ببخاخ </p>\n<p>حجم ٥٠٠ مل</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B8F7F933-757A-43A9-A4D8-19AC78D22CED.jpg?v=1786963042",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/B8F7F933-757A-43A9-A4D8-19AC78D22CED.jpg?v=1786963042"
+      ],
+      "variants": [
+        {
+          "id": 45345024803001,
+          "title": "500 gm",
+          "price": "40.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167771570361,
+      "handle": "ملمع-زجاج-بدون-بخاخ",
+      "title": "Pershine without spray\n\n500 ml",
+      "titleAr": "ملمع زجاج بدون بخاخ",
+      "descriptionHtml": "<p>ملمع زجاج بدون بخاخ </p>\n<p>حجم ٥٠٠ مل</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E42D76BC-8D6E-4821-9B9E-E78152170C8B.jpg?v=1786963086",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/E42D76BC-8D6E-4821-9B9E-E78152170C8B.jpg?v=1786963086"
+      ],
+      "variants": [
+        {
+          "id": 45345025163449,
+          "title": "500 gm",
+          "price": "35.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167770947769,
+      "handle": "ملمع-زجاج-ميكس",
+      "title": "Pershine with spray and without spray (Mix)\n\n500 ml",
+      "titleAr": "ملمع زجاج ببخاخ وبدون بخاخ",
+      "descriptionHtml": "<p>ملمع زجاج ببخاخ وبدون بخاخ</p>\n<p>حجم ٥٠٠ مل</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/DECD228C-1B45-4F64-8267-FD5FE6000513.jpg?v=1786963115",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/DECD228C-1B45-4F64-8267-FD5FE6000513.jpg?v=1786963115"
+      ],
+      "variants": [
+        {
+          "id": 45345025360057,
+          "title": "2* 500 gm",
+          "price": "70.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "2* 500 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167770194105,
+      "handle": "ملمع-زجاج",
+      "title": "Pershine\n\n5 k",
+      "titleAr": "ملمع زجاج",
+      "descriptionHtml": "<p>ملمع زجاج</p>\n<p>حجم ٥ كيلو</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7B63A88F-724F-4060-8EF6-A54E51F53869.jpg?v=1752401449",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/7B63A88F-724F-4060-8EF6-A54E51F53869.jpg?v=1752401449"
+      ],
+      "variants": [
+        {
+          "id": 45345026244793,
+          "title": "5 kg",
+          "price": "150.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167769342137,
+      "handle": "صابون-منظف-بالمطهر-للأغراض-العامة-2",
+      "title": "Sanitizing and disinfectant liquid Detergent  (Perclean SD5 k)",
+      "titleAr": "صابون منظف بالمطهر للأغراض العامة",
+      "descriptionHtml": "<p>صابون منظف بالمطهر للأغراض العامة</p>\n<p>حجم ٥ كيلو </p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A072B754-2769-423D-A07B-E98302D72EDB.jpg?v=1752401365",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/A072B754-2769-423D-A07B-E98302D72EDB.jpg?v=1752401365"
+      ],
+      "variants": [
+        {
+          "id": 45345026965689,
+          "title": "5 kg",
+          "price": "470.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167768817849,
+      "handle": "صابون-منظف-بالمطهر-للأغراض-العامة-1",
+      "title": "Sanitizing and disinfectant liquid Detergent  (Per Clean SD 1.5 KG)",
+      "titleAr": "صابون منظف بالمطهر للأغراض العامة",
+      "descriptionHtml": "<p>صابون منظف بالمطهر للأغراض العامة</p>\n<p>حجم ١.٥ كيلو </p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/EA6328F0-612A-44CC-B338-AD2012A935E4.jpg?v=1786963154",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/EA6328F0-612A-44CC-B338-AD2012A935E4.jpg?v=1786963154"
+      ],
+      "variants": [
+        {
+          "id": 45345027326137,
+          "title": "1.5 kg",
+          "price": "170.00",
+          "available": true,
+          "compareAtPrice": "190.00",
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167768654009,
+      "handle": "صابون-منظف-بالمطهر-للأغراض-العامة",
+      "title": "Sanitizing and disinfectant liquid Detergent  (Per Clean SD 700 Gram)",
+      "titleAr": "صابون منظف بالمطهر للأغراض العامة حجم ٧٠٠ جم",
+      "descriptionHtml": "<p>صابون منظف بالمطهر للأغراض العامة حجم ٧٠٠ جم</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AF0BD408-5F75-4141-AB04-347755599573.jpg?v=1786963189",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/AF0BD408-5F75-4141-AB04-347755599573.jpg?v=1786963189"
+      ],
+      "variants": [
+        {
+          "id": 45345029423289,
+          "title": "700gm",
+          "price": "90.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "700gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167768326329,
+      "handle": "صابون-سائل-للمواعين-بالليمون-والبرتقال-2",
+      "title": "dishwashing detergent- morning breeze scent 5 k",
+      "titleAr": "صابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال",
+      "descriptionHtml": "<p>صابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال</p>\n<p> حجم ٥ كيلو</p>",
+      "category": "kitchen",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/56938FAC-46BC-48E0-9E6C-781A4E97FBC2.jpg?v=1784722128",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/56938FAC-46BC-48E0-9E6C-781A4E97FBC2.jpg?v=1784722128"
+      ],
+      "variants": [
+        {
+          "id": 45345033060537,
+          "title": "5KG",
+          "price": "240.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5KG",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167768228025,
+      "handle": "صابون-سائل-للمواعين-بالليمون-والبرتقال-1",
+      "title": "dishwashing detergent- morning breeze scent 700 gm",
+      "titleAr": "صابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال",
+      "descriptionHtml": "<p>صابون سائل للمواعين (عطر نسيم الصباح) بالليمون والبرتقال</p>\n<p> حجم ٧٠٠ جم</p>",
+      "category": "kitchen",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/4110F2C5-230F-4DDA-8463-FD15A88F1E99.jpg?v=1784722160",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/4110F2C5-230F-4DDA-8463-FD15A88F1E99.jpg?v=1784722160"
+      ],
+      "variants": [
+        {
+          "id": 45345034764473,
+          "title": "700 gm",
+          "price": "55.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "700 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167768096953,
+      "handle": "صابون-سائل-للمواعين-بالليمون-والبرتقال",
+      "title": "dishwashing detergent- morning breeze scent 1.5 k",
+      "titleAr": "صابون سائل للمواعين بالليمون والبرتقال",
+      "descriptionHtml": "<p>صابون سائل للمواعين بالليمون والبرتقال </p>\n<p>حجم ١.٥ كيلو</p>",
+      "category": "kitchen",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BA46F36A-016C-4C5D-8C68-1B5E28960F9C.jpg?v=1784722196",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/BA46F36A-016C-4C5D-8C68-1B5E28960F9C.jpg?v=1784722196"
+      ],
+      "variants": [
+        {
+          "id": 45345036206265,
+          "title": "1.5 kg",
+          "price": "95.00",
+          "available": true,
+          "compareAtPrice": "105.00",
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167767998649,
+      "handle": "منظف-الأرضيات-2",
+      "title": "perfumed and disinfectant Detergent (3 in 1) 700 gm",
+      "titleAr": "منظف ومطهر ومعطر للأرضيات",
+      "descriptionHtml": "<p>منظف ومطهر ومعطر للأرضيات </p>\n<p>حجم ٧٠٠ جم</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/44EA168B-CFBF-4FCF-BFC8-5D0D45BC60DA.jpg?v=1786963348",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/44EA168B-CFBF-4FCF-BFC8-5D0D45BC60DA.jpg?v=1786963348"
+      ],
+      "variants": [
+        {
+          "id": 45345038139577,
+          "title": "700 gm",
+          "price": "75.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "700 gm",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167767933113,
+      "handle": "منظف-الأرضيات-1",
+      "title": "perfumed and disinfectant Detergent (3 in 1) 5 k",
+      "titleAr": "منظف ومطهر ومعطر الأرضيات حجم ٥ كيلو",
+      "descriptionHtml": "<p>منظف ومطهر ومعطر الأرضيات حجم ٥ كيلو</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2A7BED6C-3036-486B-9C25-57E08247C31B.jpg?v=1752400847",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2A7BED6C-3036-486B-9C25-57E08247C31B.jpg?v=1752400847"
+      ],
+      "variants": [
+        {
+          "id": 45345040695481,
+          "title": "5 kg",
+          "price": "350.00",
+          "available": true,
+          "compareAtPrice": null,
+          "option1": "5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    },
+    {
+      "id": 8167767605433,
+      "handle": "منظف-الأرضيات",
+      "title": "perfumed and disinfectant Detergent (3 in 1) 1.5 k",
+      "titleAr": "منظف ومطهر ومعطر الأرضيات",
+      "descriptionHtml": "<p>منظف ومطهر ومعطر الأرضيات</p>\n<p>حجم ١.٥ كيلو</p>",
+      "category": "home-care",
+      "image": "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2BF6CB14-5A71-4C77-8C0D-C666E703AA30.jpg?v=1786963378",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0712/4038/4697/files/2BF6CB14-5A71-4C77-8C0D-C666E703AA30.jpg?v=1786963378"
+      ],
+      "variants": [
+        {
+          "id": 45345041809593,
+          "title": "1.5 kg",
+          "price": "130.00",
+          "available": true,
+          "compareAtPrice": "150.00",
+          "option1": "1.5 kg",
+          "option2": null,
+          "option3": null
+        }
+      ]
+    }
+  ]
+}
